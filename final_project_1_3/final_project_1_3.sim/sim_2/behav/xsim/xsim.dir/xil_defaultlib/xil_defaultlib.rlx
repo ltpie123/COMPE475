@@ -1,0 +1,16 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.sim/sim_2/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sim_2/new/saw_wav_gen_tb.v,1727857947,verilog,,,,saw_wav_gen_tb,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/clk_div.v,1727852837,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/note_sel.v,,clk_div,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/midi_to_freq.v,1727852837,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/synth.v,,midi_to_freq,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/note_sel.v,1727852837,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sim_2/new/saw_wav_gen_tb.v,,note_sel,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/saw_wav_gen.v,1727859834,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/wav_selector.v,,saw_wav_gen,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/sin_wav_gen.v,1727852837,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/midi_to_freq.v,,sin_wav_gen,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/sqr_wav_gen.v,1727854242,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/tri_wav_gen.v,,sqr_wav_gen,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/synth.v,1727852837,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/sqr_wav_gen.v,,synth,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/top.v,1727852837,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/clk_div.v,,top,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/tri_wav_gen.v,1727852837,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/top.v,,tri_wav_gen,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/wav_selector.v,1727852837,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sources_1/new/sin_wav_gen.v,,wav_selector,,,,,,,,
