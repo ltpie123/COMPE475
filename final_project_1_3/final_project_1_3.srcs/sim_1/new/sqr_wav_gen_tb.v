@@ -40,6 +40,12 @@ module sqr_wav_gen_tb;
         clk = 0;
         forever #5 clk = ~clk; // 100 MHz clock
     end
+    
+    initial begin
+        $dumpfile("sqr_wav_gen_tb.vcd"); // Name of the VCD (Value Change Dump) file
+        $dumpvars(0, sqr_wav_gen_tb); // Dump all variables in the testbench
+    end
+
 
     // Test sequence
     initial begin
@@ -56,33 +62,27 @@ module sqr_wav_gen_tb;
         // Frequencies corresponding to MIDI notes
         // MIDI Note 60 (Middle C) - ~261.63 Hz
         freq = 32'd192576; // 50M / 261.63 ? 192576
-        #500000; // Wait enough time to observe output
-        $display("Testing freq = 261.63 Hz (MIDI 60): wav_out = %h", wav_out);
+        #5000; // Wait enough time to observe output
 
         // MIDI Note 64 (E4) - ~329.63 Hz
         freq = 32'd151685; // 50M / 329.63 ? 151685
-        #500000; // Wait enough time to observe output
-        $display("Testing freq = 329.63 Hz (MIDI 64): wav_out = %h", wav_out);
+        #5000; // Wait enough time to observe output
 
         // MIDI Note 67 (G4) - ~392.00 Hz
         freq = 32'd127882; // 50M / 392.00 ? 127882
-        #500000; // Wait enough time to observe output
-        $display("Testing freq = 392.00 Hz (MIDI 67): wav_out = %h", wav_out);
+        #5000; // Wait enough time to observe output
 
         // MIDI Note 72 (C5) - ~523.25 Hz
         freq = 32'd95655; // 50M / 523.25 ? 95655
-        #500000; // Wait enough time to observe output
-        $display("Testing freq = 523.25 Hz (MIDI 72): wav_out = %h", wav_out);
+        #5000; // Wait enough time to observe output
 
         // MIDI Note 76 (E5) - ~659.25 Hz
         freq = 32'd75853; // 50M / 659.25 ? 75853
-        #500000; // Wait enough time to observe output
-        $display("Testing freq = 659.25 Hz (MIDI 76): wav_out = %h", wav_out);
+        #5000; // Wait enough time to observe output
 
         // MIDI Note 79 (G5) - ~783.99 Hz
         freq = 32'd63969; // 50M / 783.99 ? 63969
-        #500000; // Wait enough time to observe output
-        $display("Testing freq = 783.99 Hz (MIDI 79): wav_out = %h", wav_out);
+        #5000; // Wait enough time to observe output
 
         // Finish the simulation
         $finish;

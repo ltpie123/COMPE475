@@ -1,4 +1,7 @@
-Running: xsim.dir/sin_wav_gen_tb_behav/xsimk.exe -simmode gui -wdb sin_wav_gen_tb_behav.wdb -simrunnum 0 -socket 56801
+Running: xsim.dir/sin_wav_gen_tb_behav/xsimk.exe -simmode gui -wdb sin_wav_gen_tb_behav.wdb -simrunnum 0 -socket 58030
 Design successfully loaded
-Design Loading Memory Usage: 7384 KB (Peak: 7384 KB)
-Design Loading CPU Usage: 15 ms
+Design Loading Memory Usage: 7412 KB (Peak: 7412 KB)
+Design Loading CPU Usage: 77 ms
+Simulation completed
+Simulation Memory Usage: 16028 KB (Peak: 16028 KB)
+Simulation CPU Usage: 5530 ms
