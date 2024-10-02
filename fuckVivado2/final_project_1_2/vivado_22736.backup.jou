@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Sep 27 11:23:44 2024
+# Process ID: 22736
+# Current directory: C:/Users/ltpie/Desktop/fuckVivado2/final_project_1_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22944 C:\Users\ltpie\Desktop\fuckVivado2\final_project_1_2\final_project_1_2.xpr
+# Log file: C:/Users/ltpie/Desktop/fuckVivado2/final_project_1_2/vivado.log
+# Journal file: C:/Users/ltpie/Desktop/fuckVivado2/final_project_1_2\vivado.jou
+# Running On: LAPTOP-OOE5PD4C, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 16540 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ltpie/Desktop/fuckVivado2/final_project_1_2/final_project_1_2.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source tb.tcl
+close_sim
+launch_simulation
+source tb.tcl
+close_sim
+launch_simulation
+source tb.tcl
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/ltpie/Desktop/fuckVivado2/final_project_1_2/final_project_1_2.srcs/sim_1/new/sqr_wav_gen_tb.v w ]
+add_files -fileset sim_1 C:/Users/ltpie/Desktop/fuckVivado2/final_project_1_2/final_project_1_2.srcs/sim_1/new/sqr_wav_gen_tb.v
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+source tb.tcl
+set_property is_enabled false [get_files  C:/Users/ltpie/Desktop/fuckVivado2/final_project_1_2/final_project_1_2.srcs/sim_1/new/tb.v]
+close_sim
+launch_simulation
+source tb.tcl
+update_compile_order -fileset sim_1
+run 1 s
+update_compile_order -fileset sim_1
+set_property top sqr_wav_gen_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+set_property is_enabled true [get_files  C:/Users/ltpie/Desktop/fuckVivado2/final_project_1_2/final_project_1_2.srcs/sim_1/new/tb.v]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+close_sim
