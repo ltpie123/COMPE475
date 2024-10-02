@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Oct  1 23:40:10 2024
+# Process ID: 37556
+# Current directory: C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26476 C:\Users\ltpie\Documents\GitHub\COMPE475\final_project_1_3\final_project_1_3.xpr
+# Log file: C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/vivado.log
+# Journal file: C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3\vivado.jou
+# Running On: LAPTOP-OOE5PD4C, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 16540 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/sin_wav_gen_tb_behav.wcfg
+source sin_wav_gen_tb.tcl
+set_property top sqr_wav_gen_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+run 100 s
+launch_simulation
+create_wave_config; add_wave /; set_property needs_save false [current_wave_config]
+restart
+launch_simulation
+launch_simulation
+close_sim
