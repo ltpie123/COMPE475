@@ -1,3 +1,0 @@
-Breakpoint File Version 1.0
-82,true,"C:/Users/ltpie/Desktop/fuckVivado2/Lab_4_3/Lab_4_3.srcs/sources_1/new/uart_tx.v"
-83,true,"C:/Users/ltpie/Desktop/fuckVivado2/Lab_4_3/Lab_4_3.srcs/sources_1/new/uart_tx.v"
