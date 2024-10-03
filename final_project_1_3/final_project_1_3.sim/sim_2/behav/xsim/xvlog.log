@@ -20,3 +20,5 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ltpie/Documents/GitHub/COM
 INFO: [VRFC 10-311] analyzing module note_sel
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.srcs/sim_2/new/saw_wav_gen_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module saw_wav_gen_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ltpie/Documents/GitHub/COMPE475/final_project_1_3/final_project_1_3.sim/sim_2/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
