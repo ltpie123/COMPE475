@@ -20,9 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module saw_wav_gen (
-    input clk,
-    input reset,
-    input [31:0] freq,
+    input wire clk,
+    input wire reset,
+    input wire [31:0] freq,
     output reg [7:0] wav_out
 );
 

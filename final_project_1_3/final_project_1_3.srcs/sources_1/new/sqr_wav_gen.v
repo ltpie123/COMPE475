@@ -47,9 +47,9 @@
     // Combinational block to calculate max value
     always @(*) begin
         if (freq == 0) begin
-            max = 32'd50000000; // Large number to generate very low frequency
+            max = 32'd100000000; // Large number to generate very low frequency
         end else begin
-            max = 50000000 / freq;
+            max = 100000000 / freq;
         end
     end
 endmodule

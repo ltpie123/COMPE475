@@ -1,7 +1,29 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 09/26/2024
+// Design Name: 
+// Module Name: tri_wav_gen
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
 module tri_wav_gen (
-    input clk,
-    input reset,
-    input [31:0] freq,
+    input wire clk,
+    input wire reset,
+    input wire [31:0] freq,
     output reg [7:0] wav_out
 );
 
