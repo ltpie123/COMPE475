@@ -19,28 +19,56 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module wav_selector(
     input wire clk,
     input wire [1:0] wav_sel,
     input wire [31:0] freq,
     output reg [7:0] wav_out
     );
+
+    // Create intermediate signals for each wave generator's output
+    wire [7:0] sqr_wav_out;
+    wire [7:0] sin_wav_out;
+    wire [7:0] saw_wav_out;
+    wire [7:0] tri_wav_out;
+
+    // Instantiate the wave generators, connecting their outputs to the intermediate signals
+    sqr_wav_gen sqr_wav_inst (
+        .clk(clk),
+        .reset(reset), // Note: Ensure reset is defined somewhere
+        .freq(freq),
+        .wav_out(sqr_wav_out)
+    );
     
-    wire sqr_wav, sin_wav, saw_wav, tri_wav;
+    sin_wav_gen sin_wav_inst (
+        .clk(clk),
+        .reset(reset),
+        .freq(freq),
+        .wav_out(sin_wav_out)
+    );
     
-    sqr_wav_gen sqr_wav_gen(.clk(clk), .freq(freq), .wav_out(wav_out));
-    sin_wav_gen sin_wav_gen(.clk(clk), .freq(freq), .wav_out(wav_out));
-    saw_wav_gen saw_wav_gen(.clk(clk), .freq(freq), .wav_out(wav_out));
-    tri_wav_gen tri_wav_gen(.clk(clk), .freq(freq), .wav_out(wav_out));
+    saw_wav_gen saw_wav_inst (
+        .clk(clk),
+        .reset(reset),
+        .freq(freq),
+        .wav_out(saw_wav_out)
+    );
     
-    always @(*) begin
+    tri_wav_gen tri_wav_inst (
+        .clk(clk),
+        .reset(reset),
+        .freq(freq),
+        .wav_out(tri_wav_out)
+    );
+
+    // Use a clocked always block to select the output wave
+    always @(posedge clk) begin
         case (wav_sel)
-            2'b00: wav_out = sqr_wav;
-            2'b01: wav_out = sin_wav;
-            2'b10: wav_out = saw_wav;
-            2'b11: wav_out = tri_wav;
-            default: wav_out = 0;
+            2'b00: wav_out <= sqr_wav_out;  // Square wave
+            2'b01: wav_out <= sin_wav_out;  // Sine wave
+            2'b10: wav_out <= saw_wav_out;  // Sawtooth wave
+            2'b11: wav_out <= tri_wav_out;  // Triangle wave
+            default: wav_out <= 8'b0;       // Default to zero if selection is invalid
         endcase
     end
 endmodule
