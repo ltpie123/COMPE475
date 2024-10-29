@@ -46,27 +46,27 @@ module wav_selector_tb;
         freq = 32'd440; // Example frequency (5000 Hz)
 
         // Apply reset
-        #10 reset = 0;   // Release reset after 10 ns
+        #1000 reset = 0;   // Release reset after 10 ns
 
         // Test case 1: Select square wave
         #20 wav_sel = 2'b00; 
-        #100; // Wait for a few cycles to observe square wave output
+        #1000000; // Wait for a few cycles to observe square wave output
 
         // Test case 2: Select sine wave
         #20 wav_sel = 2'b01;
-        #100; // Wait for a few cycles to observe sine wave output
+        #1000000; // Wait for a few cycles to observe sine wave output
 
         // Test case 3: Select sawtooth wave
         #20 wav_sel = 2'b10;
-        #100; // Wait for a few cycles to observe sawtooth wave output
+        #1000000; // Wait for a few cycles to observe sawtooth wave output
 
         // Test case 4: Select triangle wave
         #20 wav_sel = 2'b11;
-        #100; // Wait for a few cycles to observe triangle wave output
+        #1000000; // Wait for a few cycles to observe triangle wave output
 
         // Test case 5: Test invalid selection
         #20 wav_sel = 2'bxx; // Invalid case to observe the default behavior
-        #100;
+        #1000000;
 
         // End simulation
         $stop;
