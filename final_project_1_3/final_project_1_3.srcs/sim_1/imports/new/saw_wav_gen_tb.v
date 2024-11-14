@@ -48,13 +48,13 @@ module saw_wav_gen_tb;
         #20 reset = 0; // Release reset
 
         // Set frequency and monitor outputs for a fixed duration
-        freq = 32'd131; // Set frequency to C3
+        freq = 32'd5000; // Set frequency to C3
         #500000; // Wait for 5 ms
-        freq = 32'd262; // Change frequency to C4
+        freq = 32'd2500; // Change frequency to C4
         #500000; // Wait for 5 ms
-        freq = 32'd523; // Change frequency to C5
+        freq = 32'd1500; // Change frequency to C5
         #500000; // Wait for 5 ms
-        freq = 32'd1047; // Change frequency to C6
+        freq = 32'd1000; // Change frequency to C6
         #500000; // Wait for 5 ms
         freq = 32'd440; // Change frequency to A4
         #500000; // Wait for 5 ms

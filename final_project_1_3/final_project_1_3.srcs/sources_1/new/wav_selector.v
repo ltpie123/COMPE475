@@ -21,6 +21,7 @@
 
 module wav_selector(
     input wire clk,
+    input wire reset,
     input wire [1:0] wav_sel,
     input wire [31:0] freq,
     output reg [7:0] wav_out
@@ -35,7 +36,7 @@ module wav_selector(
     // Instantiate the wave generators, connecting their outputs to the intermediate signals
     sqr_wav_gen sqr_wav_inst (
         .clk(clk),
-        .reset(reset), // Note: Ensure reset is defined somewhere
+        .reset(reset), 
         .freq(freq),
         .wav_out(sqr_wav_out)
     );

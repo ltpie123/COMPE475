@@ -1,0 +1,25 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../final_project_1_3.srcs/sources_1/new/saw_wav_gen.v" \
+"../../../../final_project_1_3.srcs/sources_1/new/wav_selector.v" \
+"../../../../final_project_1_3.srcs/sources_1/new/sin_wav_gen.v" \
+"../../../../final_project_1_3.srcs/sources_1/new/midi_to_freq.v" \
+"../../../../final_project_1_3.srcs/sources_1/new/synth.v" \
+"../../../../final_project_1_3.srcs/sources_1/new/sqr_wav_gen.v" \
+"../../../../final_project_1_3.srcs/sources_1/new/tri_wav_gen.v" \
+"../../../../final_project_1_3.srcs/sources_1/new/top.v" \
+"../../../../final_project_1_3.srcs/sources_1/new/clk_div.v" \
+"../../../../final_project_1_3.srcs/sources_1/new/note_sel.v" \
+"../../../../final_project_1_3.srcs/sim_1/new/tb.v" \
+"../../../../final_project_1_3.srcs/sim_1/new/sqr_wav_gen_tb.v" \
+"../../../../final_project_1_3.srcs/sim_1/imports/new/saw_wav_gen_tb.v" \
+"../../../../final_project_1_3.srcs/sim_1/new/sin_wav_gen_tb.v" \
+"../../../../final_project_1_3.srcs/sim_1/new/tri_wav_gen_tb.v" \
+"../../../../final_project_1_3.srcs/sim_1/new/synth_tb.v" \
+"../../../../final_project_1_3.srcs/sim_1/new/wav_selector_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
