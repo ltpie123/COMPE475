@@ -25,32 +25,27 @@ module saw_wav_gen (
     input wire [31:0] freq,
     output reg [7:0] wav_out
 );
-
-    reg [31:0] counter;  // Counter for generating the sawtooth
-    reg [31:0] max_count; // Maximum count value based on frequency
-
+    reg [31:0] phase_accumulator;
+    reg [31:0] phase_increment;
+    
+    // Calculate phase increment using 64-bit arithmetic
+    wire [63:0] phase_inc_calc;
+    assign phase_inc_calc = ((freq * 64'h100000000) / 100_000_000);
+    
     always @(posedge clk) begin
         if (reset) begin
-            counter <= 0;
+            phase_accumulator <= 0;
+            phase_increment <= 0;
             wav_out <= 0;
-            max_count <= 0;
         end else begin
-            // Calculate max_count based on the frequency (assuming clk is 100 MHz)
-            if (freq > 0) begin
-                max_count <= (100_000_000 / freq) - 1; // Adjust for the clock frequency
-            end else begin
-                max_count <= 0; // Prevent division by zero if freq is zero
-            end
-
-            // Increment the counter
-            if (counter < max_count) begin
-                counter <= counter + 1;
-            end else begin
-                counter <= 0; // Reset counter for the next cycle
-            end
+            // Update phase increment (registered to prevent glitches)
+            phase_increment <= phase_inc_calc[31:0];
             
-            // Scale counter value to 8 bits for output
-            wav_out <= (counter * 255) / max_count; 
+            // Update phase accumulator
+            phase_accumulator <= phase_accumulator + phase_increment;
+            
+            // Use upper 8 bits of phase accumulator for output
+            wav_out <= phase_accumulator[31:24];
         end
     end
 

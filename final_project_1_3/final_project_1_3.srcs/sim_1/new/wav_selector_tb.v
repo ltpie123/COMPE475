@@ -30,6 +30,7 @@ module wav_selector_tb;
     // Instantiate the Unit Under Test (UUT)
     wav_selector uut (
         .clk(clk),
+        .reset(reset),
         .wav_sel(wav_sel),
         .freq(freq),
         .wav_out(wav_out)
@@ -43,7 +44,7 @@ module wav_selector_tb;
         clk = 0;
         reset = 1;       // Reset signal is high initially
         wav_sel = 2'b00; // Start with square wave selection
-        freq = 32'd440; // Example frequency (5000 Hz)
+        freq = 32'd5000; // Example frequency (5000 Hz)
 
         // Apply reset
         #1000 reset = 0;   // Release reset after 10 ns

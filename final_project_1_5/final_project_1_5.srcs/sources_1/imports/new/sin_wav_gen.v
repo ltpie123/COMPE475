@@ -26,18 +26,23 @@ module sin_wav_gen (
     input wire [31:0] freq,
     output reg [7:0] wav_out
 );
-
-    reg [31:0] phase_accumulator;     // Phase accumulator
-    reg [31:0] phase_increment;       // Phase increment per clock cycle
-    parameter integer TABLE_SIZE = 256; // Size of the sine lookup table
-    reg [7:0] sine_table [0:TABLE_SIZE-1]; // Sine lookup table
-
-    integer i;
+    reg [31:0] phase_accumulator;     
+    reg [31:0] phase_increment;       
+    parameter integer TABLE_SIZE = 256;
+    reg [7:0] sine_table [0:TABLE_SIZE-1];
+    
+    // Calculate phase increment based on 100 MHz clock
+    // phase_increment = (freq * 2^32) / clock_frequency
+    // This gives us proper frequency scaling with 32-bit fixed-point math
+    wire [63:0] phase_inc_calc;
+    assign phase_inc_calc = ((freq * 64'd4294967296) / 100_000_000);
     
     // Initialize sine wave lookup table
+    integer i;
     initial begin
         for (i = 0; i < TABLE_SIZE; i = i + 1) begin
-            sine_table[i] = $signed($rtoi($sin(2 * 3.14159 * i / TABLE_SIZE) * 127 + 128));
+            // Generate sine values between 0 and 255
+            sine_table[i] = $rtoi($sin(2.0 * 3.14159 * i / TABLE_SIZE) * 127.0 + 128.0);
         end
     end
 
@@ -45,29 +50,26 @@ module sin_wav_gen (
         if (reset) begin
             phase_accumulator <= 0;
             phase_increment <= 0;
-            wav_out <= 8'h7f; // Middle value of the sine wave (0.5)
+            wav_out <= 8'h80; // Middle value (128)
         end else begin
-            // Calculate the phase increment based on the frequency
-            // phase_increment = (freq * TABLE_SIZE) / Sample_Rate
-            // Assuming Sample_Rate is set to 1 MHz (1,000,000 Hz)
-            phase_increment <= (freq * TABLE_SIZE) / 1000000; // Ensure this calculation is correct
-
-            // Update the phase accumulator
+            // Update phase increment
+            phase_increment <= phase_inc_calc[31:0];
+            
+            // Update phase accumulator
             phase_accumulator <= phase_accumulator + phase_increment;
-
-            // Wrap around the phase accumulator to fit within the table size
-            // Use modulo operation correctly
-            if (phase_accumulator >= TABLE_SIZE) begin
-                phase_accumulator = phase_accumulator % TABLE_SIZE;
-            end
-
-            // Output the current sine value
-            wav_out <= sine_table[phase_accumulator];
-
-            // Debugging output
-            $display("Time: %0t | Freq: %d | Phase Increment: %d | Phase Accumulator: %d | wav_out: %h", 
-                      $time, freq, phase_increment, phase_accumulator, wav_out);
+            
+            // Use the top 8 bits of the phase accumulator to index into the sine table
+            wav_out <= sine_table[phase_accumulator[31:24]];
         end
     end
+
+    // Synthesis translate_off
+    // Debug logic to verify frequency
+    real current_freq;
+    always @(phase_increment) begin
+        current_freq = (phase_increment * 100_000_000.0) / 4294967296.0;
+        $display("Requested Freq: %0d Hz, Actual Freq: %0f Hz", freq, current_freq);
+    end
+    // Synthesis translate_on
 
 endmodule
