@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company:
-// Engineer:
+// Company: San Diego State University
+// Engineer: Elias Chokeir
 //
 // Create Date: 09/26/2024 03:59:46 PM
 // Design Name:
