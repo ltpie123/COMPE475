@@ -1,23 +1,23 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
+// Company:
+// Engineer:
+//
 // Create Date: 09/27/2024 11:46:18 AM
-// Design Name: 
+// Design Name:
 // Module Name: sin_wav_gen
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
+// Project Name:
+// Target Devices:
+// Tool Versions:
+// Description:
 //   A sine wave generator that produces an 8-bit sine output based on the input frequency.
-// 
-// Dependencies: 
-// 
+//
+// Dependencies:
+//
 // Revision:
 // Revision 0.01 - File created
 // Additional Comments:
-// 
+//
 //////////////////////////////////////////////////////////////////////////////////
 
 module sin_wav_gen (
@@ -33,7 +33,7 @@ module sin_wav_gen (
     reg [7:0] sine_table [0:TABLE_SIZE-1]; // Sine lookup table
 
     integer i;
-    
+
     // Initialize sine wave lookup table
     initial begin
         for (i = 0; i < TABLE_SIZE; i = i + 1) begin
@@ -65,7 +65,7 @@ module sin_wav_gen (
             wav_out <= sine_table[phase_accumulator];
 
             // Debugging output
-            $display("Time: %0t | Freq: %d | Phase Increment: %d | Phase Accumulator: %d | wav_out: %h", 
+            $display("Time: %0t | Freq: %d | Phase Increment: %d | Phase Accumulator: %d | wav_out: %h",
                       $time, freq, phase_increment, phase_accumulator, wav_out);
         end
     end
