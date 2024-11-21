@@ -1,35 +1,35 @@
     `timescale 1ns / 1ps
     //////////////////////////////////////////////////////////////////////////////////
-    // Company: 
-    // Engineer: 
-    // 
+    // Company:
+    // Engineer:
+    //
     // Create Date: 09/26/2024 07:36:44 PM
-    // Design Name: 
+    // Design Name:
     // Module Name: sqr_wav_gen
-    // Project Name: 
-    // Target Devices: 
-    // Tool Versions: 
-    // Description: 
-    // 
-    // Dependencies: 
-    // 
+    // Project Name:
+    // Target Devices:
+    // Tool Versions:
+    // Description:
+    //
+    // Dependencies:
+    //
     // Revision:
     // Revision 0.01 - File Created
     // Additional Comments:
-    // 
+    //
     //////////////////////////////////////////////////////////////////////////////////
-    
-    
+
+
     module sqr_wav_gen(
         input wire clk,
         input wire reset,
         input wire [31:0] freq,
         output reg [7:0] wav_out
     );
-    
+
     reg [31:0] counter;
     reg [31:0] max;
-    
+
     always @(posedge clk) begin
         if (reset) begin
             counter <= 0;
@@ -43,7 +43,7 @@
             end
         end
     end
-    
+
     // Combinational block to calculate max value
     // Improved max calculation
     always @(*) begin

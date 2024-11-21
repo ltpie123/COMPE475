@@ -1,22 +1,22 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
+// Company:
+// Engineer:
+//
 // Create Date: 09/26/2024 07:11:32 PM
-// Design Name: 
+// Design Name:
 // Module Name: midi_to_freq
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
+// Project Name:
+// Target Devices:
+// Tool Versions:
+// Description:
+//
+// Dependencies:
+//
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-// 
+//
 //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -24,7 +24,7 @@ module midi_to_freq(
     input wire [6:0] midi_in,
     output reg [31:0] freq_out
     );
-    
+
     initial begin
         freq_out = 32'd0;
     end
@@ -71,5 +71,5 @@ module midi_to_freq(
             default: freq_out = 32'd0;
         endcase
     end
-           
+
 endmodule
