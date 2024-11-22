@@ -20,61 +20,104 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module synth(
+module synth #(
+    parameter NUM_VOICES = 8
+)(
     input wire clk,
     input wire reset,
-    input wire [6:0] midi_in,
+    input wire [6:0] midi_note,
+    input wire note_on,
+    input wire note_valid,
     input wire [1:0] wav_sel,
+
+    // ADSR controls
+    input wire [15:0] attack_time,
+    input wire [15:0] decay_time,
+    input wire [7:0] sustain_level,
+    input wire [15:0] release_time,
+
     output wire [7:0] wav_out
-    );
+);
 
-    wire [31:0] freq;
+    // Voice manager signals
+    wire [NUM_VOICES-1:0] voice_active;
+    wire [6:0] voice_notes [0:NUM_VOICES-1];
+    wire [NUM_VOICES-1:0] voice_trigger;
+    wire [3:0] active_voice_count;
 
-    midi_to_freq midi_freq_inst (
-        .midi_in(midi_in),
-        .freq_out(freq)
-    );
+    // Per-voice frequency signals
+    wire [31:0] voice_freq [0:NUM_VOICES-1];
 
-    wire [7:0] sqr_wav_out, sin_wav_out, saw_wav_out, tri_wav_out;
+    // Per-voice wave generator outputs
+    wire [7:0] voice_raw [0:NUM_VOICES-1];
 
-    //instantiate waveform generators
-    sqr_wav_gen sqr_wav_gen_inst(
+    // Per-voice envelope outputs
+    wire [7:0] voice_envelope [0:NUM_VOICES-1];
+
+    // Voice manager instance
+    voice_manager #(
+        .NUM_VOICES(NUM_VOICES)
+    ) voice_manager_inst (
         .clk(clk),
-        .freq(freq),
-        .wav_out(sqr_wav_out)
+        .reset(reset),
+        .midi_note(midi_note),
+        .note_on(note_on),
+        .note_valid(note_valid),
+        .voice_active(voice_active),
+        .voice_notes(voice_notes),
+        .voice_trigger(voice_trigger),
+        .active_voice_count(active_voice_count)
     );
 
-    sin_wav_gen sin_wav_gen_inst(
+    // Generate per-voice frequencies
+    genvar v;
+    generate
+        for (v = 0; v < NUM_VOICES; v = v + 1) begin : voice_freq_gen
+            midi_to_freq midi_freq_inst (
+                .midi_in(voice_notes[v]),
+                .freq_out(voice_freq[v])
+            );
+        end
+    endgenerate
+
+    // Generate waveforms for each voice
+    generate
+        for (v = 0; v < NUM_VOICES; v = v + 1) begin : voice_wav_gen
+            wav_selector wav_sel_inst (
+                .clk(clk),
+                .reset(reset),
+                .wav_sel(wav_sel),
+                .freq(voice_freq[v]),
+                .wav_out(voice_raw[v])
+            );
+        end
+    endgenerate
+
+    // ADSR envelope generator
+    adsr_envelope #(
+        .NUM_VOICES(NUM_VOICES)
+    ) adsr_inst (
         .clk(clk),
-        .freq(freq),
-        .wav_out(sin_wav_out)
+        .reset(reset),
+        .voice_trigger(voice_trigger),
+        .voice_active(voice_active),
+        .attack_time(attack_time),
+        .decay_time(decay_time),
+        .sustain_level(sustain_level),
+        .release_time(release_time),
+        .voice_in(voice_raw),
+        .voice_out(voice_envelope)
     );
 
-    saw_wav_gen saw_wav_gen_inst(
+    // Voice mixer
+    voice_mixer #(
+        .NUM_VOICES(NUM_VOICES)
+    ) mixer_inst (
         .clk(clk),
-        .freq(freq),
-        .wav_out(saw_wav_out)
+        .reset(reset),
+        .voice_in(voice_envelope),
+        .voice_active(voice_active),
+        .mix_out(wav_out)
     );
-
-    tri_wav_gen tri_wav_gen_inst(
-        .clk(clk),
-        .freq(freq),
-        .wav_out(tri_wav_out)
-    );
-
-    //waveform selection logic
-    reg [7:0] wav_out_reg;
-
-    always @(*) begin
-        case (wav_sel)
-            2'b00: wav_out_reg = sqr_wav_out;
-            2'b01: wav_out_reg = sin_wav_out;
-            2'b10: wav_out_reg = saw_wav_out;
-            2'b11: wav_out_reg = tri_wav_out;
-            default: wav_out_reg = 8'd0;
-        endcase
-    end
-
-    assign wav_out = wav_out_reg;
 
 endmodule
