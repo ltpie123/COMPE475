@@ -24,28 +24,27 @@ module wav_selector(
     input wire reset,
     input wire [1:0] wav_sel,
     input wire [31:0] freq,
-    input wire voice_active,     // New signal, but won't connect to wave gens yet
-    input wire voice_trigger,    // New signal, but won't connect to wave gens yet
+    input wire voice_active,     
+    input wire voice_trigger,    
+    // Add ADSR parameters
+    input wire [15:0] attack_time,
+    input wire [15:0] decay_time,
+    input wire [7:0] sustain_level,
+    input wire [15:0] release_time,
     output reg [7:0] wav_out
 );
-    // Create intermediate signals for each wave generator's output
+    // Your existing signals
     wire [7:0] sqr_wav_out;
     wire [7:0] sin_wav_out;
     wire [7:0] saw_wav_out;
     wire [7:0] tri_wav_out;
-
-    // Registered wave select to prevent glitches
     reg [1:0] wav_sel_reg;
+    
+    // ADSR signals adjusted for single voice
+    wire [7:0] voice_out;
+    reg [7:0] selected_wave;
 
-    // Register the wave select input
-    always @(posedge clk or posedge reset) begin
-        if (reset)
-            wav_sel_reg <= 2'b00;
-        else
-            wav_sel_reg <= wav_sel;
-    end
-
-    // Instantiate the wave generators (without enable/trigger for now)
+    // Keep your existing wave generator instantiations
     sqr_wav_gen sqr_wav_inst (
         .clk(clk),
         .reset(reset),
@@ -74,12 +73,34 @@ module wav_selector(
         .wav_out(tri_wav_out)
     );
 
-    // First stage: Combinational wave selection
-    reg [7:0] selected_wave;
+    // Add ADSR envelope generator (configured for single voice)
+    adsr_envelope #(
+        .NUM_VOICES(1)
+    ) adsr_inst (
+        .clk(clk),
+        .reset(reset),
+        .voice_trigger(voice_trigger),      // Single bit
+        .voice_active(voice_active),        // Single bit
+        .attack_time(attack_time),
+        .decay_time(decay_time),
+        .sustain_level(sustain_level),
+        .release_time(release_time),
+        .voice_in(selected_wave),           // Single 8-bit input
+        .voice_out(voice_out)              // Single 8-bit output
+    );
 
+    // Wave selection logic
+    always @(posedge clk or posedge reset) begin
+        if (reset)
+            wav_sel_reg <= 2'b00;
+        else
+            wav_sel_reg <= wav_sel;
+    end
+
+    // Wave selection mux
     always @(*) begin
         if (!voice_active) begin
-            selected_wave = 8'h80;  // Center value when voice not active
+            selected_wave = 8'h80;
         end else begin
             case (wav_sel_reg)
                 2'b00: selected_wave = saw_wav_out;
@@ -91,12 +112,12 @@ module wav_selector(
         end
     end
 
-    // Second stage: Register the output
+    // Final output stage - use ADSR output directly
     always @(posedge clk or posedge reset) begin
         if (reset)
             wav_out <= 8'h80;
         else
-            wav_out <= selected_wave;
+            wav_out <= voice_out;
     end
 
 endmodule

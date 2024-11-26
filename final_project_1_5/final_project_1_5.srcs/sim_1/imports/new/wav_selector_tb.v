@@ -19,70 +19,105 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-`timescale 1ns / 1ps
+module wav_selector(
+    input wire clk,
+    input wire reset,
+    input wire [1:0] wav_sel,
+    input wire [31:0] freq,
+    input wire voice_active,     
+    input wire voice_trigger,    
+    // Add ADSR parameters
+    input wire [15:0] attack_time,
+    input wire [15:0] decay_time,
+    input wire [7:0] sustain_level,
+    input wire [15:0] release_time,
+    output reg [7:0] wav_out
+);
+    // Your existing signals
+    wire [7:0] sqr_wav_out;
+    wire [7:0] sin_wav_out;
+    wire [7:0] saw_wav_out;
+    wire [7:0] tri_wav_out;
+    reg [1:0] wav_sel_reg;
+    
+    // ADSR signals adjusted for single voice
+    wire [7:0] voice_out;
+    reg [7:0] selected_wave;
 
-module wav_selector_tb;
-    reg clk;
-    reg reset;
-    reg [1:0] wav_sel;
-    reg [31:0] freq;
-    reg voice_active;
-    reg voice_trigger;
-    wire [7:0] wav_out;
-
-    // Instantiate the Unit Under Test (UUT)
-    wav_selector uut (
+    // Keep your existing wave generator instantiations
+    sqr_wav_gen sqr_wav_inst (
         .clk(clk),
         .reset(reset),
-        .wav_sel(wav_sel),
         .freq(freq),
-        .voice_active(voice_active),
-        .voice_trigger(voice_trigger),
-        .wav_out(wav_out)
+        .wav_out(sqr_wav_out)
     );
 
-    // Clock generation
-    always #5 clk = ~clk; // 100 MHz clock (period = 10 ns)
+    sin_wav_gen sin_wav_inst (
+        .clk(clk),
+        .reset(reset),
+        .freq(freq),
+        .wav_out(sin_wav_out)
+    );
 
-    initial begin
-        // Initialize inputs
-        clk = 0;
-        reset = 1;
-        wav_sel = 2'b00;
-        freq = 32'd5000;
-        voice_active = 0;
-        voice_trigger = 0;
+    saw_wav_gen saw_wav_inst (
+        .clk(clk),
+        .reset(reset),
+        .freq(freq),
+        .wav_out(saw_wav_out)
+    );
 
-        // Apply reset
-        #1000 reset = 0;
-        voice_active = 1;  // Enable voice after reset
+    tri_wav_gen tri_wav_inst (
+        .clk(clk),
+        .reset(reset),
+        .freq(freq),
+        .wav_out(tri_wav_out)
+    );
 
-        // Test case 1: Sawtooth wave (00)
-        #20 wav_sel = 2'b00;
-        #1000000;
+    // Add ADSR envelope generator (configured for single voice)
+    adsr_envelope #(
+        .NUM_VOICES(1)
+    ) adsr_inst (
+        .clk(clk),
+        .reset(reset),
+        .voice_trigger(voice_trigger),      // Single bit
+        .voice_active(voice_active),        // Single bit
+        .attack_time(attack_time),
+        .decay_time(decay_time),
+        .sustain_level(sustain_level),
+        .release_time(release_time),
+        .voice_in(selected_wave),           // Single 8-bit input
+        .voice_out(voice_out)              // Single 8-bit output
+    );
 
-        // Test case 2: Square wave (01)
-        #20 wav_sel = 2'b01;
-        #1000000;
+    // Wave selection logic
+    always @(posedge clk or posedge reset) begin
+        if (reset)
+            wav_sel_reg <= 2'b00;
+        else
+            wav_sel_reg <= wav_sel;
+    end
 
-        // Test case 3: Triangle wave (10)
-        #20 wav_sel = 2'b10;
-        #1000000;
+    // Wave selection mux
+    always @(*) begin
+        if (!voice_active) begin
+            selected_wave = 8'h80;
+        end else begin
+            case (wav_sel_reg)
+                2'b00: selected_wave = saw_wav_out;
+                2'b01: selected_wave = sqr_wav_out;
+                2'b10: selected_wave = tri_wav_out;
+                2'b11: selected_wave = sin_wav_out;
+                default: selected_wave = 8'h80;
+            endcase
+        end
+    end
 
-        // Test case 4: Sine wave (11)
-        #20 wav_sel = 2'b11;
-        #1000000;
-
-        // Test voice_active behavior
-        #20 voice_active = 0;
-        #1000000;
-
-        // Re-enable and test different frequency
-        #20 voice_active = 1;
-        freq = 32'd10000; // Change to 10kHz
-        #1000000;
-
-        $stop;
+    // Final output stage - use ADSR output directly
+    always @(posedge clk or posedge reset) begin
+        if (reset)
+            wav_out <= 8'h80;
+        else
+            wav_out <= voice_out;
     end
 
 endmodule
