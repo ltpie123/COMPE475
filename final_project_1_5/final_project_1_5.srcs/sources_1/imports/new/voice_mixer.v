@@ -20,13 +20,14 @@ module voice_mixer #(
 )(
     input wire clk,
     input wire reset,
-    input wire [7:0] voice_in [0:NUM_VOICES-1],
+    input wire [(NUM_VOICES*8)-1:0] voice_in,   // Packed array format
     input wire [NUM_VOICES-1:0] voice_active,
     output reg [7:0] mix_out
 );
 
     // Calculate sum with extra bits to prevent overflow
     reg [10:0] sum;  // 3 extra bits for up to 8 voices
+    reg [7:0] current_voice;  // Temporary register for extracting voice data
     integer i;
 
     always @(posedge clk or posedge reset) begin
@@ -38,8 +39,10 @@ module voice_mixer #(
             // Sum active voices
             sum <= 0;
             for (i = 0; i < NUM_VOICES; i = i + 1) begin
-                if (voice_active[i])
-                    sum <= sum + voice_in[i];
+                if (voice_active[i]) begin
+                    current_voice = voice_in[i*8 +: 8];  // Extract current voice data
+                    sum <= sum + current_voice;
+                end
             end
 
             // Scale output based on number of active voices

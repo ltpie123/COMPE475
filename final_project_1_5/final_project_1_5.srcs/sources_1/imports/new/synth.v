@@ -20,6 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
+// synth.v
 module synth #(
     parameter NUM_VOICES = 8
 )(
@@ -41,18 +42,18 @@ module synth #(
 
     // Voice manager signals
     wire [NUM_VOICES-1:0] voice_active;
-    wire [6:0] voice_notes [0:NUM_VOICES-1];
+    wire [(NUM_VOICES*7)-1:0] voice_notes;
     wire [NUM_VOICES-1:0] voice_trigger;
     wire [3:0] active_voice_count;
 
     // Per-voice frequency signals
-    wire [31:0] voice_freq [0:NUM_VOICES-1];
+    wire [(NUM_VOICES*32)-1:0] voice_freq;
 
     // Per-voice wave generator outputs
-    wire [7:0] voice_raw [0:NUM_VOICES-1];
+    wire [(NUM_VOICES*8)-1:0] voice_raw;
 
     // Per-voice envelope outputs
-    wire [7:0] voice_envelope [0:NUM_VOICES-1];
+    wire [(NUM_VOICES*8)-1:0] voice_envelope;
 
     // Voice manager instance
     voice_manager #(
@@ -74,8 +75,8 @@ module synth #(
     generate
         for (v = 0; v < NUM_VOICES; v = v + 1) begin : voice_freq_gen
             midi_to_freq midi_freq_inst (
-                .midi_in(voice_notes[v]),
-                .freq_out(voice_freq[v])
+                .midi_in(voice_notes[v*7 +: 7]),
+                .freq_out(voice_freq[v*32 +: 32])
             );
         end
     endgenerate
@@ -87,8 +88,10 @@ module synth #(
                 .clk(clk),
                 .reset(reset),
                 .wav_sel(wav_sel),
-                .freq(voice_freq[v]),
-                .wav_out(voice_raw[v])
+                .freq(voice_freq[v*32 +: 32]),
+                .voice_active(voice_active[v]),
+                .voice_trigger(voice_trigger[v]),
+                .wav_out(voice_raw[v*8 +: 8])
             );
         end
     endgenerate

@@ -49,25 +49,19 @@
 module adsr_envelope #(
     parameter NUM_VOICES = 8
 )(
-    input wire clk,                     // System clock (100MHz)
-    input wire reset,                   // Active high reset
-
-    // Voice control inputs
-    input wire [NUM_VOICES-1:0] voice_trigger,    // Voice start triggers
-    input wire [NUM_VOICES-1:0] voice_active,     // Voice active flags
-
-    // ADSR parameters (in milliseconds, converted to clock cycles)
-    input wire [15:0] attack_time,     // 0-65535ms
-    input wire [15:0] decay_time,      // 0-65535ms
-    input wire [7:0] sustain_level,    // 0-255 (8-bit resolution)
-    input wire [15:0] release_time,    // 0-65535ms
-
-    // Per-voice audio inputs/outputs
-    input wire [7:0] voice_in [0:NUM_VOICES-1],    // Input waveforms
-    output reg [7:0] voice_out [0:NUM_VOICES-1]    // Envelope-modulated outputs
+    input wire clk,                     
+    input wire reset,                   
+    input wire [NUM_VOICES-1:0] voice_trigger,    
+    input wire [NUM_VOICES-1:0] voice_active,     
+    input wire [15:0] attack_time,     
+    input wire [15:0] decay_time,      
+    input wire [7:0] sustain_level,    
+    input wire [15:0] release_time,    
+    input wire [(NUM_VOICES*8)-1:0] voice_in,    
+    output reg [(NUM_VOICES*8)-1:0] voice_out    
 );
 
-    // State definitions
+    // State definitions and other parameters remain the same
     localparam IDLE = 3'd0;
     localparam ATTACK = 3'd1;
     localparam DECAY = 3'd2;
@@ -79,31 +73,29 @@ module adsr_envelope #(
     reg [31:0] voice_counter [0:NUM_VOICES-1];
     reg [7:0] voice_envelope [0:NUM_VOICES-1];
 
-    // Clock cycles per millisecond (for 100MHz clock)
+    // Clock cycles and rates calculations remain the same
     localparam CYCLES_PER_MS = 100_000;
-
-    // Calculate time values in clock cycles
     wire [31:0] attack_cycles = attack_time * CYCLES_PER_MS;
     wire [31:0] decay_cycles = decay_time * CYCLES_PER_MS;
     wire [31:0] release_cycles = release_time * CYCLES_PER_MS;
-
-    // Calculate rates (in amplitude units per cycle)
     wire [31:0] attack_rate = (attack_cycles > 0) ? (32'd255 * CYCLES_PER_MS) / attack_cycles : 32'd255;
     wire [31:0] decay_rate = (decay_cycles > 0) ? ((255 - sustain_level) * CYCLES_PER_MS) / decay_cycles : 32'd255;
     wire [31:0] release_rate = (release_cycles > 0) ? (sustain_level * CYCLES_PER_MS) / release_cycles : 32'd255;
 
+    // New temporary variables for multiplication
+    reg [15:0] mult_result;
+    reg [7:0] current_voice_in;
     integer i;
 
     always @(posedge clk or posedge reset) begin
         if (reset) begin
+            voice_out <= 0;  // Reset entire output
             for (i = 0; i < NUM_VOICES; i = i + 1) begin
                 voice_state[i] <= IDLE;
                 voice_counter[i] <= 0;
                 voice_envelope[i] <= 8'd0;
-                voice_out[i] <= 8'd0;
             end
         end else begin
-            // Process each voice
             for (i = 0; i < NUM_VOICES; i = i + 1) begin
                 // Check for new note trigger
                 if (voice_trigger[i]) begin
@@ -111,7 +103,7 @@ module adsr_envelope #(
                     voice_counter[i] <= 0;
                 end
 
-                // State machine for each voice
+                // State machine remains the same
                 case (voice_state[i])
                     IDLE: begin
                         voice_envelope[i] <= 8'd0;
@@ -163,8 +155,10 @@ module adsr_envelope #(
                     end
                 endcase
 
-                // Apply envelope to voice waveform
-                voice_out[i] <= (voice_in[i] * voice_envelope[i]) >> 8;
+                // Modified envelope application using block assignments
+                current_voice_in = voice_in[i*8 +: 8];
+                mult_result = current_voice_in * voice_envelope[i];
+                voice_out[i*8 +: 8] <= mult_result >> 8;
             end
         end
     end

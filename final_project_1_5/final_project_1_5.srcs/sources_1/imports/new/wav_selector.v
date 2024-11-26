@@ -24,6 +24,8 @@ module wav_selector(
     input wire reset,
     input wire [1:0] wav_sel,
     input wire [31:0] freq,
+    input wire voice_active,     // New signal, but won't connect to wave gens yet
+    input wire voice_trigger,    // New signal, but won't connect to wave gens yet
     output reg [7:0] wav_out
 );
     // Create intermediate signals for each wave generator's output
@@ -43,7 +45,7 @@ module wav_selector(
             wav_sel_reg <= wav_sel;
     end
 
-    // Instantiate the wave generators
+    // Instantiate the wave generators (without enable/trigger for now)
     sqr_wav_gen sqr_wav_inst (
         .clk(clk),
         .reset(reset),
@@ -72,41 +74,29 @@ module wav_selector(
         .wav_out(tri_wav_out)
     );
 
-    // Two-stage wave selection process to prevent glitches
+    // First stage: Combinational wave selection
     reg [7:0] selected_wave;
 
-    // First stage: Combinational wave selection
     always @(*) begin
-        case (wav_sel_reg)
-            2'b00: selected_wave = sqr_wav_out;
-            2'b01: selected_wave = sin_wav_out;
-            2'b10: selected_wave = saw_wav_out;
-            2'b11: selected_wave = tri_wav_out;
-            default: selected_wave = 8'b0;
-        endcase
+        if (!voice_active) begin
+            selected_wave = 8'h80;  // Center value when voice not active
+        end else begin
+            case (wav_sel_reg)
+                2'b00: selected_wave = saw_wav_out;
+                2'b01: selected_wave = sqr_wav_out;
+                2'b10: selected_wave = tri_wav_out;
+                2'b11: selected_wave = sin_wav_out;
+                default: selected_wave = 8'h80;
+            endcase
+        end
     end
 
     // Second stage: Register the output
     always @(posedge clk or posedge reset) begin
         if (reset)
-            wav_out <= 8'b0;
+            wav_out <= 8'h80;
         else
             wav_out <= selected_wave;
     end
-
-    // Optional: Add debug assertions
-    // synthesis translate_off
-    always @(posedge clk) begin
-        if (!reset) begin
-            // Check for X's in wave select
-            if (^wav_sel === 1'bx)
-                $display("Warning: X detected in wav_sel at time %t", $time);
-
-            // Check for valid frequency
-            if (freq == 0)
-                $display("Warning: Zero frequency detected at time %t", $time);
-        end
-    end
-    // synthesis translate_on
 
 endmodule

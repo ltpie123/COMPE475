@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="synth_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="synth_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="118.600001 us"></ZoomEndTime>
+      <Cursor1Time time="244.420000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="199"></NameColumnWidth>
+      <ValueColumnWidth column_width="81"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/synth_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/synth_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/synth_tb/midi_note" type="array">
+      <obj_property name="ElementShortName">midi_note[6:0]</obj_property>
+      <obj_property name="ObjectShortName">midi_note[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/synth_tb/note_on" type="logic">
+      <obj_property name="ElementShortName">note_on</obj_property>
+      <obj_property name="ObjectShortName">note_on</obj_property>
+   </wvobject>
+   <wvobject fp_name="/synth_tb/note_valid" type="logic">
+      <obj_property name="ElementShortName">note_valid</obj_property>
+      <obj_property name="ObjectShortName">note_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/synth_tb/wav_sel" type="array">
+      <obj_property name="ElementShortName">wav_sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">wav_sel[1:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/synth_tb/attack_time" type="array">
+      <obj_property name="ElementShortName">attack_time[15:0]</obj_property>
+      <obj_property name="ObjectShortName">attack_time[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/synth_tb/decay_time" type="array">
+      <obj_property name="ElementShortName">decay_time[15:0]</obj_property>
+      <obj_property name="ObjectShortName">decay_time[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/synth_tb/sustain_level" type="array">
+      <obj_property name="ElementShortName">sustain_level[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sustain_level[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/synth_tb/release_time" type="array">
+      <obj_property name="ElementShortName">release_time[15:0]</obj_property>
+      <obj_property name="ObjectShortName">release_time[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/synth_tb/wav_out" type="array">
+      <obj_property name="ElementShortName">wav_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wav_out[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/synth_tb/uut/\voice_freq_gen[4].midi_freq_inst /freq_out" type="array">
+      <obj_property name="ElementShortName">freq_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">freq_out[31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>

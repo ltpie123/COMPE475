@@ -27,57 +27,68 @@ module voice_manager #(
 )(
     input wire clk,
     input wire reset,
-
-    // MIDI input interface
     input wire [6:0] midi_note,
     input wire note_on,
     input wire note_valid,
-
-    // Voice allocation outputs
     output reg [NUM_VOICES-1:0] voice_active,
-    output reg [6:0] voice_notes [0:NUM_VOICES-1],
-    output reg [NUM_VOICES-1:0] voice_trigger, // Triggers envelope generators
-
-    // Debug outputs
+    output reg [(NUM_VOICES*7)-1:0] voice_notes,
+    output reg [NUM_VOICES-1:0] voice_trigger,
     output reg [3:0] active_voice_count
 );
 
-    // Voice tracking
-    reg [6:0] voice_allocation [0:NUM_VOICES-1];  // Which note each voice is playing
-    reg [7:0] voice_age [0:NUM_VOICES-1];        // Age counter for voice stealing
-
+    // All declarations at module level
+    reg [(NUM_VOICES*7)-1:0] voice_allocation;
+    reg [(NUM_VOICES*8)-1:0] voice_age;
     integer i;
+    reg [3:0] allocated_voice;
+    reg found_free;
+    reg [7:0] max_age;
+    reg [7:0] current_age;
+    reg [3:0] voice_index;
 
-    // Find oldest voice for voice stealing
-    function [3:0] find_oldest_voice;
-        input [NUM_VOICES-1:0] active_voices;
-        input [7:0] ages [0:NUM_VOICES-1];
-        reg [7:0] max_age;
-        reg [3:0] oldest_voice;
+    // Helper functions
+    function [7:0] get_age;
+        input [(NUM_VOICES*8)-1:0] ages;
+        input integer index;
         begin
-            max_age = 0;
-            oldest_voice = 0;
-            for (i = 0; i < NUM_VOICES; i = i + 1) begin
-                if (active_voices[i] && ages[i] > max_age) begin
-                    max_age = ages[i];
-                    oldest_voice = i;
-                end
-            end
-            find_oldest_voice = oldest_voice;
+            get_age = ages[index*8 +: 8];
         end
     endfunction
 
-    // Find free voice or steal one if needed
+    function [(NUM_VOICES*8)-1:0] set_age;
+        input [(NUM_VOICES*8)-1:0] ages;
+        input integer index;
+        input [7:0] value;
+        begin
+            set_age = ages;
+            set_age[index*8 +: 8] = value;
+        end
+    endfunction
+
+    function [3:0] find_oldest_voice;
+        input [NUM_VOICES-1:0] active_voices;
+        input [(NUM_VOICES*8)-1:0] ages;
+        begin
+            max_age = 0;
+            voice_index = 0;
+            for (i = 0; i < NUM_VOICES; i = i + 1) begin
+                current_age = get_age(ages, i);
+                if (active_voices[i] && current_age > max_age) begin
+                    max_age = current_age;
+                    voice_index = i;
+                end
+            end
+            find_oldest_voice = voice_index;
+        end
+    endfunction
+
     function [3:0] allocate_voice;
         input [NUM_VOICES-1:0] active_voices;
-        input [7:0] ages [0:NUM_VOICES-1];
-        reg found_free;
-        reg [3:0] voice_index;
+        input [(NUM_VOICES*8)-1:0] ages;
         begin
             found_free = 0;
             voice_index = 0;
 
-            // First try to find an inactive voice
             for (i = 0; i < NUM_VOICES; i = i + 1) begin
                 if (!active_voices[i] && !found_free) begin
                     found_free = 1;
@@ -85,7 +96,6 @@ module voice_manager #(
                 end
             end
 
-            // If no free voices, steal the oldest one
             if (!found_free) begin
                 voice_index = find_oldest_voice(active_voices, ages);
             end
@@ -94,51 +104,38 @@ module voice_manager #(
         end
     endfunction
 
-    // Voice allocation and management
     always @(posedge clk or posedge reset) begin
         if (reset) begin
             voice_active <= 0;
             voice_trigger <= 0;
             active_voice_count <= 0;
-            for (i = 0; i < NUM_VOICES; i = i + 1) begin
-                voice_notes[i] <= 0;
-                voice_allocation[i] <= 0;
-                voice_age[i] <= 0;
-            end
+            voice_notes <= 0;
+            voice_allocation <= 0;
+            voice_age <= 0;
         end
         else begin
-            // Clear trigger flags
             voice_trigger <= 0;
 
-            // Increment age counters for active voices
             for (i = 0; i < NUM_VOICES; i = i + 1) begin
                 if (voice_active[i])
-                    voice_age[i] <= voice_age[i] + 1;
+                    voice_age[i*8 +: 8] <= voice_age[i*8 +: 8] + 1;
             end
 
-            // Process new note events
             if (note_valid) begin
                 if (note_on) begin
-                    // Allocate a voice for the new note
-                    reg [3:0] allocated_voice;
                     allocated_voice = allocate_voice(voice_active, voice_age);
-
-                    // Activate the voice
                     voice_active[allocated_voice] <= 1;
-                    voice_notes[allocated_voice] <= midi_note;
-                    voice_allocation[allocated_voice] <= midi_note;
-                    voice_age[allocated_voice] <= 0;
+                    voice_notes[allocated_voice*7 +: 7] <= midi_note;
+                    voice_allocation[allocated_voice*7 +: 7] <= midi_note;
+                    voice_age[allocated_voice*8 +: 8] <= 0;
                     voice_trigger[allocated_voice] <= 1;
-
-                    // Update active voice count
                     active_voice_count <= active_voice_count + !voice_active[allocated_voice];
                 end
                 else begin
-                    // Find and deactivate voices playing this note
                     for (i = 0; i < NUM_VOICES; i = i + 1) begin
-                        if (voice_active[i] && voice_allocation[i] == midi_note) begin
+                        if (voice_active[i] && voice_allocation[i*7 +: 7] == midi_note) begin
                             voice_active[i] <= 0;
-                            voice_age[i] <= 0;
+                            voice_age[i*8 +: 8] <= 0;
                             active_voice_count <= active_voice_count - 1;
                         end
                     end
