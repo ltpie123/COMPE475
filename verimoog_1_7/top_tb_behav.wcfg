@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="10,000.600000 us"></ZoomEndTime>
+      <Cursor1Time time="536.038965 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="439"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="30" />
+   <wvobject fp_name="/top_tb/clk" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/reset" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/midi_in" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">midi_in[6:0]</obj_property>
+      <obj_property name="ObjectShortName">midi_in[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/note_on" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">note_on</obj_property>
+      <obj_property name="ObjectShortName">note_on</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/wav_sel" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">wav_sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">wav_sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/attack_time" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">attack_time[15:0]</obj_property>
+      <obj_property name="ObjectShortName">attack_time[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/decay_time" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">decay_time[15:0]</obj_property>
+      <obj_property name="ObjectShortName">decay_time[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/sustain_level" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">sustain_level[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sustain_level[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/release_time" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">release_time[15:0]</obj_property>
+      <obj_property name="ObjectShortName">release_time[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/pwm_audio_out" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">pwm_audio_out</obj_property>
+      <obj_property name="ObjectShortName">pwm_audio_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/voice_raw" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">voice_raw[7:0]</obj_property>
+      <obj_property name="ObjectShortName">voice_raw[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/voice_freq" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">voice_freq[31:0]</obj_property>
+      <obj_property name="ObjectShortName">voice_freq[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/wav_out" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">wav_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wav_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/pwm_audio_inst/audio_in" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">audio_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">audio_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/pwm_audio_inst/pwm_out" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">pwm_out</obj_property>
+      <obj_property name="ObjectShortName">pwm_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/wav_sel_inst/freq" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">freq[31:0]</obj_property>
+      <obj_property name="ObjectShortName">freq[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/wav_sel_inst/wav_sel" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">wav_sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">wav_sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/wav_sel_inst/voice_active" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">voice_active</obj_property>
+      <obj_property name="ObjectShortName">voice_active</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/wav_sel_inst/sqr_wav_inst/wav_out" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">wav_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wav_out[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/wav_sel_inst/sin_wav_inst/wav_out" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">wav_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wav_out[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/wav_sel_inst/saw_wav_inst/wav_out" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">wav_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wav_out[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/wav_sel_inst/tri_wav_inst/wav_out" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">wav_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wav_out[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/wav_sel_inst/voice_active" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">voice_active</obj_property>
+      <obj_property name="ObjectShortName">voice_active</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/wav_sel_inst/wav_out" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">wav_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wav_out[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/adsr_inst/voice_in" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">voice_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">voice_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/adsr_inst/voice_out" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">voice_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">voice_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/adsr_inst/state" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/adsr_inst/envelope" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">envelope[7:0]</obj_property>
+      <obj_property name="ObjectShortName">envelope[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/adsr_inst/voice_trigger" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">voice_trigger</obj_property>
+      <obj_property name="ObjectShortName">voice_trigger</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/uut/synth_inst/adsr_inst/voice_active" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">voice_active</obj_property>
+      <obj_property name="ObjectShortName">voice_active</obj_property>
+   </wvobject>
+</wave_config>

@@ -36,7 +36,6 @@
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-//    - CLKS_PER_BIT parameter must be adjusted if system clock is not 100MHz
 //    - Current implementation ignores MIDI velocity data
 //    - Only processes channel 1 MIDI messages
 //    - Does not handle MIDI Running Status
