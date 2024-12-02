@@ -26,16 +26,22 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module pwm_audio(
-    input wire clk,
+    input wire clk,              // 100MHz clock
     input wire reset,
-    input wire [7:0] audio_in,
-    output reg pwm_out
+    input wire [7:0] audio_in,   // 8-bit audio input
+    output reg pwm_out          // PWM output
 );
-    // Debug: Initially just pass through MSB of audio_in
+
+    reg [7:0] counter;
+    
     always @(posedge clk or posedge reset) begin
-        if (reset)
+        if (reset) begin
+            counter <= 8'd0;
             pwm_out <= 1'b0;
-        else
-            pwm_out <= audio_in[7];  // Just pass through MSB for debugging
+        end else begin
+            counter <= counter + 1'b1;
+            pwm_out <= (audio_in > counter);
+        end
     end
+
 endmodule
