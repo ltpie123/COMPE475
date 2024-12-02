@@ -70,11 +70,11 @@ module midi_input (
     parameter NOTE_OFF = 8'h80;
 
     // State variables
-    reg [2:0] state;
-    reg [2:0] next_state;
+    reg [2:0]  state;
+    reg [2:0]  next_state;
     reg [15:0] bit_counter;
-    reg [7:0] rx_data;
-    reg [3:0] bit_index;
+    reg [7:0]  rx_data;
+    reg [3:0]  bit_index;
 
     // MIDI message processing
     reg [7:0] status_byte;
