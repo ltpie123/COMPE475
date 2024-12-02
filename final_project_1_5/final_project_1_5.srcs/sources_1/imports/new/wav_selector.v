@@ -24,8 +24,8 @@ module wav_selector(
     input wire reset,
     input wire [1:0] wav_sel,
     input wire [31:0] freq,
-    input wire voice_active,     
-    input wire voice_trigger,    
+    input wire voice_active,
+    input wire voice_trigger,
     // Add ADSR parameters
     input wire [15:0] attack_time,
     input wire [15:0] decay_time,
@@ -39,7 +39,7 @@ module wav_selector(
     wire [7:0] saw_wav_out;
     wire [7:0] tri_wav_out;
     reg [1:0] wav_sel_reg;
-    
+
     // ADSR signals adjusted for single voice
     wire [7:0] voice_out;
     reg [7:0] selected_wave;
