@@ -1,0 +1,129 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)" "(v12_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/ivl/system.vpi";
+:vpi_module "/usr/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/ivl/va_math.vpi";
+S_0x559958d41500 .scope module, "saw_wav_gen_tb" "saw_wav_gen_tb" 2 23;
+ .timescale -9 -12;
+v0x559958d981c0_0 .var "clk", 0 0;
+v0x559958d98280_0 .var "freq", 31 0;
+v0x559958d98320_0 .var "reset", 0 0;
+v0x559958d983f0_0 .net "wav_out", 7 0, v0x559958d98060_0;  1 drivers
+S_0x559958d41690 .scope module, "uut" "saw_wav_gen" 2 31, 3 54 0, S_0x559958d41500;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 32 "freq";
+    .port_info 3 /OUTPUT 8 "wav_out";
+v0x559958d7e250_0 .net *"_ivl_0", 63 0, L_0x559958d984c0;  1 drivers
+L_0x7fb7a8634018 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x559958d977b0_0 .net *"_ivl_3", 31 0, L_0x7fb7a8634018;  1 drivers
+L_0x7fb7a8634060 .functor BUFT 1, C4<0000000000000000000000000000000100000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x559958d97890_0 .net/2u *"_ivl_4", 63 0, L_0x7fb7a8634060;  1 drivers
+v0x559958d97950_0 .net *"_ivl_7", 63 0, L_0x559958da8670;  1 drivers
+L_0x7fb7a86340a8 .functor BUFT 1, C4<0000000000000000000000000000000000000101111101011110000100000000>, C4<0>, C4<0>, C4<0>;
+v0x559958d97a30_0 .net/2u *"_ivl_8", 63 0, L_0x7fb7a86340a8;  1 drivers
+v0x559958d97b60_0 .net "clk", 0 0, v0x559958d981c0_0;  1 drivers
+v0x559958d97c20_0 .net "freq", 31 0, v0x559958d98280_0;  1 drivers
+v0x559958d97d00_0 .var "phase_accumulator", 31 0;
+v0x559958d97de0_0 .net "phase_inc_calc", 63 0, L_0x559958da87b0;  1 drivers
+v0x559958d97ec0_0 .var "phase_increment", 31 0;
+v0x559958d97fa0_0 .net "reset", 0 0, v0x559958d98320_0;  1 drivers
+v0x559958d98060_0 .var "wav_out", 7 0;
+E_0x559958d7fb00 .event posedge, v0x559958d97b60_0;
+L_0x559958d984c0 .concat [ 32 32 0 0], v0x559958d98280_0, L_0x7fb7a8634018;
+L_0x559958da8670 .arith/mult 64, L_0x559958d984c0, L_0x7fb7a8634060;
+L_0x559958da87b0 .arith/div 64, L_0x559958da8670, L_0x7fb7a86340a8;
+    .scope S_0x559958d41690;
+T_0 ;
+    %wait E_0x559958d7fb00;
+    %load/vec4 v0x559958d97fa0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0x559958d97d00_0, 0;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0x559958d97ec0_0, 0;
+    %pushi/vec4 0, 0, 8;
+    %assign/vec4 v0x559958d98060_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0x559958d97de0_0;
+    %parti/s 32, 0, 2;
+    %assign/vec4 v0x559958d97ec0_0, 0;
+    %load/vec4 v0x559958d97d00_0;
+    %load/vec4 v0x559958d97ec0_0;
+    %add;
+    %assign/vec4 v0x559958d97d00_0, 0;
+    %load/vec4 v0x559958d97d00_0;
+    %parti/s 8, 24, 6;
+    %assign/vec4 v0x559958d98060_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x559958d41500;
+T_1 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x559958d981c0_0, 0, 1;
+T_1.0 ;
+    %delay 5000, 0;
+    %load/vec4 v0x559958d981c0_0;
+    %inv;
+    %store/vec4 v0x559958d981c0_0, 0, 1;
+    %jmp T_1.0;
+    %end;
+    .thread T_1;
+    .scope S_0x559958d41500;
+T_2 ;
+    %vpi_call 2 47 "$dumpfile", "saw_wav_gen_tb.vcd" {0 0 0};
+    %vpi_call 2 48 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x559958d41500 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x559958d98320_0, 0, 1;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x559958d98280_0, 0, 32;
+    %delay 100000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x559958d98320_0, 0, 1;
+    %delay 100000, 0;
+    %vpi_call 2 61 "$display", "Testing Middle C (261.63 Hz)..." {0 0 0};
+    %pushi/vec4 262, 0, 32;
+    %store/vec4 v0x559958d98280_0, 0, 32;
+    %delay 10000000, 0;
+    %vpi_call 2 66 "$display", "Testing A4 (440 Hz)..." {0 0 0};
+    %pushi/vec4 440, 0, 32;
+    %store/vec4 v0x559958d98280_0, 0, 32;
+    %delay 10000000, 0;
+    %vpi_call 2 71 "$display", "Testing E4 (329.63 Hz)..." {0 0 0};
+    %pushi/vec4 330, 0, 32;
+    %store/vec4 v0x559958d98280_0, 0, 32;
+    %delay 10000000, 0;
+    %vpi_call 2 76 "$display", "Testing reset behavior..." {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x559958d98320_0, 0, 1;
+    %delay 100000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x559958d98320_0, 0, 1;
+    %delay 100000, 0;
+    %vpi_call 2 83 "$display", "Testing frequency change..." {0 0 0};
+    %pushi/vec4 523, 0, 32;
+    %store/vec4 v0x559958d98280_0, 0, 32;
+    %delay 10000000, 0;
+    %vpi_call 2 87 "$display", "Simulation complete" {0 0 0};
+    %vpi_call 2 88 "$finish" {0 0 0};
+    %end;
+    .thread T_2;
+    .scope S_0x559958d41500;
+T_3 ;
+    %vpi_call 2 93 "$monitor", "Time=%0t freq=%0d wav_out=%h", $time, v0x559958d98280_0, v0x559958d983f0_0 {0 0 0};
+    %end;
+    .thread T_3;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "verimoog_1_7/verimoog_1_7.srcs/sim_1/imports/new/saw_wav_gen_tb.v";
+    "verimoog_1_7/verimoog_1_7.srcs/sources_1/imports/new/saw_wav_gen.v";

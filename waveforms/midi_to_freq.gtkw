@@ -1,0 +1,15 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*]
+[*] Command Line: gtkwave
+[*]
+[dumpfile] "midi_to_freq_tb.vcd"
+[dumpfile_mtime] "1733203500"
+[dumpfile_size] 0
+[optimize_vcd]
+[savefile] "midi_to_freq.gtkw"
+[timestart] 0
+[size] 1920 1080
+[pos] -1 -1
+*-20.000000 40000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[signals_width] 350

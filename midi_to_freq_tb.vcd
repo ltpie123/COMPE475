@@ -1,0 +1,59 @@
+$date
+	Mon Dec  2 21:25:00 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module midi_to_freq_tb $end
+$var wire 32 ! freq_out [31:0] $end
+$var reg 7 " midi_in [6:0] $end
+$scope module uut $end
+$var wire 7 # midi_in [6:0] $end
+$var reg 32 $ freq_out [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b100000110 $
+b111100 #
+b111100 "
+b100000110 !
+$end
+#100000
+b110111000 !
+b110111000 $
+b1000101 "
+b1000101 #
+#200000
+b10000011 !
+b10000011 $
+b110000 "
+b110000 #
+#300000
+b1000001011 !
+b1000001011 $
+b1001000 "
+b1001000 #
+#400000
+b10010011 !
+b10010011 $
+b110010 "
+b110010 #
+#500000
+b1100111111 !
+b1100111111 $
+b1010000 "
+b1010000 #
+#600000
+b0 !
+b0 $
+b1111111 "
+b1111111 #
+#700000
