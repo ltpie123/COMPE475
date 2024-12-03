@@ -6,40 +6,58 @@
 // Create Date: 09/26/2024 09:15:00 PM
 // Design Name: MIDI Input Interface
 // Module Name: midi_input
-// Project Name: Synthesizer
+// Project Name: VeriMoog Synthesizer
 // Target Devices: Generic FPGA
 // Tool Versions:
 // Description:
 //    MIDI input interface that receives serial MIDI data and decodes MIDI messages.
-//    - Implements MIDI protocol with 31250 baud rate
-//    - Handles Note On (0x90) and Note Off (0x80) messages
-//    - Outputs 7-bit MIDI note number and note on/off status
-//    - Compatible with standard MIDI devices through UART interface
+//    Implements the standard MIDI protocol with:
+//    - 31250 baud rate (100MHz system clock)
+//    - 8 data bits, no parity, 1 stop bit
+//    - Note On (0x90) and Note Off (0x80) message support
+//
+// Key Features:
+//    - Real-time MIDI message decoding
+//    - Handles standard note messages
+//    - Outputs 7-bit MIDI note numbers with validity flag
+//    - Automatic note-off detection for zero velocity notes
+//
+// Signal Information:
+//    Inputs:
+//        clk         - 100MHz system clock
+//        reset       - Active high reset
+//        midi_rx     - Serial MIDI input line
+//    Outputs:
+//        midi_note   - 7-bit MIDI note number (0-127)
+//        note_on     - Note active status
+//        note_valid  - Note data valid strobe
+//
+// Timing:
+//    - MIDI baud rate: 31250 bps
+//    - Clock cycles per bit: 3200 (100MHz/31250)
+//    - Output updated on complete message receipt
+//
+// Message Format:
+//    Byte 1: Status (0x90 = Note On, 0x80 = Note Off)
+//    Byte 2: Note number (0-127)
+//    Byte 3: Velocity (0-127, 0 = Note Off)
+//
+// Implementation Notes:
+//    - Uses state machine for MIDI protocol parsing
+//    - Synchronous reset for all registers
+//    - No FIFO buffering (immediate processing)
+//    - Channel-agnostic (processes all MIDI channels)
 //
 // Dependencies: None
 //
-// Inputs:
-//    - clk: System clock (assumed 100MHz)
-//    - reset: Active high reset
-//    - midi_rx: Serial MIDI input signal
-//
-// Outputs:
-//    - midi_note[6:0]: MIDI note number (0-127)
-//    - note_on: High when note is active, low when note is off
-//    - note_valid: Pulses high for one clock cycle when new note data is valid
-//
-// Expected MIDI Message Format:
-//    Status Byte (1xxx xxxx) - Note On (0x90) or Note Off (0x80)
-//    Data Byte 1 (0xxx xxxx) - Note number (0-127)
-//    Data Byte 2 (0xxx xxxx) - Velocity (0-127, 0 velocity Note On = Note Off)
-//
-// Revision:
-// Revision 0.01 - File Created
+// Revision History:
+// Revision 0.01 - Initial design
 // Additional Comments:
-//    - Current implementation ignores MIDI velocity data
-//    - Only processes channel 1 MIDI messages
-//    - Does not handle MIDI Running Status
-//
+//    - Future enhancements could include:
+//      * MIDI channel filtering
+//      * Velocity sensitivity
+//      * Program change support
+//      * Control change handling
 //////////////////////////////////////////////////////////////////////////////////
 
 module midi_input (

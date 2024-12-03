@@ -19,62 +19,97 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-module wav_selector(
-    input wire clk,
-    input wire reset,
-    input wire [1:0] wav_sel,
-    input wire [31:0] freq,
-    input wire voice_active,     
-    output reg [7:0] wav_out
-);
-    // Wave generator outputs
-    wire [7:0] sqr_wav_out;
-    wire [7:0] sin_wav_out;
-    wire [7:0] saw_wav_out;
-    wire [7:0] tri_wav_out;
+module wav_selector_tb;
+    // Test bench signals
+    reg clk;
+    reg reset;
+    reg [1:0] wav_sel;
+    reg [31:0] freq;
+    reg voice_active;
+    wire [7:0] wav_out;
 
-    // Simple wave generators for testing
-    sqr_wav_gen sqr_wav_inst (
+    // Instantiate wave selector module
+    wav_selector uut (
         .clk(clk),
         .reset(reset),
+        .wav_sel(wav_sel),
         .freq(freq),
-        .wav_out(sqr_wav_out)
+        .voice_active(voice_active),
+        .wav_out(wav_out)
     );
 
-    sin_wav_gen sin_wav_inst (
-        .clk(clk),
-        .reset(reset),
-        .freq(freq),
-        .wav_out(sin_wav_out)
-    );
+    // Clock generation
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk; // 100MHz clock
+    end
 
-    saw_wav_gen saw_wav_inst (
-        .clk(clk),
-        .reset(reset),
-        .freq(freq),
-        .wav_out(saw_wav_out)
-    );
+    // Test stimulus
+    initial begin
+        // Initialize waveform dumps
+        $dumpfile("wav_selector_tb.vcd");
+        $dumpvars(0, wav_selector_tb);
+        
+        // Initialize signals
+        reset = 1;
+        wav_sel = 2'b00;
+        freq = 32'd440; // A4 note
+        voice_active = 0;
+        
+        // Release reset
+        #100;
+        reset = 0;
+        #100;
 
-    tri_wav_gen tri_wav_inst (
-        .clk(clk),
-        .reset(reset),
-        .freq(freq),
-        .wav_out(tri_wav_out)
-    );
+        // Test each waveform type with voice active
+        voice_active = 1;
+        
+        // Test sawtooth wave (00)
+        $display("Testing sawtooth wave...");
+        wav_sel = 2'b00;
+        #1000;
+        
+        // Test square wave (01)
+        $display("Testing square wave...");
+        wav_sel = 2'b01;
+        #1000;
+        
+        // Test triangle wave (10)
+        $display("Testing triangle wave...");
+        wav_sel = 2'b10;
+        #1000;
+        
+        // Test sine wave (11)
+        $display("Testing sine wave...");
+        wav_sel = 2'b11;
+        #1000;
 
-    // Super simple output selection - no intermediate registers
-    always @* begin
-        if (reset)
-            wav_out = 8'h80;
-        else if (!voice_active)
-            wav_out = 8'h80;
-        else case (wav_sel)
-            2'b00: wav_out = saw_wav_out;
-            2'b01: wav_out = sqr_wav_out;
-            2'b10: wav_out = tri_wav_out;
-            2'b11: wav_out = sin_wav_out;
-            default: wav_out = saw_wav_out;
-        endcase
+        // Test voice inactive behavior
+        $display("Testing voice inactive behavior...");
+        voice_active = 0;
+        #500;
+
+        // Test frequency change
+        $display("Testing frequency change...");
+        voice_active = 1;
+        freq = 32'd880; // A5 note
+        #1000;
+
+        // Test reset behavior
+        $display("Testing reset behavior...");
+        reset = 1;
+        #100;
+        reset = 0;
+        #100;
+
+        $display("Simulation complete");
+        $finish;
+    end
+
+    // Monitor changes
+    initial begin
+        $monitor("Time=%0t wav_sel=%b voice_active=%b wav_out=%h", 
+                 $time, wav_sel, voice_active, wav_out);
     end
 
 endmodule

@@ -1,22 +1,60 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company:
+// Company: San Diego State University
 // Engineer:
 //
-// Create Date: 09/26/2024 08:04:55 PM
-// Design Name:
+// Create Date: 09/26/2024
+// Design Name: Waveform Selector
 // Module Name: wav_selector
-// Project Name:
-// Target Devices:
+// Project Name: VeriMoog Synthesizer
+// Target Devices: Generic FPGA
 // Tool Versions:
 // Description:
+//    Multiplexer for selecting between different waveform generators.
+//    Supports saw, square, triangle, and sine waveforms.
+//
+// Key Features:
+//    - Four waveform types
+//    - Glitch-free switching
+//    - Voice activity gating
+//    - Default to mid-scale when inactive
+//
+// Signal Information:
+//    Inputs:
+//        clk           - 100MHz system clock
+//        reset         - Active high reset
+//        wav_sel[1:0]  - Waveform selection control
+//                        00: Sawtooth
+//                        01: Square
+//                        10: Triangle
+//                        11: Sine
+//        freq          - 32-bit frequency word
+//        voice_active  - Voice gate control
+//    Outputs:
+//        wav_out       - Selected 8-bit waveform
+//
+// Implementation Notes:
+//    - Combinatorial output selection
+//    - Mid-scale (0x80) output when inactive
+//    - Instantiates all waveform generators
+//    - No output smoothing on switches
+//
+// Resource Usage:
+//    - Four waveform generator instances
+//    - Simple multiplexer logic
+//    - Shared frequency input
 //
 // Dependencies:
+//    - saw_wav_gen.v
+//    - sqr_wav_gen.v
+//    - tri_wav_gen.v
+//    - sin_wav_gen.v
 //
-// Revision:
-// Revision 0.01 - File Created
+// Revision History:
+// Revision 0.01 - Initial design
 // Additional Comments:
-//
+//    - Could add crossfading between waveforms
+//    - Consider adding waveform mixing capability
 //////////////////////////////////////////////////////////////////////////////////
 
 module wav_selector(

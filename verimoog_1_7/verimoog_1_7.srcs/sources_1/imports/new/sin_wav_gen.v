@@ -1,23 +1,56 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company:
+// Company: San Diego State University
 // Engineer:
 //
-// Create Date: 09/27/2024 11:46:18 AM
-// Design Name:
+// Create Date: 09/27/2024
+// Design Name: Sine Wave Generator
 // Module Name: sin_wav_gen
-// Project Name:
-// Target Devices:
+// Project Name: VeriMoog Synthesizer
+// Target Devices: Generic FPGA
 // Tool Versions:
 // Description:
-//   A sine wave generator that produces an 8-bit sine output based on the input frequency.
+//    Look-up table based sine wave generator with phase accumulator.
+//    Produces band-limited sine waves with minimal harmonic distortion.
 //
-// Dependencies:
+// Key Features:
+//    - 256-point sine look-up table
+//    - Phase-accurate frequency synthesis
+//    - 8-bit amplitude resolution
+//    - Continuous phase operation
 //
-// Revision:
-// Revision 0.01 - File created
+// Signal Information:
+//    Inputs:
+//        clk       - 100MHz system clock
+//        reset     - Active high reset
+//        freq      - 32-bit frequency control word (Hz)
+//    Outputs:
+//        wav_out   - 8-bit sine wave output
+//
+// Implementation Details:
+//    - Look-up table initialization uses $sin function
+//    - Fixed-point phase accumulation
+//    - Table size: 256 entries
+//    - Output range: 0 to 255 (centered at 128)
+//
+// Mathematical Basis:
+//    - Phase Increment = (freq * 2^32) / clock_freq
+//    - Table Index = phase_accumulator[31:24]
+//    - Sine Scaling = sin(2? * index / 256) * 127 + 128
+//
+// Performance:
+//    - THD: < 0.5% (theoretical)
+//    - Frequency Resolution: 0.023 Hz
+//    - Amplitude Resolution: 8 bits
+//
+// Dependencies: None
+//
+// Revision History:
+// Revision 0.01 - Initial design
 // Additional Comments:
-//
+//    - Could implement linear interpolation
+//    - Consider larger table for better resolution
+//    - Possible cubic interpolation enhancement
 //////////////////////////////////////////////////////////////////////////////////
 
 module sin_wav_gen (

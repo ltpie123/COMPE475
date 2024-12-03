@@ -1,22 +1,55 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company:
+// Company: San Diego State University
 // Engineer:
 //
 // Create Date: 09/26/2024
-// Design Name:
+// Design Name: Triangle Wave Generator
 // Module Name: tri_wav_gen
-// Project Name:
-// Target Devices:
+// Project Name: VeriMoog Synthesizer
+// Target Devices: Generic FPGA
 // Tool Versions:
 // Description:
+//    Phase accumulator-based triangle wave generator.
+//    Produces symmetrical triangle waves with linear slopes.
 //
-// Dependencies:
+// Key Features:
+//    - Linear rise and fall slopes
+//    - Phase-accurate frequency control
+//    - 8-bit amplitude resolution
+//    - Symmetrical waveform generation
 //
-// Revision:
-// Revision 0.01 - File Created
+// Signal Information:
+//    Inputs:
+//        clk       - 100MHz system clock
+//        reset     - Active high reset
+//        freq      - 32-bit frequency control word (Hz)
+//    Outputs:
+//        wav_out   - 8-bit triangle wave output
+//
+// Implementation Notes:
+//    - Uses phase accumulator for timing
+//    - MSB controls slope direction
+//    - Linear amplitude mapping
+//    - Glitch-free operation
+//
+// Mathematical Basis:
+//    - Phase Increment = (freq * 2^32) / clock_freq
+//    - Rising Edge: Direct mapping of phase bits
+//    - Falling Edge: Inverted mapping of phase bits
+//
+// Performance:
+//    - Frequency Range: 0-20kHz practical
+//    - Phase Resolution: 32 bits
+//    - Amplitude Resolution: 8 bits
+//
+// Dependencies: None
+//
+// Revision History:
+// Revision 0.01 - Initial design
 // Additional Comments:
-//
+//    - Consider adding bandwidth limiting
+//    - Could implement variable slope rates
 //////////////////////////////////////////////////////////////////////////////////
 
 

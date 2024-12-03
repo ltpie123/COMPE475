@@ -1,22 +1,53 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company:
+// Company: San Diego State University
 // Engineer:
 //
-// Create Date: 09/26/2024 07:11:32 PM
-// Design Name:
+// Create Date: 09/26/2024
+// Design Name: MIDI Note to Frequency Converter
 // Module Name: midi_to_freq
-// Project Name:
-// Target Devices:
+// Project Name: VeriMoog Synthesizer
+// Target Devices: Generic FPGA
 // Tool Versions:
 // Description:
+//    Converts MIDI note numbers to corresponding frequencies in Hz.
+//    Implements lookup table for standard 12-tone equal temperament.
 //
-// Dependencies:
+// Key Features:
+//    - Direct MIDI note to frequency conversion
+//    - 3-octave range (C3 to C6)
+//    - Standard A4=440Hz tuning
+//    - Zero-latency lookup
 //
-// Revision:
-// Revision 0.01 - File Created
+// Signal Information:
+//    Inputs:
+//        midi_in[6:0]  - MIDI note number (48-84 valid)
+//    Outputs:
+//        freq_out[31:0] - Frequency in Hz
+//
+// Implementation Notes:
+//    - Case statement-based lookup table
+//    - Returns 0 Hz for invalid notes
+//    - Fixed-point integer frequencies
+//    - No interpolation between notes
+//
+// Musical Notes:
+//    - A4 (MIDI 69) = 440 Hz
+//    - Middle C (MIDI 60) = 262 Hz
+//    - Covers C3 (MIDI 48) to C6 (MIDI 84)
+//
+// Frequency Table Generation:
+//    fn = 440 * 2^((n-69)/12) where n is MIDI note number
+//    All frequencies rounded to nearest integer
+//
+// Dependencies: None
+//
+// Revision History:
+// Revision 0.01 - Initial design
 // Additional Comments:
-//
+//    - Could extend range of supported notes
+//    - Consider adding cents/fine tuning
+//    - Possible support for alternate tunings
 //////////////////////////////////////////////////////////////////////////////////
 
 

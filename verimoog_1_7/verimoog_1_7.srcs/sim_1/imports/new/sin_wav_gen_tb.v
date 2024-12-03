@@ -21,14 +21,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module sin_wav_gen_tb;
+    // Test bench signals
+    reg clk;
+    reg reset;
+    reg [31:0] freq;
+    wire [7:0] wav_out;
 
-    // Testbench signals
-    reg clk;                             // Clock signal
-    reg reset;                           // Reset signal
-    reg [31:0] freq;                    // Input frequency
-    wire [7:0] wav_out;                 // Output waveform
-
-    // Instantiate the sin_wav_gen module
+    // Instantiate sine wave generator
     sin_wav_gen uut (
         .clk(clk),
         .reset(reset),
@@ -39,53 +38,59 @@ module sin_wav_gen_tb;
     // Clock generation
     initial begin
         clk = 0;
-        forever #5 clk = ~clk;           // 100 MHz clock
+        forever #5 clk = ~clk; // 100MHz clock
     end
 
-    // Test sequence
+    // Test stimulus
     initial begin
+        // Initialize waveform dumps
+        $dumpfile("sin_wav_gen_tb.vcd");
+        $dumpvars(0, sin_wav_gen_tb);
+        
         // Initialize signals
-        reset = 1;                      // Assert reset
-        freq = 32'h0;                   // Initial frequency set to 0
+        reset = 1;
+        freq = 0;
+        
+        // Release reset
+        #100;
+        reset = 0;
+        #100;
 
-        // Wait for some time
-        #10;
-        reset = 0;                      // Release reset
-        #10;
+        // Test different frequencies
+        // Test A4 (440 Hz)
+        $display("Testing A4 (440 Hz)...");
+        freq = 32'd440;
+        #10000;
 
-        // Test various frequencies
-        // MIDI Note 60 (Middle C) - ~261.63 Hz
-        freq = 32'd192576;              // Frequency value corresponding to 261.63 Hz
-        #50000;                        // Wait enough time to observe output
-        $display("Testing freq = 261.63 Hz (MIDI 60): wav_out = %h", wav_out);
+        // Test A3 (220 Hz)
+        $display("Testing A3 (220 Hz)...");
+        freq = 32'd220;
+        #10000;
 
-        // MIDI Note 64 (E4) - ~329.63 Hz
-        freq = 32'd151685;              // Frequency value corresponding to 329.63 Hz
-        #50000;                        // Wait enough time to observe output
-        $display("Testing freq = 329.63 Hz (MIDI 64): wav_out = %h", wav_out);
+        // Test A5 (880 Hz)
+        $display("Testing A5 (880 Hz)...");
+        freq = 32'd880;
+        #10000;
 
-        // MIDI Note 67 (G4) - ~392.00 Hz
-        freq = 32'd127882;              // Frequency value corresponding to 392.00 Hz
-        #50000;                        // Wait enough time to observe output
-        $display("Testing freq = 392.00 Hz (MIDI 67): wav_out = %h", wav_out);
+        // Test reset during operation
+        $display("Testing reset behavior...");
+        reset = 1;
+        #100;
+        reset = 0;
+        #100;
 
-        // MIDI Note 72 (C5) - ~523.25 Hz
-        freq = 32'd95655;               // Frequency value corresponding to 523.25 Hz
-        #50000;                        // Wait enough time to observe output
-        $display("Testing freq = 523.25 Hz (MIDI 72): wav_out = %h", wav_out);
+        // Test very low frequency
+        $display("Testing low frequency (110 Hz)...");
+        freq = 32'd110;
+        #10000;
 
-        // MIDI Note 76 (E5) - ~659.25 Hz
-        freq = 32'd75853;               // Frequency value corresponding to 659.25 Hz
-        #50000;                        // Wait enough time to observe output
-        $display("Testing freq = 659.25 Hz (MIDI 76): wav_out = %h", wav_out);
-
-        // MIDI Note 79 (G5) - ~783.99 Hz
-        freq = 32'd63969;               // Frequency value corresponding to 783.99 Hz
-        #50000;                        // Wait enough time to observe output
-        $display("Testing freq = 783.99 Hz (MIDI 79): wav_out = %h", wav_out);
-
-        // Finish the simulation
+        $display("Simulation complete");
         $finish;
+    end
+
+    // Monitor output for analysis
+    initial begin
+        $monitor("Time=%0t freq=%0d wav_out=%h", $time, freq, wav_out);
     end
 
 endmodule

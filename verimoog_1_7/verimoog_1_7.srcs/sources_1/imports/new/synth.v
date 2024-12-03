@@ -1,22 +1,63 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company:
+// Company: San Diego State University
 // Engineer:
 //
-// Create Date: 09/26/2024 07:26:44 PM
-// Design Name:
+// Create Date: 09/26/2024
+// Design Name: Synthesizer Core
 // Module Name: synth
-// Project Name:
-// Target Devices:
+// Project Name: VeriMoog Synthesizer
+// Target Devices: Generic FPGA
 // Tool Versions:
 // Description:
+//    Core synthesizer module combining MIDI processing, waveform generation,
+//    and envelope control for a single voice synthesizer.
+//
+// Key Features:
+//    - MIDI note to frequency conversion
+//    - Multiple waveform options
+//    - ADSR envelope modulation
+//    - Single voice polyphony
+//
+// Signal Information:
+//    Inputs:
+//        clk             - 100MHz system clock
+//        reset           - Active high reset
+//        midi_note[6:0]  - MIDI note number
+//        note_on         - Note trigger control
+//        wav_sel[1:0]    - Waveform selection
+//        attack_time     - Attack phase duration
+//        decay_time      - Decay phase duration
+//        sustain_level   - Sustain amplitude
+//        release_time    - Release phase duration
+//    Outputs:
+//        wav_out[7:0]    - Final audio output
+//
+// Signal Chain:
+//    MIDI Note -> Frequency -> Waveform -> ADSR -> Output
+//
+// Implementation Notes:
+//    - Synchronous design throughout
+//    - Instantiates key processing blocks
+//    - Single sample processing path
+//    - No internal buffering
 //
 // Dependencies:
+//    - midi_to_freq.v
+//    - wav_selector.v
+//    - adsr_envelope.v
 //
-// Revision:
-// Revision 0.01 - File Created
+// Performance:
+//    - Single cycle latency per block
+//    - Full MIDI note range support
+//    - 8-bit audio resolution
+//
+// Revision History:
+// Revision 0.01 - Initial design
 // Additional Comments:
-//
+//    - Consider adding velocity sensitivity
+//    - Could implement polyphony
+//    - Possible effects processing stage
 //////////////////////////////////////////////////////////////////////////////////
 
 `timescale 1ns / 1ps
