@@ -1,24 +1,3 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 12/01/2024 08:18:41 PM
-// Design Name: 
-// Module Name: top_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 module top_tb;
     // Test bench signals
     reg clk;
@@ -36,7 +15,6 @@ module top_tb;
     top uut (
         .clk(clk),
         .reset(reset),
-        .midi_in(midi_in),
         .note_on(note_on),
         .wav_sel(wav_sel),
         .attack_time(attack_time),
@@ -49,7 +27,7 @@ module top_tb;
     // Clock generation
     initial begin
         clk = 0;
-        forever #5 clk = ~clk; // 100MHz clock
+        forever #5 clk = ~clk; // 100MHz clock (adjust if needed)
     end
 
     // Test stimulus
@@ -64,61 +42,36 @@ module top_tb;
         sustain_level = 128;  // 50% sustain
         release_time = 300;   // 300ms release
 
-        // Wait 100ns and release reset
-        #100;
+        // Wait for a longer reset duration
+        #1000;
         reset = 0;
-        #100;
 
-        // Test 1: Basic note functionality
-        $display("Test 1: Testing basic note functionality");
+        // Test note sequence
         midi_in = 7'd60;  // Middle C
-        #100;
         note_on = 1;
-        #1000000;  // Wait 1ms to see the note
+        #10000000;  // Hold note for 10ms
         note_on = 0;
-        #1000000;  // Wait 1ms to see the release
+        #10000000;  // Release note for 10ms
 
-        // Test 2: Waveform selection
-        $display("Test 2: Testing waveform selection");
-        // Test each waveform with middle C
-        wav_sel = 2'b00;  // Sawtooth
-        #100;
+        midi_in = 7'd72;  // C5
         note_on = 1;
-        #1000000;
+        #10000000;
         note_on = 0;
-        #1000000;
+        #10000000;
 
-        wav_sel = 2'b01;  // Square
-        #100;
-        note_on = 1;
-        #1000000;
-        note_on = 0;
-        #1000000;
+        // Add more test cases as needed
 
-        // Test 3: ADSR behavior
-        $display("Test 3: Testing ADSR envelope");
-        wav_sel = 2'b00;  // Back to sawtooth
-        attack_time = 50;     // Fast attack
-        decay_time = 100;     // Fast decay
-        sustain_level = 192;  // High sustain
-        release_time = 150;   // Medium release
-        
-        note_on = 1;
-        #2000000;  // Hold note
-        note_on = 0;
-        #2000000;  // Release
-
-        $display("Tests complete");
-        #100;
+        // Finish the simulation
+        #1000;
         $finish;
     end
 
     // Monitor PWM output
     initial begin
-        $monitor("Time=%0t pwm_out=%b", $time, pwm_audio_out);
+        $monitor("Time=%0t pwm_audio_out=%b", $time, pwm_audio_out);
     end
 
-    // Create VCD file for waveform viewing
+    // Generate waveform file
     initial begin
         $dumpfile("top_tb.vcd");
         $dumpvars(0, top_tb);

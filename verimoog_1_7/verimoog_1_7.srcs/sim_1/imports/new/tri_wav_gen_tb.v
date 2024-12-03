@@ -50,27 +50,27 @@ module tri_wav_gen_tb;
         #100;
         
         // Test: Monitor the phase and wav_out
-        $monitor("Time: %0d, Phase: %h, Waveform Output: %h", $time, uut.phase, wav_out);
+        $monitor("Time: %0d, Phase: %h, Waveform Output: %h", $time, uut.phase_accumulator, wav_out);
         
         // Play C3 (frequency = 131 Hz)
         freq = 32'd131;
-        #4000;  // Run for some time to play the note
+        #10000000;  // Run for 10ms to play the note
 
         // Play C4 (frequency = 262 Hz)
         freq = 32'd262;
-        #4000;
+        #10000000;
 
         // Play C5 (frequency = 523 Hz)
         freq = 32'd523;
-        #4000;
+        #10000000;
 
         // Play C6 (frequency = 1047 Hz)
         freq = 32'd1047;
-        #4000;
+        #10000000;
 
         // Play A4 (frequency = 440 Hz)
         freq = 32'd440;
-        #4000;
+        #10000000;
 
         // Finish simulation
         $finish;

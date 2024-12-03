@@ -94,5 +94,4 @@ module tri_wav_gen (
             wav_out <= amplitude;
         end
     end
-
 endmodule

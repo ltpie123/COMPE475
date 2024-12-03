@@ -18,7 +18,6 @@
 // Additional Comments:
 //
 //////////////////////////////////////////////////////////////////////////////////
-
 module wav_selector_tb;
     // Test bench signals
     reg clk;
@@ -67,33 +66,33 @@ module wav_selector_tb;
         // Test sawtooth wave (00)
         $display("Testing sawtooth wave...");
         wav_sel = 2'b00;
-        #1000;
+        #10000000; // 10 ms
         
         // Test square wave (01)
         $display("Testing square wave...");
         wav_sel = 2'b01;
-        #1000;
+        #10000000;
         
         // Test triangle wave (10)
         $display("Testing triangle wave...");
         wav_sel = 2'b10;
-        #1000;
+        #10000000;
         
         // Test sine wave (11)
         $display("Testing sine wave...");
         wav_sel = 2'b11;
-        #1000;
+        #10000000;
 
         // Test voice inactive behavior
         $display("Testing voice inactive behavior...");
         voice_active = 0;
-        #500;
-
+        #5000000; // 5 ms
+        
         // Test frequency change
         $display("Testing frequency change...");
         voice_active = 1;
         freq = 32'd880; // A5 note
-        #1000;
+        #10000000;
 
         // Test reset behavior
         $display("Testing reset behavior...");
@@ -111,5 +110,4 @@ module wav_selector_tb;
         $monitor("Time=%0t wav_sel=%b voice_active=%b wav_out=%h", 
                  $time, wav_sel, voice_active, wav_out);
     end
-
 endmodule

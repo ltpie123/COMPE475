@@ -25,6 +25,7 @@
 //        reset           - Active high reset
 //        midi_note[6:0]  - MIDI note number
 //        note_on         - Note trigger control
+//        note_valid      - Note valid signal
 //        wav_sel[1:0]    - Waveform selection
 //        attack_time     - Attack phase duration
 //        decay_time      - Decay phase duration
@@ -60,12 +61,12 @@
 //    - Possible effects processing stage
 //////////////////////////////////////////////////////////////////////////////////
 
-`timescale 1ns / 1ps
 module synth(
     input wire clk,
     input wire reset,
     input wire [6:0] midi_note,
     input wire note_on,
+    input wire note_valid, // Added the note_valid input port
     input wire [1:0] wav_sel,
     // ADSR controls
     input wire [15:0] attack_time,

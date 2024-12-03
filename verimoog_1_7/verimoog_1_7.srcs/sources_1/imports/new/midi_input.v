@@ -6,58 +6,40 @@
 // Create Date: 09/26/2024 09:15:00 PM
 // Design Name: MIDI Input Interface
 // Module Name: midi_input
-// Project Name: VeriMoog Synthesizer
+// Project Name: Synthesizer
 // Target Devices: Generic FPGA
 // Tool Versions:
 // Description:
 //    MIDI input interface that receives serial MIDI data and decodes MIDI messages.
-//    Implements the standard MIDI protocol with:
-//    - 31250 baud rate (100MHz system clock)
-//    - 8 data bits, no parity, 1 stop bit
-//    - Note On (0x90) and Note Off (0x80) message support
-//
-// Key Features:
-//    - Real-time MIDI message decoding
-//    - Handles standard note messages
-//    - Outputs 7-bit MIDI note numbers with validity flag
-//    - Automatic note-off detection for zero velocity notes
-//
-// Signal Information:
-//    Inputs:
-//        clk         - 100MHz system clock
-//        reset       - Active high reset
-//        midi_rx     - Serial MIDI input line
-//    Outputs:
-//        midi_note   - 7-bit MIDI note number (0-127)
-//        note_on     - Note active status
-//        note_valid  - Note data valid strobe
-//
-// Timing:
-//    - MIDI baud rate: 31250 bps
-//    - Clock cycles per bit: 3200 (100MHz/31250)
-//    - Output updated on complete message receipt
-//
-// Message Format:
-//    Byte 1: Status (0x90 = Note On, 0x80 = Note Off)
-//    Byte 2: Note number (0-127)
-//    Byte 3: Velocity (0-127, 0 = Note Off)
-//
-// Implementation Notes:
-//    - Uses state machine for MIDI protocol parsing
-//    - Synchronous reset for all registers
-//    - No FIFO buffering (immediate processing)
-//    - Channel-agnostic (processes all MIDI channels)
+//    - Implements MIDI protocol with 31250 baud rate
+//    - Handles Note On (0x90) and Note Off (0x80) messages
+//    - Outputs 7-bit MIDI note number and note on/off status
+//    - Compatible with standard MIDI devices through UART interface
 //
 // Dependencies: None
 //
-// Revision History:
-// Revision 0.01 - Initial design
+// Inputs:
+//    - clk: System clock (assumed 100MHz)
+//    - reset: Active high reset
+//    - midi_rx: Serial MIDI input signal
+//
+// Outputs:
+//    - midi_note[6:0]: MIDI note number (0-127)
+//    - note_on: High when note is active, low when note is off
+//    - note_valid: Pulses high for one clock cycle when new note data is valid
+//
+// Expected MIDI Message Format:
+//    Status Byte (1xxx xxxx) - Note On (0x90) or Note Off (0x80)
+//    Data Byte 1 (0xxx xxxx) - Note number (0-127)
+//    Data Byte 2 (0xxx xxxx) - Velocity (0-127, 0 velocity Note On = Note Off)
+//
+// Revision:
+// Revision 0.01 - File Created
 // Additional Comments:
-//    - Future enhancements could include:
-//      * MIDI channel filtering
-//      * Velocity sensitivity
-//      * Program change support
-//      * Control change handling
+//    - Current implementation ignores MIDI velocity data
+//    - Only processes channel 1 MIDI messages
+//    - Does not handle MIDI Running Status
+//
 //////////////////////////////////////////////////////////////////////////////////
 
 module midi_input (
@@ -77,19 +59,18 @@ module midi_input (
     parameter CLKS_PER_HALF_BIT = CLKS_PER_BIT/2;
 
     // MIDI message state machine states
-    parameter IDLE = 3'd0;
-    parameter START_BIT = 3'd1;
-    parameter DATA_BITS = 3'd2;
-    parameter STOP_BIT = 3'd3;
-    parameter PROCESS_BYTE = 3'd4;
+    localparam IDLE = 3'd0;
+    localparam START_BIT = 3'd1;
+    localparam DATA_BITS = 3'd2;
+    localparam STOP_BIT = 3'd3;
+    localparam PROCESS_BYTE = 3'd4;
 
     // MIDI message bytes
-    parameter NOTE_ON = 8'h90;
-    parameter NOTE_OFF = 8'h80;
+    localparam NOTE_ON = 8'h90;
+    localparam NOTE_OFF = 8'h80;
 
     // State variables
     reg [2:0]  state;
-    reg [2:0]  next_state;
     reg [15:0] bit_counter;
     reg [7:0]  rx_data;
     reg [3:0]  bit_index;
@@ -100,7 +81,6 @@ module midi_input (
     reg [7:0] data_byte2;
     reg [1:0] byte_count;
 
-    // State machine
     always @(posedge clk or posedge reset) begin
         if (reset) begin
             state <= IDLE;

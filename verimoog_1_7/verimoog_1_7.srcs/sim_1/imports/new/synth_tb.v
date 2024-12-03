@@ -19,14 +19,13 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module synth_tb;
 
     reg clk;
     reg reset;
     reg [6:0] midi_note;
     reg note_on;
-    reg note_valid;
+    reg note_valid;  // Add this line
     reg [1:0] wav_sel;
     reg [15:0] attack_time;
     reg [15:0] decay_time;
@@ -39,7 +38,7 @@ module synth_tb;
         .reset(reset),
         .midi_note(midi_note),
         .note_on(note_on),
-        .note_valid(note_valid),
+        .note_valid(note_valid),  
         .wav_sel(wav_sel),
         .attack_time(attack_time),
         .decay_time(decay_time),

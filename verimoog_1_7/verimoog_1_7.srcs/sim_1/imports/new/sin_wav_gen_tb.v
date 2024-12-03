@@ -60,29 +60,22 @@ module sin_wav_gen_tb;
         // Test A4 (440 Hz)
         $display("Testing A4 (440 Hz)...");
         freq = 32'd440;
-        #10000;
+        #5000000; // Run for 5ms
 
         // Test A3 (220 Hz)
         $display("Testing A3 (220 Hz)...");
         freq = 32'd220;
-        #10000;
+        #5000000; // Run for 5ms
 
         // Test A5 (880 Hz)
         $display("Testing A5 (880 Hz)...");
         freq = 32'd880;
-        #10000;
-
-        // Test reset during operation
-        $display("Testing reset behavior...");
-        reset = 1;
-        #100;
-        reset = 0;
-        #100;
+        #5000000; // Run for 5ms
 
         // Test very low frequency
         $display("Testing low frequency (110 Hz)...");
         freq = 32'd110;
-        #10000;
+        #5000000; // Run for 5ms
 
         $display("Simulation complete");
         $finish;

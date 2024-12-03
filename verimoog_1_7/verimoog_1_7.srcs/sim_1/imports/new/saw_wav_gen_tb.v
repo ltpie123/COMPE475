@@ -1,24 +1,4 @@
-timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 09/27/2024 11:46:18 AM
-// Design Name: 
-// Module Name: saw_wav_gen_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-//   Testbench for sine wave generator.
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+`timescale 1ns / 1ps
 
 module saw_wav_gen_tb;
     // Test bench signals
@@ -51,38 +31,45 @@ module saw_wav_gen_tb;
         reset = 1;
         freq = 0;
         
-        // Release reset
+        // Release reset after 100ns
         #100;
         reset = 0;
         #100;
 
-        // Test different frequencies
-        // Test Middle C (261.63 Hz)
-        $display("Testing Middle C (261.63 Hz)...");
-        freq = 32'd262;
-        #10000;
+        // Test with much larger frequency differences
+        
+        // Test Low Frequency (100 Hz)
+        $display("Testing 100 Hz...");
+        freq = 32'd100;
+        #100000;
 
-        // Test A4 (440 Hz)
-        $display("Testing A4 (440 Hz)...");
-        freq = 32'd440;
-        #10000;
+        // Test Medium-Low Frequency (500 Hz)
+        $display("Testing 500 Hz...");
+        freq = 32'd500;
+        #100000;
 
-        // Test E4 (329.63 Hz)
-        $display("Testing E4 (329.63 Hz)...");
-        freq = 32'd330;
-        #10000;
+        // Test Medium Frequency (1 kHz)
+        $display("Testing 1 kHz...");
+        freq = 32'd1000;
+        #100000;
+
+        // Test Medium-High Frequency (2 kHz)
+        $display("Testing 2 kHz...");
+        freq = 32'd2000;
+        #100000;
+
+        // Test High Frequency (4 kHz)
+        $display("Testing 4 kHz...");
+        freq = 32'd4000;
+        #100000;
 
         // Test reset during operation
         $display("Testing reset behavior...");
         reset = 1;
         #100;
         reset = 0;
-        #100;
-
-        // Test frequency change during operation
-        $display("Testing frequency change...");
-        freq = 32'd523; // C5
-        #10000;
+        freq = 32'd1000; // Back to 1 kHz
+        #100000;
 
         $display("Simulation complete");
         $finish;
