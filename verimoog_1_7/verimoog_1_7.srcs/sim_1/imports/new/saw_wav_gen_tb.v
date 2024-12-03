@@ -1,23 +1,23 @@
-timescale 1ns / 1ps
+`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
+// Company:
+// Engineer:
+//
 // Create Date: 09/27/2024 11:46:18 AM
-// Design Name: 
+// Design Name:
 // Module Name: saw_wav_gen_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
+// Project Name:
+// Target Devices:
+// Tool Versions:
+// Description:
 //   Testbench for sine wave generator.
-// 
-// Dependencies: 
-// 
+//
+// Dependencies:
+//
 // Revision:
 // Revision 0.01 - File created
 // Additional Comments:
-// 
+//
 //////////////////////////////////////////////////////////////////////////////////
 
 module saw_wav_gen_tb;
@@ -46,11 +46,11 @@ module saw_wav_gen_tb;
         // Initialize waveform dumps
         $dumpfile("saw_wav_gen_tb.vcd");
         $dumpvars(0, saw_wav_gen_tb);
-        
+
         // Initialize signals
         reset = 1;
         freq = 0;
-        
+
         // Release reset
         #100;
         reset = 0;
