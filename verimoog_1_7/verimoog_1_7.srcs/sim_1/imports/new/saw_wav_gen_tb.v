@@ -1,5 +1,25 @@
 `timescale 1ns / 1ps
 
+//////////////////////////////////////////////////////////////////////////////////
+// Company:
+// Engineer:
+//
+// Create Date: 09/26/2024 07:36:44 PM
+// Design Name:
+// Module Name: sqr_wav_gen
+// Project Name:
+// Target Devices:
+// Tool Versions:
+// Description:
+//
+// Dependencies:
+//
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+//
+//////////////////////////////////////////////////////////////////////////////////
+
 module saw_wav_gen_tb;
     // Test bench signals
     reg clk;
