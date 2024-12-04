@@ -1,0 +1,13 @@
+Time resolution is 1 ps
+Requested Freq: 0 Hz, Actual Freq: 0.000000 Hz
+Time=0 pwm_audio_out=0
+Requested Freq: 0 Hz, Actual Freq: 0.000000 Hz
+Time=0 pwm_audio_out=0
+Time=1015000 pwm_audio_out=x
+Time=1025000 pwm_audio_out=0
+Requested Freq: 0 Hz, Actual Freq: 0.000000 Hz
+Time=0 pwm_audio_out=0
+Time=1015000 pwm_audio_out=x
+Time=1025000 pwm_audio_out=0
+$finish called at time : 40002 us : File "C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_7/verimoog_1_7.srcs/sim_1/new/top_tb.v" Line 66
+INFO: xsimkernel Simulation Memory Usage: 16356 KB (Peak: 16356 KB), Simulation CPU Usage: 110202 ms

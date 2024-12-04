@@ -1,0 +1,413 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 485.629 ; gain = 182.547
+Command: read_checkpoint -auto_incremental -incremental C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 42000
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1323.270 ; gain = 439.887
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/top.v:22]
+INFO: [Synth 8-6157] synthesizing module 'midi_input' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/midi_input.v:45]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/midi_input.v:93]
+INFO: [Synth 8-6155] done synthesizing module 'midi_input' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/midi_input.v:45]
+INFO: [Synth 8-6157] synthesizing module 'synth' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/synth.v:64]
+INFO: [Synth 8-6157] synthesizing module 'midi_to_freq' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/midi_to_freq.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'midi_to_freq' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/midi_to_freq.v:54]
+INFO: [Synth 8-6157] synthesizing module 'wav_selector' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/wav_selector.v:60]
+INFO: [Synth 8-6157] synthesizing module 'sqr_wav_gen' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/sqr_wav_gen.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'sqr_wav_gen' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/sqr_wav_gen.v:55]
+INFO: [Synth 8-6157] synthesizing module 'sin_wav_gen' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/sin_wav_gen.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'sin_wav_gen' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/sin_wav_gen.v:56]
+INFO: [Synth 8-6157] synthesizing module 'saw_wav_gen' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/saw_wav_gen.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'saw_wav_gen' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/saw_wav_gen.v:54]
+INFO: [Synth 8-6157] synthesizing module 'tri_wav_gen' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/tri_wav_gen.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'tri_wav_gen' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/tri_wav_gen.v:56]
+INFO: [Synth 8-226] default block is never used [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/wav_selector.v:109]
+INFO: [Synth 8-6155] done synthesizing module 'wav_selector' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/wav_selector.v:60]
+INFO: [Synth 8-6157] synthesizing module 'adsr_envelope' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/adsr_envelope.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'adsr_envelope' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/adsr_envelope.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'synth' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/synth.v:64]
+INFO: [Synth 8-6157] synthesizing module 'pwm_audio' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/pwm_audio.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'pwm_audio' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/pwm_audio.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/top.v:22]
+WARNING: [Synth 8-6014] Unused sequential element data_byte1_reg was removed.  [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/midi_input.v:85]
+WARNING: [Synth 8-6014] Unused sequential element direction_reg was removed.  [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/tri_wav_gen.v:75]
+WARNING: [Synth 8-7137] Register mult_temp_reg in module adsr_envelope has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/adsr_envelope.v:142]
+WARNING: [Synth 8-7129] Port attack_time[15] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[14] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[13] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[12] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[11] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[10] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[9] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[8] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[7] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[6] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[5] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[4] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[3] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[2] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[1] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[0] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[15] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[14] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[13] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[12] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[11] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[10] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[9] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[8] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[7] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[6] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[5] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[4] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[3] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[2] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[1] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[0] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[15] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[14] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[13] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[12] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[11] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[10] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[9] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[8] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[7] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[6] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[5] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[4] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[3] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[2] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[1] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[0] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port note_valid in module synth is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1434.664 ; gain = 551.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1434.664 ; gain = 551.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1434.664 ; gain = 551.281
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1434.664 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/constrs_1/imports/new/basys3_constraints.xdc]
+Finished Parsing XDC File [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/constrs_1/imports/new/basys3_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/constrs_1/imports/new/basys3_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1536.461 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+The system cannot find the path specified.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1536.461 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1536.461 ; gain = 653.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1536.461 ; gain = 653.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1536.461 ; gain = 653.078
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'midi_input'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+               START_BIT |                              001 |                              001
+               DATA_BITS |                              010 |                              010
+                STOP_BIT |                              011 |                              011
+            PROCESS_BYTE |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'midi_input'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1536.461 ; gain = 653.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 10    
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	              32x33  Multipliers := 3     
++---ROMs : 
+	                    ROMs := 1     
++---Muxes : 
+	   2 Input   27 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 2     
+	   3 Input   16 Bit        Muxes := 1     
+	   5 Input   16 Bit        Muxes := 1     
+	   5 Input    8 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 6     
+	   4 Input    8 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   8 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 16    
+	   5 Input    1 Bit        Muxes := 7     
+	   6 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port attack_time[15] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[14] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[13] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[12] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[11] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[10] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[9] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[8] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[7] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[6] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[5] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[4] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[3] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[2] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[1] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port attack_time[0] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[15] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[14] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[13] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[12] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[11] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[10] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[9] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[8] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[7] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[6] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[5] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[4] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[3] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[2] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[1] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port decay_time[0] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[15] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[14] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[13] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[12] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[11] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[10] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[9] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[8] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[7] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[6] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[5] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[4] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[3] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[2] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[1] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port release_time[0] in module adsr_envelope is either unconnected or has no load
+WARNING: [Synth 8-7129] Port note_valid in module synth is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1536.461 ; gain = 653.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++-------------+-------------------------+---------------+----------------+
+|Module Name  | RTL Object              | Depth x Width | Implemented As | 
++-------------+-------------------------+---------------+----------------+
+|midi_to_freq | freq_out                | 128x11        | LUT            | 
+|sin_wav_gen  | wav_out_reg             | 256x8         | Block RAM      | 
+|synth        | midi_freq_inst/freq_out | 128x11        | LUT            | 
++-------------+-------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1536.461 ; gain = 653.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1536.461 ; gain = 653.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance synth_inst/wav_sel_inst/sin_wav_inst/wav_out_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1536.461 ; gain = 653.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1536.461 ; gain = 653.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1536.461 ; gain = 653.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1536.461 ; gain = 653.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1536.461 ; gain = 653.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1536.461 ; gain = 653.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1536.461 ; gain = 653.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   666|
+|3     |LUT1     |    92|
+|4     |LUT2     |   961|
+|5     |LUT3     |   613|
+|6     |LUT4     |   959|
+|7     |LUT5     |   527|
+|8     |LUT6     |   502|
+|9     |MUXF7    |     2|
+|10    |RAMB18E1 |     1|
+|11    |FDCE     |   148|
+|12    |FDRE     |   200|
+|13    |IBUF     |     9|
+|14    |OBUF     |     1|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1536.461 ; gain = 653.078
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 50 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 1536.461 ; gain = 551.281
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1536.461 ; gain = 653.078
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.099 . Memory (MB): peak = 1536.461 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 669 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1536.461 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+The system cannot find the path specified.
+Synth Design complete | Checksum: 3e2ab4ad
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1536.461 ; gain = 1044.355
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1536.461 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  4 11:49:34 2024...
