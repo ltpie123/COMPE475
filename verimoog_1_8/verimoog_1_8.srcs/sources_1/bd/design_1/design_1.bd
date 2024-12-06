@@ -1,0 +1,169 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../verimoog_1_8.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "None",
+      "tool_version": "2023.2"
+    },
+    "design_tree": {
+      "top_0": "",
+      "clk_wiz": "",
+      "rst_clk_wiz_100M": ""
+    },
+    "ports": {
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "PHASE": {
+            "value": "0.0"
+          }
+        }
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      }
+    },
+    "components": {
+      "top_0": {
+        "vlnv": "xilinx.com:module_ref:top:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_top_0_0",
+        "xci_path": "ip\\design_1_top_0_0\\design_1_top_0_0.xci",
+        "inst_hier_path": "top_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "top",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "midi_rx": {
+            "direction": "I"
+          },
+          "wav_sel": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "attack_time": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "decay_time": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "sustain_level": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "release_time": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "pwm_audio_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "clk_wiz": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "13",
+        "xci_name": "design_1_clk_wiz_0",
+        "xci_path": "ip\\design_1_clk_wiz_0\\design_1_clk_wiz_0.xci",
+        "inst_hier_path": "clk_wiz",
+        "parameters": {
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "RESET_BOARD_INTERFACE": {
+            "value": "reset"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      },
+      "rst_clk_wiz_100M": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "14",
+        "xci_name": "design_1_rst_clk_wiz_100M_0",
+        "xci_path": "ip\\design_1_rst_clk_wiz_100M_0\\design_1_rst_clk_wiz_100M_0.xci",
+        "inst_hier_path": "rst_clk_wiz_100M",
+        "parameters": {
+          "RESET_BOARD_INTERFACE": {
+            "value": "reset"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_wiz_clk_out1": {
+        "ports": [
+          "clk_wiz/clk_out1",
+          "top_0/clk",
+          "rst_clk_wiz_100M/slowest_sync_clk"
+        ]
+      },
+      "clk_wiz_locked": {
+        "ports": [
+          "clk_wiz/locked",
+          "rst_clk_wiz_100M/dcm_locked"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "clk_wiz/reset",
+          "rst_clk_wiz_100M/ext_reset_in"
+        ]
+      },
+      "rst_clk_wiz_100M_peripheral_aresetn": {
+        "ports": [
+          "rst_clk_wiz_100M/peripheral_aresetn",
+          "top_0/reset"
+        ]
+      },
+      "sys_clock_1": {
+        "ports": [
+          "sys_clock",
+          "clk_wiz/clk_in1"
+        ]
+      }
+    }
+  }
+}

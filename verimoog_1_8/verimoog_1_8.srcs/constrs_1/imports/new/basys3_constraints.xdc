@@ -1,7 +1,7 @@
 ## Clock signal
 set_property PACKAGE_PIN W5 [get_ports clk]
 set_property IOSTANDARD LVCMOS33 [get_ports clk]
-create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
+create_clock -period 100.000 -name sys_clk_pin -waveform {0.000 50.000} -add [get_ports clk]
 
 ## Reset button (Center button)
 set_property PACKAGE_PIN U18 [get_ports reset]
@@ -65,3 +65,14 @@ set_property IOSTANDARD LVCMOS33 [get_ports pwm_audio_out]
 ## Configuration options
 set_property CONFIG_VOLTAGE 3.3 [current_design]
 set_property CFGBVS VCCO [current_design]
+
+set_input_delay -clock [get_clocks sys_clk_pin] -min -add_delay 2.500 [get_ports {sustain_level[*]}]
+set_input_delay -clock [get_clocks sys_clk_pin] -max -add_delay 8.000 [get_ports {sustain_level[*]}]
+set_input_delay -clock [get_clocks sys_clk_pin] -min -add_delay 2.500 [get_ports {wav_sel[*]}]
+set_input_delay -clock [get_clocks sys_clk_pin] -max -add_delay 8.000 [get_ports {wav_sel[*]}]
+set_input_delay -clock [get_clocks sys_clk_pin] -min -add_delay 2.500 [get_ports midi_rx]
+set_input_delay -clock [get_clocks sys_clk_pin] -max -add_delay 8.000 [get_ports midi_rx]
+set_input_delay -clock [get_clocks sys_clk_pin] -min -add_delay 2.500 [get_ports reset]
+set_input_delay -clock [get_clocks sys_clk_pin] -max -add_delay 8.000 [get_ports reset]
+set_output_delay -clock [get_clocks sys_clk_pin] -min -add_delay -0.500 [get_ports pwm_audio_out]
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 5.000 [get_ports pwm_audio_out]
