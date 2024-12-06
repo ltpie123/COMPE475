@@ -1,2 +1,6 @@
-design_1.v,verilog,xil_defaultlib,../../../bd/design_1/sim/design_1.v,
+design_1_top_0_0.v,verilog,xil_defaultlib,../../../bd/design_1/ip/design_1_top_0_0/sim/design_1_top_0_0.v,incdir="../../../../verimoog_1_8.gen/sources_1/bd/design_1/ipshared/c2c6"incdir="../../../../verimoog_1_8.gen/sources_1/bd/design_1/ipshared/c2c6"
+design_1_clk_wiz_0_clk_wiz.v,verilog,xil_defaultlib,../../../bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0_clk_wiz.v,incdir="../../../../verimoog_1_8.gen/sources_1/bd/design_1/ipshared/c2c6"incdir="../../../../verimoog_1_8.gen/sources_1/bd/design_1/ipshared/c2c6"
+design_1_clk_wiz_0.v,verilog,xil_defaultlib,../../../bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0.v,incdir="../../../../verimoog_1_8.gen/sources_1/bd/design_1/ipshared/c2c6"incdir="../../../../verimoog_1_8.gen/sources_1/bd/design_1/ipshared/c2c6"
+design_1_rst_clk_wiz_100M_0.vhd,vhdl,xil_defaultlib,../../../bd/design_1/ip/design_1_rst_clk_wiz_100M_0/sim/design_1_rst_clk_wiz_100M_0.vhd,incdir="../../../../verimoog_1_8.gen/sources_1/bd/design_1/ipshared/c2c6"incdir="../../../../verimoog_1_8.gen/sources_1/bd/design_1/ipshared/c2c6"
+design_1.v,verilog,xil_defaultlib,../../../bd/design_1/sim/design_1.v,incdir="../../../../verimoog_1_8.gen/sources_1/bd/design_1/ipshared/c2c6"incdir="../../../../verimoog_1_8.gen/sources_1/bd/design_1/ipshared/c2c6"
 glbl.v,Verilog,xil_defaultlib,glbl.v

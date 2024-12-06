@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1733349211" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1733449852" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top.dcp">
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
   <File Type="RDS-RDS" Name="top.vds"/>
@@ -109,6 +109,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/new/clk_div.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../verimoog_1_7/verimoog_1_7.srcs/sources_1/imports/new/clk_div.v"/>
         <Attr Name="ImportTime" Val="1733199735"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -118,6 +119,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/new/note_sel.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../verimoog_1_7/verimoog_1_7.srcs/sources_1/imports/new/note_sel.v"/>
         <Attr Name="ImportTime" Val="1733199735"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -127,6 +129,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/new/voice_manager.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../verimoog_1_7/verimoog_1_7.srcs/sources_1/imports/new/voice_manager.v"/>
         <Attr Name="ImportTime" Val="1733199735"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -136,8 +139,17 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/new/voice_mixer.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../verimoog_1_7/verimoog_1_7.srcs/sources_1/imports/new/voice_mixer.v"/>
         <Attr Name="ImportTime" Val="1733199735"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -146,6 +158,8 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="top"/>
+      <Option Name="TopLib" Val="xil_defaultlib"/>
+      <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/imports/new/top.v"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>

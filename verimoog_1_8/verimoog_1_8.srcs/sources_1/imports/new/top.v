@@ -23,13 +23,7 @@ module top(
     input wire clk,             // 100MHz system clock
     input wire reset,           // Active high reset
     input wire midi_rx,         // MIDI serial input
-    input wire [1:0] wav_sel,   // Waveform selector
-    // ADSR controls with reduced bit widths
-    input wire [2:0] attack_time,    // Reduced from [15:0]
-    input wire [2:0] decay_time,     // Reduced from [15:0]
-    input wire [3:0] sustain_level,  // Reduced from [7:0]
-    input wire [2:0] release_time,   // Reduced from [15:0]
-    output wire pwm_audio_out        // PWM audio output pin
+    output wire pwm_audio_out   // PWM audio output pin
 );
 
     // Internal signals from MIDI input module
@@ -38,11 +32,48 @@ module top(
     wire note_valid;
     wire [7:0] wav_out;
 
-    // Internal extended ADSR signals
-    wire [15:0] attack_time_ext = {5'b0, attack_time, 8'b0};  // Scale to proper range
-    wire [15:0] decay_time_ext = {5'b0, decay_time, 8'b0};    // Scale to proper range
-    wire [7:0] sustain_level_ext = {sustain_level, 4'b0};     // Scale to 8 bits
-    wire [15:0] release_time_ext = {5'b0, release_time, 8'b0}; // Scale to proper range
+    // Processor to synth interface signals
+    wire [7:0] proc_port_addr;
+    wire [7:0] proc_data_out;
+    wire [7:0] proc_data_in;
+    wire proc_read_e;
+    wire proc_write_e;
+
+    // Synth control signals
+    wire [1:0] wav_sel;
+    wire [2:0] attack_time;
+    wire [2:0] decay_time;
+    wire [3:0] sustain_level;
+    wire [2:0] release_time;
+
+    // Instantiate the Natalius processor
+    natalius_processor processor_inst(
+        .clk(clk),
+        .rst(reset),
+        .port_addr(proc_port_addr),
+        .read_e(proc_read_e),
+        .write_e(proc_write_e),
+        .data_in(proc_data_in),
+        .data_out(proc_data_out)
+    );
+
+    // Instantiate the synthesizer interface
+    synth_interface synth_if_inst(
+        .clk(clk),
+        .reset(reset),
+        // Processor side
+        .port_addr(proc_port_addr),
+        .data_in(proc_data_out),
+        .data_out(proc_data_in),
+        .write_e(proc_write_e),
+        .read_e(proc_read_e),
+        // Synthesizer side
+        .wav_sel(wav_sel),
+        .attack_time(attack_time),
+        .decay_time(decay_time),
+        .sustain_level(sustain_level),
+        .release_time(release_time)
+    );
 
     // Instantiate MIDI input module
     midi_input midi_input_inst(
@@ -62,10 +93,10 @@ module top(
         .note_on(note_on),
         .note_valid(note_valid),
         .wav_sel(wav_sel),
-        .attack_time(attack_time_ext),
-        .decay_time(decay_time_ext),
-        .sustain_level(sustain_level_ext),
-        .release_time(release_time_ext),
+        .attack_time(attack_time),
+        .decay_time(decay_time),
+        .sustain_level(sustain_level),
+        .release_time(release_time),
         .wav_out(wav_out)
     );
 

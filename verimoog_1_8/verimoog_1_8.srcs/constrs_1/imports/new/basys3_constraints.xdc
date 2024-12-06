@@ -7,8 +7,8 @@ create_clock -period 100.000 -name sys_clk_pin -waveform {0.000 50.000} -add [ge
 set_property PACKAGE_PIN U18 [get_ports reset]
 set_property IOSTANDARD LVCMOS33 [get_ports reset]
 
-## MIDI RX (using UART RX pin)
-set_property PACKAGE_PIN B18 [get_ports midi_rx]
+## MIDI input pin (can use a button for testing)
+set_property PACKAGE_PIN V17 [get_ports midi_rx]
 set_property IOSTANDARD LVCMOS33 [get_ports midi_rx]
 
 ## Switches layout (16 total):

@@ -71,7 +71,6 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache C:/Users/ltpie/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-20212-HI-LAPTOP/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -102,10 +101,6 @@ read_verilog -library xil_defaultlib {
   C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/tri_wav_gen.v
   C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/wav_selector.v
   C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/top.v
-  C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/clk_div.v
-  C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/note_sel.v
-  C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/voice_manager.v
-  C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_1_8/verimoog_1_8.srcs/sources_1/imports/new/voice_mixer.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
