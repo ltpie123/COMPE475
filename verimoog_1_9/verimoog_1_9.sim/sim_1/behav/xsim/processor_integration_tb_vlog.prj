@@ -1,0 +1,29 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/natalius_8bit_risc/processor_core/ALU.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/natalius_8bit_risc/processor_core/LIFO.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/new/adsr_envelope.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/natalius_8bit_risc/processor_core/control_unit.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/natalius_8bit_risc/processor_core/data_path.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/natalius_8bit_risc/processor_core/instruction_memory.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/new/midi_input.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/new/midi_to_freq.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/natalius_8bit_risc/processor_core/natalius_processor.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/new/processor_synth_interface.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/new/pwm_audio.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/natalius_8bit_risc/processor_core/regfile.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/new/saw_wav_gen.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/natalius_8bit_risc/processor_core/shiftbyte.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/new/sin_wav_gen.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/new/sqr_wav_gen.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/new/synth.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/new/top.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/new/tri_wav_gen.v" \
+"../../../../verimoog_1_9.srcs/sources_1/imports/imports/new/wav_selector.v" \
+"../../../../verimoog_1_9.srcs/sim_1/new/processor_synth_interface_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

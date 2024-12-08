@@ -9,6 +9,7 @@ verilog xil_defaultlib  --include "../../../../verimoog_1_8.gen/sources_1/bd/des
 "../../../../verimoog_1_8.srcs/sources_1/imports/new/midi_input.v" \
 "../../../../verimoog_1_8.srcs/sources_1/imports/new/midi_to_freq.v" \
 "../../../../verimoog_1_8.srcs/sources_1/imports/natalius_8bit_risc/processor_core/natalius_processor.v" \
+"../../../../verimoog_1_8.srcs/sources_1/new/processor_synth_interface.v" \
 "../../../../verimoog_1_8.srcs/sources_1/imports/new/pwm_audio.v" \
 "../../../../verimoog_1_8.srcs/sources_1/imports/natalius_8bit_risc/processor_core/regfile.v" \
 "../../../../verimoog_1_8.srcs/sources_1/imports/new/saw_wav_gen.v" \
@@ -16,7 +17,6 @@ verilog xil_defaultlib  --include "../../../../verimoog_1_8.gen/sources_1/bd/des
 "../../../../verimoog_1_8.srcs/sources_1/imports/new/sin_wav_gen.v" \
 "../../../../verimoog_1_8.srcs/sources_1/imports/new/sqr_wav_gen.v" \
 "../../../../verimoog_1_8.srcs/sources_1/imports/new/synth.v" \
-"../../../../verimoog_1_8.srcs/sources_1/new/synth_interface.v" \
 "../../../../verimoog_1_8.srcs/sources_1/imports/new/top.v" \
 "../../../../verimoog_1_8.srcs/sources_1/imports/new/tri_wav_gen.v" \
 "../../../../verimoog_1_8.srcs/sources_1/imports/new/wav_selector.v" \

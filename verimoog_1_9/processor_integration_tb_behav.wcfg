@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="processor_integration_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="processor_integration_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="485.000001 us"></ZoomEndTime>
+      <Cursor1Time time="262.000000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="582"></NameColumnWidth>
+      <ValueColumnWidth column_width="167"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="/processor_integration_tb/clk" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_integration_tb/rst" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_integration_tb/midi_rx" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">midi_rx</obj_property>
+      <obj_property name="ObjectShortName">midi_rx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_integration_tb/pwm_audio_out" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">pwm_audio_out</obj_property>
+      <obj_property name="ObjectShortName">pwm_audio_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_integration_tb/instruction" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">instruction[15:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_integration_tb/proc_data_out" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">proc_data_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">proc_data_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_integration_tb/proc_data_in" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">proc_data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">proc_data_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_integration_tb/port_addr" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">port_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_integration_tb/proc_write" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">proc_write</obj_property>
+      <obj_property name="ObjectShortName">proc_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_integration_tb/proc_read" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">proc_read</obj_property>
+      <obj_property name="ObjectShortName">proc_read</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_integration_tb/uut/synth_inst/wav_sel_inst/wav_out" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">wav_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wav_out[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_integration_tb/uut/pwm_audio_inst/pwm_out" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">pwm_out</obj_property>
+      <obj_property name="ObjectShortName">pwm_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_integration_tb/uut/synth_inst/adsr_inst/voice_in" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">voice_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">voice_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_integration_tb/uut/synth_inst/adsr_inst/voice_out" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">voice_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">voice_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_integration_tb/uut/synth_inst/midi_freq_inst/midi_in" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">midi_in[6:0]</obj_property>
+      <obj_property name="ObjectShortName">midi_in[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/processor_integration_tb/uut/synth_inst/midi_freq_inst/freq_out" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">freq_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">freq_out[31:0]</obj_property>
+   </wvobject>
+</wave_config>

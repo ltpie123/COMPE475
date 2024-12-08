@@ -32,49 +32,31 @@ module top(
     wire note_valid;
     wire [7:0] wav_out;
 
-    // Processor to synth interface signals
-    wire [7:0] proc_port_addr;
-    wire [7:0] proc_data_out;
+    // Processor interface signals
+    wire [7:0] proc_addr;
+    wire proc_write;
+    wire proc_read;
     wire [7:0] proc_data_in;
-    wire proc_read_e;
-    wire proc_write_e;
+    wire [7:0] proc_data_out;
 
     // Synth control signals
     wire [1:0] wav_sel;
-    wire [2:0] attack_time;
-    wire [2:0] decay_time;
-    wire [3:0] sustain_level;
-    wire [2:0] release_time;
-
-    // Instantiate the Natalius processor
-    natalius_processor processor_inst(
-        .clk(clk),
-        .rst(reset),
-        .port_addr(proc_port_addr),
-        .read_e(proc_read_e),
-        .write_e(proc_write_e),
-        .data_in(proc_data_in),
-        .data_out(proc_data_out)
-    );
-
-    // Instantiate the synthesizer interface
-    synth_interface synth_if_inst(
-        .clk(clk),
-        .reset(reset),
-        // Processor side
-        .port_addr(proc_port_addr),
-        .data_in(proc_data_out),
-        .data_out(proc_data_in),
-        .write_e(proc_write_e),
-        .read_e(proc_read_e),
-        // Synthesizer side
-        .wav_sel(wav_sel),
-        .attack_time(attack_time),
-        .decay_time(decay_time),
-        .sustain_level(sustain_level),
-        .release_time(release_time)
-    );
-
+    wire [15:0] attack_time;
+    wire [15:0] decay_time;
+    wire [7:0] sustain_level;
+    wire [15:0] release_time;
+    
+    // In top.v
+    wire [15:0] instruction;
+    wire [7:0] proc_data_out;
+    wire [7:0] proc_data_in;
+    
+    // Connect debug signals
+    assign instruction = dut.processor_inst.instruction;
+    assign proc_data_out = dut.interface_inst.proc_data_out;
+    assign proc_data_in = dut.interface_inst.proc_data_in;
+    
+    
     // Instantiate MIDI input module
     midi_input midi_input_inst(
         .clk(clk),
@@ -83,6 +65,36 @@ module top(
         .midi_note(midi_note),
         .note_on(note_on),
         .note_valid(note_valid)
+    );
+
+    // Instantiate processor
+    natalius_processor processor_inst(
+        .clk(clk),
+        .rst(reset),
+        .port_addr(proc_addr),
+        .read_e(proc_read),
+        .write_e(proc_write),
+        .data_in(proc_data_in),
+        .data_out(proc_data_out)
+    );
+
+    // Instantiate processor-synth interface
+    processor_synth_interface interface_inst(
+        .clk(clk),
+        .rst(reset),
+        .proc_addr(proc_addr),
+        .proc_write(proc_write),
+        .proc_read(proc_read),
+        .proc_data_out(proc_data_out),
+        .proc_data_in(proc_data_in),
+        .midi_note(midi_note),
+        .note_on(note_on),
+        .note_valid(note_valid),
+        .wav_sel(wav_sel),
+        .attack_time(attack_time),
+        .decay_time(decay_time),
+        .sustain_level(sustain_level),
+        .release_time(release_time)
     );
 
     // Instantiate synthesizer

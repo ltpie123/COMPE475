@@ -20,123 +20,95 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module processor_synth_interface(
-    input wire clk,                    // System clock (100MHz)
-    input wire reset,                  // Global reset
-    input wire midi_rx,                // MIDI serial input
-    input wire [1:0] wav_sel,          // Direct waveform override
-    output wire pwm_audio_out,         // Final audio output
-    
-    // Debug/Monitor outputs
-    output wire [7:0] processor_port_out,
-    output wire proc_read_strobe,
-    output wire proc_write_strobe
+    input wire clk,
+    input wire rst,
+    // Processor interface
+    input wire [7:0] proc_addr,
+    input wire proc_write,
+    input wire proc_read,
+    input wire [7:0] proc_data_out,
+    output reg [7:0] proc_data_in,
+    // Synthesizer interface
+    input wire [6:0] midi_note,
+    input wire note_on,
+    input wire note_valid,
+    output reg [1:0] wav_sel,
+    output reg [15:0] attack_time,
+    output reg [15:0] decay_time,
+    output reg [7:0] sustain_level,
+    output reg [15:0] release_time,
+    // Added synchronization signals
+    output reg midi_valid_sync,
+    output reg [6:0] midi_note_sync,
+    output reg note_on_sync
 );
 
-    // Internal control signals
-    wire [7:0] proc_data_in;
-    wire [7:0] proc_data_out;
-    wire [7:0] proc_port_addr;
-    wire proc_read_e;
-    wire proc_write_e;
+    // Synchronization registers
+    reg midi_valid_meta, note_on_meta;
+    reg [6:0] midi_note_meta;
 
-    // Synth control registers
-    reg [2:0] attack_time_reg = 3'd2;    // Default moderate attack
-    reg [2:0] decay_time_reg = 3'd3;     // Default moderate decay
-    reg [3:0] sustain_level_reg = 4'd8;  // Default 50% sustain
-    reg [2:0] release_time_reg = 3'd4;   // Default moderate release
-    reg [1:0] waveform_reg = 2'b00;      // Default sawtooth
-    
-    // MIDI interface signals
-    wire [6:0] midi_note;
-    wire note_on;
-    wire note_valid;
-    wire [7:0] wav_out;
+    // Memory-mapped register addresses
+    localparam ADDR_WAV_SEL = 8'h00;
+    localparam ADDR_ATTACK = 8'h01;
+    localparam ADDR_DECAY = 8'h02;
+    localparam ADDR_SUSTAIN = 8'h03;
+    localparam ADDR_RELEASE = 8'h04;
+    localparam ADDR_MIDI_NOTE = 8'h05;
+    localparam ADDR_NOTE_STATUS = 8'h06;
 
-    // Port address definitions
-    localparam ADDR_ATTACK = 8'h00;
-    localparam ADDR_DECAY = 8'h01;
-    localparam ADDR_SUSTAIN = 8'h02;
-    localparam ADDR_RELEASE = 8'h03;
-    localparam ADDR_WAVEFORM = 8'h04;
-    localparam ADDR_MIDI_STATUS = 8'h05;
-    localparam ADDR_MIDI_NOTE = 8'h06;
-    
-    // Instantiate the Natalius processor
-    natalius_processor processor_inst(
-        .clk(clk),
-        .rst(reset),
-        .port_addr(proc_port_addr),
-        .read_e(proc_read_e),
-        .write_e(proc_write_e),
-        .data_in(proc_data_in),
-        .data_out(proc_data_out)
-    );
-    
-    // Memory-mapped I/O handling
-    always @(posedge clk) begin
-        if (reset) begin
-            attack_time_reg <= 3'd2;
-            decay_time_reg <= 3'd3;
-            sustain_level_reg <= 4'd8;
-            release_time_reg <= 3'd4;
-            waveform_reg <= 2'b00;
+    // Two-stage synchronizer
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            midi_valid_meta <= 0;
+            midi_valid_sync <= 0;
+            note_on_meta <= 0;
+            note_on_sync <= 0;
+            midi_note_meta <= 0;
+            midi_note_sync <= 0;
+        end else begin
+            // First stage
+            midi_valid_meta <= note_valid;
+            note_on_meta <= note_on;
+            midi_note_meta <= midi_note;
+            
+            // Second stage
+            midi_valid_sync <= midi_valid_meta;
+            note_on_sync <= note_on_meta;
+            midi_note_sync <= midi_note_meta;
         end
-        else if (proc_write_e) begin
-            case (proc_port_addr)
-                ADDR_ATTACK: attack_time_reg <= proc_data_out[2:0];
-                ADDR_DECAY: decay_time_reg <= proc_data_out[2:0];
-                ADDR_SUSTAIN: sustain_level_reg <= proc_data_out[3:0];
-                ADDR_RELEASE: release_time_reg <= proc_data_out[2:0];
-                ADDR_WAVEFORM: waveform_reg <= proc_data_out[1:0];
+    end
+
+    // Register writes
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            wav_sel <= 2'b00;
+            attack_time <= 16'h0000;
+            decay_time <= 16'h0000;
+            sustain_level <= 8'h00;
+            release_time <= 16'h0000;
+        end else if (proc_write) begin
+            case (proc_addr)
+                ADDR_WAV_SEL: wav_sel <= proc_data_out[1:0];
+                ADDR_ATTACK: attack_time[7:0] <= proc_data_out;
+                ADDR_DECAY: decay_time[7:0] <= proc_data_out;
+                ADDR_SUSTAIN: sustain_level <= proc_data_out;
+                ADDR_RELEASE: release_time[7:0] <= proc_data_out;
             endcase
         end
     end
     
-    // Processor read data multiplexer
-    assign proc_data_in = 
-        (proc_port_addr == ADDR_MIDI_STATUS) ? {7'b0, note_on} :
-        (proc_port_addr == ADDR_MIDI_NOTE) ? {1'b0, midi_note} :
-        8'h00;  // Default value for undefined addresses
-        
-    // Instantiate the synthesizer core with processor-controlled parameters
-    synth synth_inst(
-        .clk(clk),
-        .reset(reset),
-        .midi_note(midi_note),
-        .note_on(note_on),
-        .note_valid(note_valid),
-        .wav_sel(wav_sel_final),
-        .attack_time(attack_time_reg),
-        .decay_time(decay_time_reg),
-        .sustain_level(sustain_level_reg),
-        .release_time(release_time_reg),
-        .wav_out(wav_out)
-    );
-    
-    // MIDI input processing
-    midi_input midi_input_inst(
-        .clk(clk),
-        .reset(reset),
-        .midi_rx(midi_rx),
-        .midi_note(midi_note),
-        .note_on(note_on),
-        .note_valid(note_valid)
-    );
-    
-    // PWM audio output stage
-    pwm_audio pwm_audio_inst(
-        .clk(clk),
-        .reset(reset),
-        .audio_in(wav_out),
-        .pwm_out(pwm_audio_out)
-    );
-    
-    // Allow external waveform selection to override processor
-    wire [1:0] wav_sel_final = wav_sel != 2'b11 ? wav_sel : waveform_reg;
-    
-    // Debug/monitor outputs
-    assign processor_port_out = proc_data_out;
-    assign proc_read_strobe = proc_read_e;
-    assign proc_write_strobe = proc_write_e;
+    // Register reads
+    always @(*) begin
+        case (proc_addr)
+            ADDR_WAV_SEL: proc_data_in = {6'b0, wav_sel};
+            ADDR_ATTACK: proc_data_in = attack_time[7:0];
+            ADDR_DECAY: proc_data_in = decay_time[7:0];
+            ADDR_SUSTAIN: proc_data_in = sustain_level;
+            ADDR_RELEASE: proc_data_in = release_time[7:0];
+            ADDR_MIDI_NOTE: proc_data_in = {1'b0, midi_note_sync};
+            ADDR_NOTE_STATUS: proc_data_in = {6'b0, midi_valid_sync, note_on_sync};
+            default: proc_data_in = 8'h00;
+        endcase
+    end
 
 endmodule

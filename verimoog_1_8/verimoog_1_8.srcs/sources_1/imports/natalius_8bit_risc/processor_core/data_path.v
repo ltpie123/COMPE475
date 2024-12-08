@@ -18,6 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
+
 module data_path(
     input clk,
     input rst,
@@ -30,63 +31,90 @@ module data_path(
     input [2:0] opalu,
     input [2:0] sh,
     input selpc,
-	 input selk,
+    input selk,
     input ldpc,
-	 input ldflag,
-	 input wr_en, rd_en,
-	 input [10:0] ninst_addr,
-	 input [7:0] kte,
-	 input [7:0] imm,
-	 input selimm,
+    input ldflag,
+    input wr_en, rd_en,
+    input [10:0] ninst_addr,
+    input [7:0] kte,
+    input [7:0] imm,
+    input selimm,
     output [7:0] data_out,
     output [10:0] inst_addr,
-	 output [10:0] stack_addr,
-	 output reg z,c
+    output [10:0] stack_addr,
+    output reg z,c
+);
+
+    wire [7:0] regmux, muxkte, muximm;
+    wire [7:0] portA, portB;
+    wire [7:0] aluresu;
+    wire zero, carry;
+    wire [7:0] shiftout;
+
+    reg [10:0] PC;
+    wire [10:0] fifo_out;
+
+    regfile registros(
+        .datain(regmux),
+        .clk(clk),
+        .we(we),
+        .wa(wa),
+        .raa(raa),
+        .rab(rab),
+        .porta(portA),
+        .portb(portB)
     );
 
-wire [7:0] regmux, muxkte, muximm;
-wire [7:0] portA, portB;
-wire [7:0] aluresu;
-wire zero,carry;
-wire [7:0] shiftout;
+    ALU alui(
+        .a(portA),
+        .b(muximm),
+        .result(aluresu),
+        .opalu(opalu),
+        .zero(zero),
+        .carry(carry)
+    );
 
-reg [10:0] PC;
-wire [10:0] fifo_out;
+    shiftbyte shif_reg(
+        .din(aluresu),
+        .dshift(shiftout),
+        .sh(sh)
+    );
 
-regfile registros(regmux,clk,we,wa,raa,rab,portA,portB);
-ALU alui(portA,muximm,aluresu,opalu,zero,carry);
-shiftbyte shif_reg(aluresu,shiftout,sh);
-LIFO LIFOi(clk,rst,wr_en,rd_en,PC,fifo_out);
+    LIFO LIFOi(
+        .clk(clk),
+        .rst(rst),
+        .wr_en(wr_en),
+        .rd_en(rd_en),
+        .din(PC),
+        .dout(fifo_out)
+    );
 
-assign stack_addr=fifo_out+1;
-assign regmux=insel? shiftout : muxkte;
-assign muxkte=selk? kte : data_in;
-assign muximm=selimm? imm : portB;
+    assign stack_addr = fifo_out + 1;
+    assign regmux = insel ? shiftout : muxkte;
+    assign muxkte = selk ? kte : data_in;
+    assign muximm = selimm ? imm : portB;
 
-always@(posedge clk or posedge rst)
-	if (rst)
-		begin
-			z<=0;
-			c<=0;
-		end
-	else
-		if (ldflag)	
-			begin
-				z<=zero;
-				c<=carry;
-			end
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            z <= 0;
+            c <= 0;
+            PC <= 0;
+        end else begin
+            if (ldflag) begin
+                z <= zero;
+                c <= carry;
+            end
+            if (ldpc) begin
+                if (selpc) begin
+                    PC <= ninst_addr;
+                    $display("PC updated to: %h", ninst_addr);
+                end else
+                    PC <= PC + 1;
+            end
+        end
+    end
 
-always@(posedge clk or posedge rst)
-	if (rst)
-		PC<=0;
-	else
-		if (ldpc)	
-			if(selpc)
-				PC<=ninst_addr;
-			else
-				PC<=PC+1;
-
-assign inst_addr=PC;
-assign data_out=shiftout;
+    assign inst_addr = PC;
+    assign data_out = shiftout;
 
 endmodule

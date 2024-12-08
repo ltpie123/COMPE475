@@ -19,73 +19,153 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module processor_synth_tb();
-    // Test bench signals
-    reg clk;
-    reg reset;
-    reg midi_rx;
-    wire pwm_audio_out;
+`timescale 1ns / 1ps
 
-    // Clock generation (100MHz)
-    initial begin
-        clk = 0;
-        forever #5 clk = ~clk;  // 100MHz clock
-    end
+module processor_synth_tb;
+   // Clock and reset signals
+   reg clk;
+   reg reset;
+   reg midi_rx;
+   wire pwm_audio_out;
 
-    // Instantiate the top module
-    top uut (
-        .clk(clk),
-        .reset(reset),
-        .midi_rx(midi_rx),
-        .pwm_audio_out(pwm_audio_out)
-    );
+   // Debug signals
+   wire [15:0] instruction;
+   wire [7:0] proc_data_out, proc_data_in; 
+   wire [1:0] wav_sel;
+   wire midi_valid_sync, note_on_sync;
+   wire [6:0] midi_note_sync;
+   wire [7:0] wav_out;
 
-    // Test stimulus
-    initial begin
-        // Initialize inputs
-        midi_rx = 0;
-        reset = 1;
-        
-        // Display test start
-        $display("Starting processor synthesizer test");
-        $display("Time\tReset\tMIDI_RX\tPWM_Out");
-        $monitor("%0t\t%b\t%b\t%b", $time, reset, midi_rx, pwm_audio_out);
+   // Clock generation
+   initial begin
+       clk = 0;
+       forever #5 clk = ~clk; 
+   end
 
-        // Hold reset for 100ns
-        #100;
-        reset = 0;
-        $display("Reset released at time %0t", $time);
+   // Instantiate DUT
+   top dut (
+       .clk(clk),
+       .reset(reset),
+       .midi_rx(midi_rx),
+       .pwm_audio_out(pwm_audio_out)
+   );
 
-        // Let processor run for a while
-        #1000;
-        $display("Checking processor signals at time %0t", $time);
-        
-        // Check processor outputs
-        $display("Current synth settings:");
-        $display("Waveform = %h", uut.synth_if_inst.wav_sel);
-        $display("Attack = %h", uut.synth_if_inst.attack_time);
-        $display("Decay = %h", uut.synth_if_inst.decay_time);
-        $display("Sustain = %h", uut.synth_if_inst.sustain_level);
-        $display("Release = %h", uut.synth_if_inst.release_time);
+   // Debug signal assignments
+   assign instruction = dut.processor_inst.instruction;
+   assign proc_data_out = dut.processor_inst.data_out;
+   assign proc_data_in = dut.processor_inst.data_in;
+   assign wav_sel = dut.interface_inst.wav_sel;
+   assign midi_valid_sync = dut.interface_inst.midi_valid_sync;
+   assign note_on_sync = dut.interface_inst.note_on_sync;
+   assign midi_note_sync = dut.interface_inst.midi_note_sync;
+   assign wav_out = dut.synth_inst.wav_out;
 
-        // Test MIDI input
-        #100;
-        midi_rx = 1;
-        #100;
-        midi_rx = 0;
-        
-        // Run for a while longer
-        #1000;
-        
-        // End simulation
-        $display("Test completed at time %0t", $time);
-        $finish;
-    end
+   // MIDI message generator
+   task send_midi_note_on;
+       input [7:0] note;
+       begin
+           // MIDI Note On message (0x90)
+           midi_rx = 0; #32000; // Start bit
+           midi_rx = 1; #32000; // 0x90 byte
+           midi_rx = 0; #32000;
+           midi_rx = 0; #32000;
+           midi_rx = 1; #32000;
+           midi_rx = 0; #32000;
+           midi_rx = 0; #32000;
+           midi_rx = 0; #32000;
+           midi_rx = 1; #32000; // Stop bit
+           
+           // Note number
+           midi_rx = 0; #32000; // Start bit
+           repeat(8) begin
+               midi_rx = note[0];
+               note = note >> 1;
+               #32000;
+           end
+           midi_rx = 1; #32000; // Stop bit
+           
+           // Velocity (64)
+           midi_rx = 0; #32000; // Start bit
+           midi_rx = 0; #32000;
+           midi_rx = 0; #32000;
+           midi_rx = 0; #32000;
+           midi_rx = 0; #32000;
+           midi_rx = 1; #32000;
+           midi_rx = 1; #32000;
+           midi_rx = 1; #32000;
+           midi_rx = 0; #32000;
+           midi_rx = 1; #32000; // Stop bit
+       end
+   endtask
 
-    // Optional: Waveform dumping
-    initial begin
-        $dumpfile("processor_synth.vcd");
-        $dumpvars(0, processor_synth_tb);
-    end
+   task send_midi_note_off;
+       input [7:0] note;
+       begin
+           // MIDI Note Off message (0x80)
+           midi_rx = 0; #32000;
+           midi_rx = 1; #32000;
+           midi_rx = 0; #32000;
+           midi_rx = 0; #32000;
+           midi_rx = 0; #32000;
+           midi_rx = 0; #32000;
+           midi_rx = 0; #32000;
+           midi_rx = 0; #32000;
+           midi_rx = 1; #32000;
+           
+           // Note number
+           midi_rx = 0; #32000;
+           repeat(8) begin
+               midi_rx = note[0];
+               note = note >> 1;
+               #32000;
+           end
+           midi_rx = 1; #32000;
+           
+           // Velocity (0)
+           midi_rx = 0; #32000;
+           repeat(8) begin
+               midi_rx = 0;
+               #32000;
+           end
+           midi_rx = 1; #32000;
+       end
+   endtask
+
+   // Test stimulus
+   initial begin
+       // Initialize
+       reset = 1;
+       midi_rx = 1;
+       #200;  // Longer reset period
+       reset = 0;
+       #100;
+       
+       // Verify instruction fetch
+       #1000;
+
+       // Test sequence
+       send_midi_note_on(8'h3C);  // Middle C
+       #500000;
+       send_midi_note_off(8'h3C);
+       #500000;
+       
+       send_midi_note_on(8'h40);  // E4
+       #500000;
+       send_midi_note_off(8'h40);
+       #500000;
+
+       #1000000;
+       $finish;
+   end
+
+   // Debug monitoring
+   initial begin
+       $monitor("Time=%t rst=%b instr=%h data_out=%h data_in=%h wav=%h midi_valid=%b note_on=%b note=%h wav_out=%h", 
+                $time, reset, instruction, proc_data_out, proc_data_in, wav_sel,
+                midi_valid_sync, note_on_sync, midi_note_sync, wav_out);
+                
+       $dumpfile("processor_synth.vcd");
+       $dumpvars(0, processor_synth_tb);
+   end
 
 endmodule
