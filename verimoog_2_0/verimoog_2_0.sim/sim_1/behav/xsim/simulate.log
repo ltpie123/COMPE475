@@ -1,0 +1,1619 @@
+Time resolution is 1 ps
+Instruction Memory Contents:
+Addr 0: 0200
+Addr 1: 0201
+Addr 2: 0202
+Addr 3: 0203
+Addr 4: 0204
+Addr 5: 0205
+Addr 6: 0206
+Addr 7: 0207
+Addr 8: 0305
+Addr 9: 0306
+Addr a: 0307
+Addr b: 0308
+Addr c: 0309
+Addr d: 2005
+Addr e: 6000
+Addr f: 7001
+=== Starting Testbench ===
+Data Path Reset - PC set to 0
+Time=5000 Instruction=0000 Data_Out=xx Data_In=00
+Time=5000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=5000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=5000 Audio Output=00
+Time=5000 State transition: x -> x
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=15000 Instruction=0200 Data_Out=xx Data_In=00
+Time=15000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=15000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=15000 Audio Output=00
+Time=15000 State transition: x -> x
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=25000 Instruction=0200 Data_Out=xx Data_In=00
+Time=25000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=25000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=25000 Audio Output=00
+Reset asserted - State set to FETCH
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=35000 Control State=0
+Time=35000 Instruction=0200 Data_Out=xx Data_In=00
+Time=35000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=35000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=35000 Audio Output=00
+Reset asserted - State set to FETCH
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=45000 Control State=0
+Time=45000 Instruction=0200 Data_Out=00 Data_In=00
+Time=45000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=45000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=45000 Audio Output=00
+Reset asserted - State set to FETCH
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=55000 Control State=0
+Time=55000 Instruction=0200 Data_Out=00 Data_In=00
+Time=55000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=55000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=55000 Audio Output=00
+Reset asserted - State set to FETCH
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=65000 Control State=0
+Time=65000 Instruction=0200 Data_Out=00 Data_In=00
+Time=65000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=65000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=65000 Audio Output=00
+Reset asserted - State set to FETCH
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=75000 Control State=0
+Time=75000 Instruction=0200 Data_Out=00 Data_In=00
+Time=75000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=75000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=75000 Audio Output=00
+Reset asserted - State set to FETCH
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=85000 Control State=0
+Time=85000 Instruction=0200 Data_Out=00 Data_In=00
+Time=85000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=85000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=85000 Audio Output=00
+Reset asserted - State set to FETCH
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=95000 Control State=0
+Time=95000 Instruction=0200 Data_Out=00 Data_In=00
+Time=95000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=95000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=95000 Audio Output=00
+Reset asserted - State set to FETCH
+Reading instruction at addr=000: 0200
+Reset released at time 105000
+Time=105000 Control State=0
+Time=105000 Instruction=0200 Data_Out=00 Data_In=00
+Time=105000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=105000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Reset asserted - State set to FETCH
+Reading instruction at addr=000: 0200
+Time=115000 Control State=0
+Time=115000 Instruction=0200 Data_Out=00 Data_In=00
+Time=115000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=115000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=115000 Audio Output=00
+Time=115000 State transition: 0 -> 1
+Time=115000 FETCH: PC hold
+Reading instruction at addr=000: 0200
+Time=125000 Control State=1
+Time=125000 Instruction=0200 Data_Out=00 Data_In=00
+Time=125000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=125000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=125000 Audio Output=00
+Time=125000 State transition: 1 -> 2
+Time=125000 DECODE: LDI R2, 00
+Reading instruction at addr=000: 0200
+Time=135000 Control State=2
+Time=135000 Instruction=0200 Data_Out=00 Data_In=00
+Time=135000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=135000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=135000 Audio Output=00
+Time=135000 State transition: 2 -> 3
+Time=135000 EXECUTE: opcode=02 we=0 selk=0 wa=2 KTE=00
+Time=135000 EXECUTE: LDI active - selk=0 we=0
+Reading instruction at addr=000: 0200
+Time=145000 Control State=3
+Time=145000 Instruction=0200 Data_Out=00 Data_In=00
+Time=145000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=145000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=145000 Audio Output=00
+Time=145000 State transition: 3 -> 0
+Time=145000 WRITEBACK: PC increment
+Reading instruction at addr=000: 0200
+
+=== Testing MIDI Note On Sequence ===
+Time=155000 Control State=0
+Time=155000 Instruction=0200 Data_Out=00 Data_In=00
+Time=155000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=155000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=155000 Audio Output=00
+Time=155000 State transition: 0 -> 1
+Time=155000 FETCH: PC hold
+Reading instruction at addr=000: 0200
+Time=165000 Control State=1
+Time=165000 Instruction=0200 Data_Out=00 Data_In=00
+Time=165000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=165000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=165000 Audio Output=00
+Time=165000 State transition: 1 -> 2
+Time=165000 DECODE: LDI R2, 00
+Reading instruction at addr=001: 0201
+Time=175000 Control State=2
+Time=175000 Instruction=0201 Data_Out=00 Data_In=00
+Time=175000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=175000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=175000 Audio Output=00
+Time=175000 State transition: 2 -> 3
+Time=175000 EXECUTE: opcode=02 we=0 selk=0 wa=2 KTE=00
+Time=175000 EXECUTE: LDI active - selk=0 we=0
+Reading instruction at addr=001: 0201
+Time=185000 Control State=3
+Time=185000 Instruction=0201 Data_Out=00 Data_In=00
+Time=185000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=185000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=185000 Audio Output=00
+Time=185000 State transition: 3 -> 0
+Time=185000 WRITEBACK: PC increment
+Reading instruction at addr=001: 0201
+Time=195000 Control State=0
+Time=195000 Instruction=0201 Data_Out=00 Data_In=00
+Time=195000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=195000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=195000 Audio Output=00
+Time=195000 State transition: 0 -> 1
+Time=195000 FETCH: PC hold
+Reading instruction at addr=001: 0201
+Time=205000 Control State=1
+Time=205000 Instruction=0201 Data_Out=00 Data_In=00
+Time=205000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=205000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=205000 Audio Output=00
+Time=205000 State transition: 1 -> 2
+Time=205000 DECODE: LDI R2, 01
+Reading instruction at addr=002: 0202
+Time=215000 Control State=2
+Time=215000 Instruction=0202 Data_Out=00 Data_In=00
+Time=215000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=215000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=215000 Audio Output=00
+Time=215000 State transition: 2 -> 3
+Time=215000 EXECUTE: opcode=02 we=0 selk=0 wa=2 KTE=01
+Time=215000 EXECUTE: LDI active - selk=0 we=0
+Reading instruction at addr=002: 0202
+Time=225000 Control State=3
+Time=225000 Instruction=0202 Data_Out=00 Data_In=00
+Time=225000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=225000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=225000 Audio Output=00
+Time=225000 State transition: 3 -> 0
+Time=225000 WRITEBACK: PC increment
+Reading instruction at addr=002: 0202
+Time=235000 Control State=0
+Time=235000 Instruction=0202 Data_Out=00 Data_In=00
+Time=235000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=235000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=235000 Audio Output=00
+Time=235000 State transition: 0 -> 1
+Time=235000 FETCH: PC hold
+Reading instruction at addr=002: 0202
+Time=245000 Control State=1
+Time=245000 Instruction=0202 Data_Out=00 Data_In=00
+Time=245000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=245000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=245000 Audio Output=00
+Time=245000 State transition: 1 -> 2
+Time=245000 DECODE: LDI R2, 02
+Reading instruction at addr=003: 0203
+Time=255000 Control State=2
+Time=255000 Instruction=0203 Data_Out=00 Data_In=00
+Time=255000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=255000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=255000 Audio Output=00
+Time=255000 State transition: 2 -> 3
+Time=255000 EXECUTE: opcode=02 we=0 selk=0 wa=2 KTE=02
+Time=255000 EXECUTE: LDI active - selk=0 we=0
+Reading instruction at addr=003: 0203
+Time=265000 Control State=3
+Time=265000 Instruction=0203 Data_Out=00 Data_In=00
+Time=265000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=265000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=265000 Audio Output=00
+Time=265000 State transition: 3 -> 0
+Time=265000 WRITEBACK: PC increment
+Reading instruction at addr=003: 0203
+Time=275000 Control State=0
+Time=275000 Instruction=0203 Data_Out=00 Data_In=00
+Time=275000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=275000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=275000 Audio Output=00
+Time=275000 State transition: 0 -> 1
+Time=275000 FETCH: PC hold
+Reading instruction at addr=003: 0203
+Time=285000 Control State=1
+Time=285000 Instruction=0203 Data_Out=00 Data_In=00
+Time=285000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=285000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=285000 Audio Output=00
+Time=285000 State transition: 1 -> 2
+Time=285000 DECODE: LDI R2, 03
+Reading instruction at addr=004: 0204
+Time=295000 Control State=2
+Time=295000 Instruction=0204 Data_Out=00 Data_In=00
+Time=295000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=295000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=295000 Audio Output=00
+Time=295000 State transition: 2 -> 3
+Time=295000 EXECUTE: opcode=02 we=0 selk=0 wa=2 KTE=03
+Time=295000 EXECUTE: LDI active - selk=0 we=0
+Reading instruction at addr=004: 0204
+Time=305000 Control State=3
+Time=305000 Instruction=0204 Data_Out=00 Data_In=00
+Time=305000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=305000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=305000 Audio Output=00
+Time=305000 State transition: 3 -> 0
+Time=305000 WRITEBACK: PC increment
+Reading instruction at addr=004: 0204
+Time=315000 Control State=0
+Time=315000 Instruction=0204 Data_Out=00 Data_In=00
+Time=315000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=315000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=315000 Audio Output=00
+Time=315000 State transition: 0 -> 1
+Time=315000 FETCH: PC hold
+Reading instruction at addr=004: 0204
+Time=325000 Control State=1
+Time=325000 Instruction=0204 Data_Out=00 Data_In=00
+Time=325000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=325000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=325000 Audio Output=00
+Time=325000 State transition: 1 -> 2
+Time=325000 DECODE: LDI R2, 04
+Reading instruction at addr=005: 0205
+Time=335000 Control State=2
+Time=335000 Instruction=0205 Data_Out=00 Data_In=00
+Time=335000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=335000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=335000 Audio Output=00
+Time=335000 State transition: 2 -> 3
+Time=335000 EXECUTE: opcode=02 we=0 selk=0 wa=2 KTE=04
+Time=335000 EXECUTE: LDI active - selk=0 we=0
+Reading instruction at addr=005: 0205
+Time=345000 Control State=3
+Time=345000 Instruction=0205 Data_Out=00 Data_In=00
+Time=345000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=345000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=345000 Audio Output=00
+Time=345000 State transition: 3 -> 0
+Time=345000 WRITEBACK: PC increment
+Reading instruction at addr=005: 0205
+Time=355000 Control State=0
+Time=355000 Instruction=0205 Data_Out=00 Data_In=00
+Time=355000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=355000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=355000 Audio Output=00
+Time=355000 State transition: 0 -> 1
+Time=355000 FETCH: PC hold
+Reading instruction at addr=005: 0205
+Time=365000 Control State=1
+Time=365000 Instruction=0205 Data_Out=00 Data_In=00
+Time=365000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=365000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=365000 Audio Output=00
+Time=365000 State transition: 1 -> 2
+Time=365000 DECODE: LDI R2, 05
+Reading instruction at addr=006: 0206
+Time=375000 Control State=2
+Time=375000 Instruction=0206 Data_Out=00 Data_In=00
+Time=375000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=375000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=375000 Audio Output=00
+Time=375000 State transition: 2 -> 3
+Time=375000 EXECUTE: opcode=02 we=0 selk=0 wa=2 KTE=05
+Time=375000 EXECUTE: LDI active - selk=0 we=0
+Reading instruction at addr=006: 0206
+Time=385000 Control State=3
+Time=385000 Instruction=0206 Data_Out=00 Data_In=00
+Time=385000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=385000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=385000 Audio Output=00
+Time=385000 State transition: 3 -> 0
+Time=385000 WRITEBACK: PC increment
+Reading instruction at addr=006: 0206
+Time=395000 Control State=0
+Time=395000 Instruction=0206 Data_Out=00 Data_In=00
+Time=395000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=395000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=395000 Audio Output=00
+Time=395000 State transition: 0 -> 1
+Time=395000 FETCH: PC hold
+Reading instruction at addr=006: 0206
+Time=405000 Control State=1
+Time=405000 Instruction=0206 Data_Out=00 Data_In=00
+Time=405000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=405000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=405000 Audio Output=00
+Time=405000 State transition: 1 -> 2
+Time=405000 DECODE: LDI R2, 06
+Reading instruction at addr=007: 0207
+Time=415000 Control State=2
+Time=415000 Instruction=0207 Data_Out=00 Data_In=00
+Time=415000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=415000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=415000 Audio Output=00
+Time=415000 State transition: 2 -> 3
+Time=415000 EXECUTE: opcode=02 we=0 selk=0 wa=2 KTE=06
+Time=415000 EXECUTE: LDI active - selk=0 we=0
+Reading instruction at addr=007: 0207
+Time=425000 Control State=3
+Time=425000 Instruction=0207 Data_Out=00 Data_In=00
+Time=425000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=425000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=425000 Audio Output=00
+Time=425000 State transition: 3 -> 0
+Time=425000 WRITEBACK: PC increment
+Reading instruction at addr=007: 0207
+Time=435000 Control State=0
+Time=435000 Instruction=0207 Data_Out=00 Data_In=00
+Time=435000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=435000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=435000 Audio Output=00
+Time=435000 State transition: 0 -> 1
+Time=435000 FETCH: PC hold
+Reading instruction at addr=007: 0207
+Time=445000 Control State=1
+Time=445000 Instruction=0207 Data_Out=00 Data_In=00
+Time=445000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=445000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=445000 Audio Output=00
+Time=445000 State transition: 1 -> 2
+Time=445000 DECODE: LDI R2, 07
+Reading instruction at addr=008: 0305
+Time=455000 Control State=2
+Time=455000 Instruction=0305 Data_Out=00 Data_In=00
+Time=455000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=455000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=455000 Audio Output=00
+Time=455000 State transition: 2 -> 3
+Time=455000 EXECUTE: opcode=03 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=008: 0305
+Time=465000 Control State=3
+Time=465000 Instruction=0305 Data_Out=00 Data_In=00
+Time=465000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=465000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=465000 Audio Output=00
+Time=465000 State transition: 3 -> 0
+Time=465000 WRITEBACK: PC increment
+Reading instruction at addr=008: 0305
+Time=475000 Control State=0
+Time=475000 Instruction=0305 Data_Out=00 Data_In=00
+Time=475000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=475000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=475000 Audio Output=00
+Time=475000 State transition: 0 -> 1
+Time=475000 FETCH: PC hold
+Reading instruction at addr=008: 0305
+Time=485000 Control State=1
+Time=485000 Instruction=0305 Data_Out=00 Data_In=00
+Time=485000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=485000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=485000 Audio Output=00
+Time=485000 State transition: 1 -> 2
+Reading instruction at addr=009: 0306
+Time=495000 Control State=2
+Time=495000 Instruction=0306 Data_Out=00 Data_In=00
+Time=495000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=495000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=495000 Audio Output=00
+Time=495000 State transition: 2 -> 3
+Time=495000 EXECUTE: opcode=03 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=009: 0306
+Time=505000 Control State=3
+Time=505000 Instruction=0306 Data_Out=00 Data_In=00
+Time=505000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=505000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=505000 Audio Output=00
+Time=505000 State transition: 3 -> 0
+Time=505000 WRITEBACK: PC increment
+Reading instruction at addr=009: 0306
+Time=515000 Control State=0
+Time=515000 Instruction=0306 Data_Out=00 Data_In=00
+Time=515000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=515000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=515000 Audio Output=00
+Time=515000 State transition: 0 -> 1
+Time=515000 FETCH: PC hold
+Reading instruction at addr=009: 0306
+Time=525000 Control State=1
+Time=525000 Instruction=0306 Data_Out=00 Data_In=00
+Time=525000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=525000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=525000 Audio Output=00
+Time=525000 State transition: 1 -> 2
+Reading instruction at addr=00a: 0307
+Time=535000 Control State=2
+Time=535000 Instruction=0307 Data_Out=00 Data_In=00
+Time=535000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=535000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=535000 Audio Output=00
+Time=535000 State transition: 2 -> 3
+Time=535000 EXECUTE: opcode=03 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=00a: 0307
+Time=545000 Control State=3
+Time=545000 Instruction=0307 Data_Out=00 Data_In=00
+Time=545000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=545000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=545000 Audio Output=00
+Time=545000 State transition: 3 -> 0
+Time=545000 WRITEBACK: PC increment
+Reading instruction at addr=00a: 0307
+Time=555000 Control State=0
+Time=555000 Instruction=0307 Data_Out=00 Data_In=00
+Time=555000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=555000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=555000 Audio Output=00
+Time=555000 State transition: 0 -> 1
+Time=555000 FETCH: PC hold
+Reading instruction at addr=00a: 0307
+Time=565000 Control State=1
+Time=565000 Instruction=0307 Data_Out=00 Data_In=00
+Time=565000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=565000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=565000 Audio Output=00
+Time=565000 State transition: 1 -> 2
+Reading instruction at addr=00b: 0308
+Time=575000 Control State=2
+Time=575000 Instruction=0308 Data_Out=00 Data_In=00
+Time=575000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=575000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=575000 Audio Output=00
+Time=575000 State transition: 2 -> 3
+Time=575000 EXECUTE: opcode=03 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=00b: 0308
+Time=585000 Control State=3
+Time=585000 Instruction=0308 Data_Out=00 Data_In=00
+Time=585000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=585000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=585000 Audio Output=00
+Time=585000 State transition: 3 -> 0
+Time=585000 WRITEBACK: PC increment
+Reading instruction at addr=00b: 0308
+Time=595000 Control State=0
+Time=595000 Instruction=0308 Data_Out=00 Data_In=00
+Time=595000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=595000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=595000 Audio Output=00
+Time=595000 State transition: 0 -> 1
+Time=595000 FETCH: PC hold
+Reading instruction at addr=00b: 0308
+Time=605000 Control State=1
+Time=605000 Instruction=0308 Data_Out=00 Data_In=00
+Time=605000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=605000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=605000 Audio Output=00
+Time=605000 State transition: 1 -> 2
+Reading instruction at addr=00c: 0309
+Time=615000 Control State=2
+Time=615000 Instruction=0309 Data_Out=00 Data_In=00
+Time=615000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=615000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=615000 Audio Output=00
+Time=615000 State transition: 2 -> 3
+Time=615000 EXECUTE: opcode=03 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=00c: 0309
+Time=625000 Control State=3
+Time=625000 Instruction=0309 Data_Out=00 Data_In=00
+Time=625000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=625000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=625000 Audio Output=00
+Time=625000 State transition: 3 -> 0
+Time=625000 WRITEBACK: PC increment
+Reading instruction at addr=00c: 0309
+Time=635000 Control State=0
+Time=635000 Instruction=0309 Data_Out=00 Data_In=00
+Time=635000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=635000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=635000 Audio Output=00
+Time=635000 State transition: 0 -> 1
+Time=635000 FETCH: PC hold
+Reading instruction at addr=00c: 0309
+Time=645000 Control State=1
+Time=645000 Instruction=0309 Data_Out=00 Data_In=00
+Time=645000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=645000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=645000 Audio Output=00
+Time=645000 State transition: 1 -> 2
+Reading instruction at addr=00d: 2005
+Time=655000 Control State=2
+Time=655000 Instruction=2005 Data_Out=00 Data_In=00
+Time=655000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=655000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=655000 Audio Output=00
+Time=655000 State transition: 2 -> 3
+Time=655000 EXECUTE: opcode=00 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=00d: 2005
+Time=665000 Control State=3
+Time=665000 Instruction=2005 Data_Out=00 Data_In=00
+Time=665000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=665000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=665000 Audio Output=00
+Time=665000 State transition: 3 -> 0
+Time=665000 WRITEBACK: PC increment
+Reading instruction at addr=00d: 2005
+Time=675000 Control State=0
+Time=675000 Instruction=2005 Data_Out=00 Data_In=00
+Time=675000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=675000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=675000 Audio Output=00
+Time=675000 State transition: 0 -> 1
+Time=675000 FETCH: PC hold
+Reading instruction at addr=00d: 2005
+Time=685000 Control State=1
+Time=685000 Instruction=2005 Data_Out=00 Data_In=00
+Time=685000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=685000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=685000 Audio Output=00
+Time=685000 State transition: 1 -> 2
+Reading instruction at addr=00e: 6000
+Time=695000 Control State=2
+Time=695000 Instruction=6000 Data_Out=00 Data_In=00
+Time=695000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=695000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=695000 Audio Output=00
+Time=695000 State transition: 2 -> 3
+Time=695000 EXECUTE: opcode=00 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=00e: 6000
+Time=705000 Control State=3
+Time=705000 Instruction=6000 Data_Out=00 Data_In=00
+Time=705000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=705000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=705000 Audio Output=00
+Time=705000 State transition: 3 -> 0
+Time=705000 WRITEBACK: PC increment
+Reading instruction at addr=00e: 6000
+Time=715000 Control State=0
+Time=715000 Instruction=6000 Data_Out=00 Data_In=00
+Time=715000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=715000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=715000 Audio Output=00
+Time=715000 State transition: 0 -> 1
+Time=715000 FETCH: PC hold
+Reading instruction at addr=00e: 6000
+Time=725000 Control State=1
+Time=725000 Instruction=6000 Data_Out=00 Data_In=00
+Time=725000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=725000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=725000 Audio Output=00
+Time=725000 State transition: 1 -> 2
+Reading instruction at addr=00f: 7001
+Time=735000 Control State=2
+Time=735000 Instruction=7001 Data_Out=00 Data_In=00
+Time=735000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=735000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=735000 Audio Output=00
+Time=735000 State transition: 2 -> 3
+Time=735000 EXECUTE: opcode=10 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=00f: 7001
+Time=745000 Control State=3
+Time=745000 Instruction=7001 Data_Out=00 Data_In=00
+Time=745000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=745000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=745000 Audio Output=00
+Time=745000 State transition: 3 -> 0
+Time=745000 WRITEBACK: PC increment
+Reading instruction at addr=00f: 7001
+Time=755000 Control State=0
+Time=755000 Instruction=7001 Data_Out=00 Data_In=00
+Time=755000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=755000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=755000 Audio Output=00
+Time=755000 State transition: 0 -> 1
+Time=755000 FETCH: PC hold
+Reading instruction at addr=00f: 7001
+Time=765000 Control State=1
+Time=765000 Instruction=7001 Data_Out=00 Data_In=00
+Time=765000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=765000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=765000 Audio Output=00
+Time=765000 State transition: 1 -> 2
+Reading instruction at addr=010: 4005
+Time=775000 Control State=2
+Time=775000 Instruction=4005 Data_Out=00 Data_In=00
+Time=775000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=775000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=775000 Audio Output=00
+Time=775000 State transition: 2 -> 3
+Time=775000 EXECUTE: opcode=00 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=010: 4005
+Time=785000 Control State=3
+Time=785000 Instruction=4005 Data_Out=00 Data_In=00
+Time=785000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=785000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=785000 Audio Output=00
+Time=785000 State transition: 3 -> 0
+Time=785000 WRITEBACK: PC increment
+Reading instruction at addr=010: 4005
+Time=795000 Control State=0
+Time=795000 Instruction=4005 Data_Out=00 Data_In=00
+Time=795000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=795000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=795000 Audio Output=00
+Time=795000 State transition: 0 -> 1
+Time=795000 FETCH: PC hold
+Reading instruction at addr=010: 4005
+Time=805000 Control State=1
+Time=805000 Instruction=4005 Data_Out=00 Data_In=00
+Time=805000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=805000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=805000 Audio Output=00
+Time=805000 State transition: 1 -> 2
+Reading instruction at addr=011: 0b00
+Time=815000 Control State=2
+Time=815000 Instruction=0b00 Data_Out=00 Data_In=00
+Time=815000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=815000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=815000 Audio Output=00
+Time=815000 State transition: 2 -> 3
+Time=815000 EXECUTE: opcode=0b we=0 selk=0 wa=2 KTE=07
+Time=815000 EXECUTE: JMP to 300
+Reading instruction at addr=011: 0b00
+Time=825000 Control State=3
+Time=825000 Instruction=0b00 Data_Out=00 Data_In=00
+Time=825000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=825000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=825000 Audio Output=00
+Time=825000 State transition: 3 -> 0
+PC updated to: 300
+Reading instruction at addr=011: 0b00
+Time=835000 Control State=0
+Time=835000 Instruction=0b00 Data_Out=00 Data_In=00
+Time=835000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=835000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=835000 Audio Output=00
+Time=835000 State transition: 0 -> 1
+Time=835000 FETCH: PC hold
+PC updated to: 300
+Reading instruction at addr=300: 0000
+Time=845000 Control State=1
+Time=845000 Instruction=0000 Data_Out=00 Data_In=00
+Time=845000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=845000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=845000 Audio Output=00
+Time=845000 State transition: 1 -> 2
+Reading instruction at addr=300: 0000
+Time=855000 Control State=2
+Time=855000 Instruction=0000 Data_Out=00 Data_In=00
+Time=855000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=855000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=855000 Audio Output=00
+Time=855000 State transition: 2 -> 3
+Time=855000 EXECUTE: opcode=00 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=300: 0000
+Time=865000 Control State=3
+Time=865000 Instruction=0000 Data_Out=00 Data_In=00
+Time=865000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=865000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=865000 Audio Output=00
+Time=865000 State transition: 3 -> 0
+Reading instruction at addr=300: 0000
+Time=875000 Control State=0
+Time=875000 Instruction=0000 Data_Out=00 Data_In=00
+Time=875000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=875000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=875000 Audio Output=00
+Time=875000 State transition: 0 -> 1
+Time=875000 FETCH: PC hold
+Reading instruction at addr=300: 0000
+Time=885000 Control State=1
+Time=885000 Instruction=0000 Data_Out=00 Data_In=00
+Time=885000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=885000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=885000 Audio Output=00
+Time=885000 State transition: 1 -> 2
+Reading instruction at addr=300: 0000
+Time=895000 Control State=2
+Time=895000 Instruction=0000 Data_Out=00 Data_In=00
+Time=895000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=895000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=895000 Audio Output=00
+Time=895000 State transition: 2 -> 3
+Time=895000 EXECUTE: opcode=00 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=300: 0000
+Time=905000 Control State=3
+Time=905000 Instruction=0000 Data_Out=00 Data_In=00
+Time=905000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=905000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=905000 Audio Output=00
+Time=905000 State transition: 3 -> 0
+Reading instruction at addr=300: 0000
+Time=915000 Control State=0
+Time=915000 Instruction=0000 Data_Out=00 Data_In=00
+Time=915000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=915000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=915000 Audio Output=00
+Time=915000 State transition: 0 -> 1
+Time=915000 FETCH: PC hold
+Reading instruction at addr=300: 0000
+Time=925000 Control State=1
+Time=925000 Instruction=0000 Data_Out=00 Data_In=00
+Time=925000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=925000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=925000 Audio Output=00
+Time=925000 State transition: 1 -> 2
+Reading instruction at addr=300: 0000
+Time=935000 Control State=2
+Time=935000 Instruction=0000 Data_Out=00 Data_In=00
+Time=935000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=935000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=935000 Audio Output=00
+Time=935000 State transition: 2 -> 3
+Time=935000 EXECUTE: opcode=00 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=300: 0000
+Time=945000 Control State=3
+Time=945000 Instruction=0000 Data_Out=00 Data_In=00
+Time=945000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=945000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=945000 Audio Output=00
+Time=945000 State transition: 3 -> 0
+Reading instruction at addr=300: 0000
+Time=955000 Control State=0
+Time=955000 Instruction=0000 Data_Out=00 Data_In=00
+Time=955000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=955000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=955000 Audio Output=00
+Time=955000 State transition: 0 -> 1
+Time=955000 FETCH: PC hold
+Reading instruction at addr=300: 0000
+Time=965000 Control State=1
+Time=965000 Instruction=0000 Data_Out=00 Data_In=00
+Time=965000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=965000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=965000 Audio Output=00
+Time=965000 State transition: 1 -> 2
+Reading instruction at addr=300: 0000
+Time=975000 Control State=2
+Time=975000 Instruction=0000 Data_Out=00 Data_In=00
+Time=975000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=975000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=975000 Audio Output=00
+Time=975000 State transition: 2 -> 3
+Time=975000 EXECUTE: opcode=00 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=300: 0000
+Time=985000 Control State=3
+Time=985000 Instruction=0000 Data_Out=00 Data_In=00
+Time=985000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=985000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=985000 Audio Output=00
+Time=985000 State transition: 3 -> 0
+Reading instruction at addr=300: 0000
+Time=995000 Control State=0
+Time=995000 Instruction=0000 Data_Out=00 Data_In=00
+Time=995000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=995000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=995000 Audio Output=00
+Time=995000 State transition: 0 -> 1
+Time=995000 FETCH: PC hold
+Reading instruction at addr=300: 0000
+Instruction Memory Contents:
+Addr 0: 0200
+Addr 1: 0201
+Addr 2: 0202
+Addr 3: 0203
+Addr 4: 0204
+Addr 5: 0205
+Addr 6: 0206
+Addr 7: 0207
+Addr 8: 0305
+Addr 9: 0306
+Addr a: 0307
+Addr b: 0308
+Addr c: 0309
+Addr d: 2005
+Addr e: 6000
+Addr f: 7001
+=== Starting Testbench ===
+Data Path Reset - PC set to 0
+Time=5000 Instruction=0000 Data_Out=xx Data_In=00
+Time=5000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=5000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=5000 Audio Output=00
+Time=5000 State transition: x -> x
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=15000 Instruction=0200 Data_Out=xx Data_In=00
+Time=15000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=15000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=15000 Audio Output=00
+Time=15000 State transition: x -> x
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=25000 Instruction=0200 Data_Out=xx Data_In=00
+Time=25000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=25000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=25000 Audio Output=00
+Reset asserted - State set to FETCH
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=35000 Control State=0
+Time=35000 Instruction=0200 Data_Out=xx Data_In=00
+Time=35000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=35000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=35000 Audio Output=00
+Reset asserted - State set to FETCH
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=45000 Control State=0
+Time=45000 Instruction=0200 Data_Out=00 Data_In=00
+Time=45000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=45000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=45000 Audio Output=00
+Reset asserted - State set to FETCH
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=55000 Control State=0
+Time=55000 Instruction=0200 Data_Out=00 Data_In=00
+Time=55000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=55000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=55000 Audio Output=00
+Reset asserted - State set to FETCH
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=65000 Control State=0
+Time=65000 Instruction=0200 Data_Out=00 Data_In=00
+Time=65000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=65000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=65000 Audio Output=00
+Reset asserted - State set to FETCH
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=75000 Control State=0
+Time=75000 Instruction=0200 Data_Out=00 Data_In=00
+Time=75000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=75000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=75000 Audio Output=00
+Reset asserted - State set to FETCH
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=85000 Control State=0
+Time=85000 Instruction=0200 Data_Out=00 Data_In=00
+Time=85000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=85000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=85000 Audio Output=00
+Reset asserted - State set to FETCH
+Data Path Reset - PC set to 0
+Reading instruction at addr=000: 0200
+Time=95000 Control State=0
+Time=95000 Instruction=0200 Data_Out=00 Data_In=00
+Time=95000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=95000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=95000 Audio Output=00
+Reset asserted - State set to FETCH
+Reading instruction at addr=000: 0200
+Reset released at time 105000
+Time=105000 Control State=0
+Time=105000 Instruction=0200 Data_Out=00 Data_In=00
+Time=105000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=105000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Reset asserted - State set to FETCH
+Reading instruction at addr=000: 0200
+Time=115000 Control State=0
+Time=115000 Instruction=0200 Data_Out=00 Data_In=00
+Time=115000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=115000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=115000 Audio Output=00
+Time=115000 State transition: 0 -> 1
+Time=115000 FETCH: PC hold
+Reading instruction at addr=000: 0200
+Time=125000 Control State=1
+Time=125000 Instruction=0200 Data_Out=00 Data_In=00
+Time=125000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=125000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=125000 Audio Output=00
+Time=125000 State transition: 1 -> 2
+Time=125000 DECODE: LDI R2, 00
+Reading instruction at addr=000: 0200
+Time=135000 Control State=2
+Time=135000 Instruction=0200 Data_Out=00 Data_In=00
+Time=135000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=135000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=135000 Audio Output=00
+Time=135000 State transition: 2 -> 3
+Time=135000 EXECUTE: opcode=02 we=0 selk=0 wa=2 KTE=00
+Time=135000 EXECUTE: LDI active - selk=0 we=0
+Reading instruction at addr=000: 0200
+Time=145000 Control State=3
+Time=145000 Instruction=0200 Data_Out=00 Data_In=00
+Time=145000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=145000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=145000 Audio Output=00
+Time=145000 State transition: 3 -> 0
+Time=145000 WRITEBACK: PC increment
+Reading instruction at addr=000: 0200
+
+=== Testing MIDI Note On Sequence ===
+Time=155000 Control State=0
+Time=155000 Instruction=0200 Data_Out=00 Data_In=00
+Time=155000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=155000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=155000 Audio Output=00
+Time=155000 State transition: 0 -> 1
+Time=155000 FETCH: PC hold
+Reading instruction at addr=000: 0200
+Time=165000 Control State=1
+Time=165000 Instruction=0200 Data_Out=00 Data_In=00
+Time=165000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=165000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=165000 Audio Output=00
+Time=165000 State transition: 1 -> 2
+Time=165000 DECODE: LDI R2, 00
+Reading instruction at addr=001: 0201
+Time=175000 Control State=2
+Time=175000 Instruction=0201 Data_Out=00 Data_In=00
+Time=175000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=175000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=175000 Audio Output=00
+Time=175000 State transition: 2 -> 3
+Time=175000 EXECUTE: opcode=02 we=0 selk=0 wa=2 KTE=00
+Time=175000 EXECUTE: LDI active - selk=0 we=0
+Reading instruction at addr=001: 0201
+Time=185000 Control State=3
+Time=185000 Instruction=0201 Data_Out=00 Data_In=00
+Time=185000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=185000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=185000 Audio Output=00
+Time=185000 State transition: 3 -> 0
+Time=185000 WRITEBACK: PC increment
+Reading instruction at addr=001: 0201
+Time=195000 Control State=0
+Time=195000 Instruction=0201 Data_Out=00 Data_In=00
+Time=195000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=195000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=195000 Audio Output=00
+Time=195000 State transition: 0 -> 1
+Time=195000 FETCH: PC hold
+Reading instruction at addr=001: 0201
+Time=205000 Control State=1
+Time=205000 Instruction=0201 Data_Out=00 Data_In=00
+Time=205000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=205000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=205000 Audio Output=00
+Time=205000 State transition: 1 -> 2
+Time=205000 DECODE: LDI R2, 01
+Reading instruction at addr=002: 0202
+Time=215000 Control State=2
+Time=215000 Instruction=0202 Data_Out=00 Data_In=00
+Time=215000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=215000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=215000 Audio Output=00
+Time=215000 State transition: 2 -> 3
+Time=215000 EXECUTE: opcode=02 we=0 selk=0 wa=2 KTE=01
+Time=215000 EXECUTE: LDI active - selk=0 we=0
+Reading instruction at addr=002: 0202
+Time=225000 Control State=3
+Time=225000 Instruction=0202 Data_Out=00 Data_In=00
+Time=225000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=225000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=225000 Audio Output=00
+Time=225000 State transition: 3 -> 0
+Time=225000 WRITEBACK: PC increment
+Reading instruction at addr=002: 0202
+Time=235000 Control State=0
+Time=235000 Instruction=0202 Data_Out=00 Data_In=00
+Time=235000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=235000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=235000 Audio Output=00
+Time=235000 State transition: 0 -> 1
+Time=235000 FETCH: PC hold
+Reading instruction at addr=002: 0202
+Time=245000 Control State=1
+Time=245000 Instruction=0202 Data_Out=00 Data_In=00
+Time=245000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=245000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=245000 Audio Output=00
+Time=245000 State transition: 1 -> 2
+Time=245000 DECODE: LDI R2, 02
+Reading instruction at addr=003: 0203
+Time=255000 Control State=2
+Time=255000 Instruction=0203 Data_Out=00 Data_In=00
+Time=255000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=255000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=255000 Audio Output=00
+Time=255000 State transition: 2 -> 3
+Time=255000 EXECUTE: opcode=02 we=0 selk=0 wa=2 KTE=02
+Time=255000 EXECUTE: LDI active - selk=0 we=0
+Reading instruction at addr=003: 0203
+Time=265000 Control State=3
+Time=265000 Instruction=0203 Data_Out=00 Data_In=00
+Time=265000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=265000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=265000 Audio Output=00
+Time=265000 State transition: 3 -> 0
+Time=265000 WRITEBACK: PC increment
+Reading instruction at addr=003: 0203
+Time=275000 Control State=0
+Time=275000 Instruction=0203 Data_Out=00 Data_In=00
+Time=275000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=275000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=275000 Audio Output=00
+Time=275000 State transition: 0 -> 1
+Time=275000 FETCH: PC hold
+Reading instruction at addr=003: 0203
+Time=285000 Control State=1
+Time=285000 Instruction=0203 Data_Out=00 Data_In=00
+Time=285000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=285000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=285000 Audio Output=00
+Time=285000 State transition: 1 -> 2
+Time=285000 DECODE: LDI R2, 03
+Reading instruction at addr=004: 0204
+Time=295000 Control State=2
+Time=295000 Instruction=0204 Data_Out=00 Data_In=00
+Time=295000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=295000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=295000 Audio Output=00
+Time=295000 State transition: 2 -> 3
+Time=295000 EXECUTE: opcode=02 we=0 selk=0 wa=2 KTE=03
+Time=295000 EXECUTE: LDI active - selk=0 we=0
+Reading instruction at addr=004: 0204
+Time=305000 Control State=3
+Time=305000 Instruction=0204 Data_Out=00 Data_In=00
+Time=305000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=305000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=305000 Audio Output=00
+Time=305000 State transition: 3 -> 0
+Time=305000 WRITEBACK: PC increment
+Reading instruction at addr=004: 0204
+Time=315000 Control State=0
+Time=315000 Instruction=0204 Data_Out=00 Data_In=00
+Time=315000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=315000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=315000 Audio Output=00
+Time=315000 State transition: 0 -> 1
+Time=315000 FETCH: PC hold
+Reading instruction at addr=004: 0204
+Time=325000 Control State=1
+Time=325000 Instruction=0204 Data_Out=00 Data_In=00
+Time=325000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=325000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=325000 Audio Output=00
+Time=325000 State transition: 1 -> 2
+Time=325000 DECODE: LDI R2, 04
+Reading instruction at addr=005: 0205
+Time=335000 Control State=2
+Time=335000 Instruction=0205 Data_Out=00 Data_In=00
+Time=335000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=335000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=335000 Audio Output=00
+Time=335000 State transition: 2 -> 3
+Time=335000 EXECUTE: opcode=02 we=0 selk=0 wa=2 KTE=04
+Time=335000 EXECUTE: LDI active - selk=0 we=0
+Reading instruction at addr=005: 0205
+Time=345000 Control State=3
+Time=345000 Instruction=0205 Data_Out=00 Data_In=00
+Time=345000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=345000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=345000 Audio Output=00
+Time=345000 State transition: 3 -> 0
+Time=345000 WRITEBACK: PC increment
+Reading instruction at addr=005: 0205
+Time=355000 Control State=0
+Time=355000 Instruction=0205 Data_Out=00 Data_In=00
+Time=355000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=355000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=355000 Audio Output=00
+Time=355000 State transition: 0 -> 1
+Time=355000 FETCH: PC hold
+Reading instruction at addr=005: 0205
+Time=365000 Control State=1
+Time=365000 Instruction=0205 Data_Out=00 Data_In=00
+Time=365000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=365000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=365000 Audio Output=00
+Time=365000 State transition: 1 -> 2
+Time=365000 DECODE: LDI R2, 05
+Reading instruction at addr=006: 0206
+Time=375000 Control State=2
+Time=375000 Instruction=0206 Data_Out=00 Data_In=00
+Time=375000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=375000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=375000 Audio Output=00
+Time=375000 State transition: 2 -> 3
+Time=375000 EXECUTE: opcode=02 we=0 selk=0 wa=2 KTE=05
+Time=375000 EXECUTE: LDI active - selk=0 we=0
+Reading instruction at addr=006: 0206
+Time=385000 Control State=3
+Time=385000 Instruction=0206 Data_Out=00 Data_In=00
+Time=385000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=385000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=385000 Audio Output=00
+Time=385000 State transition: 3 -> 0
+Time=385000 WRITEBACK: PC increment
+Reading instruction at addr=006: 0206
+Time=395000 Control State=0
+Time=395000 Instruction=0206 Data_Out=00 Data_In=00
+Time=395000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=395000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=395000 Audio Output=00
+Time=395000 State transition: 0 -> 1
+Time=395000 FETCH: PC hold
+Reading instruction at addr=006: 0206
+Time=405000 Control State=1
+Time=405000 Instruction=0206 Data_Out=00 Data_In=00
+Time=405000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=405000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=405000 Audio Output=00
+Time=405000 State transition: 1 -> 2
+Time=405000 DECODE: LDI R2, 06
+Reading instruction at addr=007: 0207
+Time=415000 Control State=2
+Time=415000 Instruction=0207 Data_Out=00 Data_In=00
+Time=415000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=415000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=415000 Audio Output=00
+Time=415000 State transition: 2 -> 3
+Time=415000 EXECUTE: opcode=02 we=0 selk=0 wa=2 KTE=06
+Time=415000 EXECUTE: LDI active - selk=0 we=0
+Reading instruction at addr=007: 0207
+Time=425000 Control State=3
+Time=425000 Instruction=0207 Data_Out=00 Data_In=00
+Time=425000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=425000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=425000 Audio Output=00
+Time=425000 State transition: 3 -> 0
+Time=425000 WRITEBACK: PC increment
+Reading instruction at addr=007: 0207
+Time=435000 Control State=0
+Time=435000 Instruction=0207 Data_Out=00 Data_In=00
+Time=435000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=435000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=435000 Audio Output=00
+Time=435000 State transition: 0 -> 1
+Time=435000 FETCH: PC hold
+Reading instruction at addr=007: 0207
+Time=445000 Control State=1
+Time=445000 Instruction=0207 Data_Out=00 Data_In=00
+Time=445000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=445000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=445000 Audio Output=00
+Time=445000 State transition: 1 -> 2
+Time=445000 DECODE: LDI R2, 07
+Reading instruction at addr=008: 0305
+Time=455000 Control State=2
+Time=455000 Instruction=0305 Data_Out=00 Data_In=00
+Time=455000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=455000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=455000 Audio Output=00
+Time=455000 State transition: 2 -> 3
+Time=455000 EXECUTE: opcode=03 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=008: 0305
+Time=465000 Control State=3
+Time=465000 Instruction=0305 Data_Out=00 Data_In=00
+Time=465000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=465000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=465000 Audio Output=00
+Time=465000 State transition: 3 -> 0
+Time=465000 WRITEBACK: PC increment
+Reading instruction at addr=008: 0305
+Time=475000 Control State=0
+Time=475000 Instruction=0305 Data_Out=00 Data_In=00
+Time=475000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=475000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=475000 Audio Output=00
+Time=475000 State transition: 0 -> 1
+Time=475000 FETCH: PC hold
+Reading instruction at addr=008: 0305
+Time=485000 Control State=1
+Time=485000 Instruction=0305 Data_Out=00 Data_In=00
+Time=485000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=485000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=485000 Audio Output=00
+Time=485000 State transition: 1 -> 2
+Reading instruction at addr=009: 0306
+Time=495000 Control State=2
+Time=495000 Instruction=0306 Data_Out=00 Data_In=00
+Time=495000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=495000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=495000 Audio Output=00
+Time=495000 State transition: 2 -> 3
+Time=495000 EXECUTE: opcode=03 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=009: 0306
+Time=505000 Control State=3
+Time=505000 Instruction=0306 Data_Out=00 Data_In=00
+Time=505000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=505000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=505000 Audio Output=00
+Time=505000 State transition: 3 -> 0
+Time=505000 WRITEBACK: PC increment
+Reading instruction at addr=009: 0306
+Time=515000 Control State=0
+Time=515000 Instruction=0306 Data_Out=00 Data_In=00
+Time=515000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=515000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=515000 Audio Output=00
+Time=515000 State transition: 0 -> 1
+Time=515000 FETCH: PC hold
+Reading instruction at addr=009: 0306
+Time=525000 Control State=1
+Time=525000 Instruction=0306 Data_Out=00 Data_In=00
+Time=525000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=525000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=525000 Audio Output=00
+Time=525000 State transition: 1 -> 2
+Reading instruction at addr=00a: 0307
+Time=535000 Control State=2
+Time=535000 Instruction=0307 Data_Out=00 Data_In=00
+Time=535000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=535000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=535000 Audio Output=00
+Time=535000 State transition: 2 -> 3
+Time=535000 EXECUTE: opcode=03 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=00a: 0307
+Time=545000 Control State=3
+Time=545000 Instruction=0307 Data_Out=00 Data_In=00
+Time=545000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=545000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=545000 Audio Output=00
+Time=545000 State transition: 3 -> 0
+Time=545000 WRITEBACK: PC increment
+Reading instruction at addr=00a: 0307
+Time=555000 Control State=0
+Time=555000 Instruction=0307 Data_Out=00 Data_In=00
+Time=555000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=555000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=555000 Audio Output=00
+Time=555000 State transition: 0 -> 1
+Time=555000 FETCH: PC hold
+Reading instruction at addr=00a: 0307
+Time=565000 Control State=1
+Time=565000 Instruction=0307 Data_Out=00 Data_In=00
+Time=565000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=565000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=565000 Audio Output=00
+Time=565000 State transition: 1 -> 2
+Reading instruction at addr=00b: 0308
+Time=575000 Control State=2
+Time=575000 Instruction=0308 Data_Out=00 Data_In=00
+Time=575000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=575000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=575000 Audio Output=00
+Time=575000 State transition: 2 -> 3
+Time=575000 EXECUTE: opcode=03 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=00b: 0308
+Time=585000 Control State=3
+Time=585000 Instruction=0308 Data_Out=00 Data_In=00
+Time=585000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=585000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=585000 Audio Output=00
+Time=585000 State transition: 3 -> 0
+Time=585000 WRITEBACK: PC increment
+Reading instruction at addr=00b: 0308
+Time=595000 Control State=0
+Time=595000 Instruction=0308 Data_Out=00 Data_In=00
+Time=595000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=595000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=595000 Audio Output=00
+Time=595000 State transition: 0 -> 1
+Time=595000 FETCH: PC hold
+Reading instruction at addr=00b: 0308
+Time=605000 Control State=1
+Time=605000 Instruction=0308 Data_Out=00 Data_In=00
+Time=605000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=605000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=605000 Audio Output=00
+Time=605000 State transition: 1 -> 2
+Reading instruction at addr=00c: 0309
+Time=615000 Control State=2
+Time=615000 Instruction=0309 Data_Out=00 Data_In=00
+Time=615000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=615000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=615000 Audio Output=00
+Time=615000 State transition: 2 -> 3
+Time=615000 EXECUTE: opcode=03 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=00c: 0309
+Time=625000 Control State=3
+Time=625000 Instruction=0309 Data_Out=00 Data_In=00
+Time=625000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=625000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=625000 Audio Output=00
+Time=625000 State transition: 3 -> 0
+Time=625000 WRITEBACK: PC increment
+Reading instruction at addr=00c: 0309
+Time=635000 Control State=0
+Time=635000 Instruction=0309 Data_Out=00 Data_In=00
+Time=635000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=635000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=635000 Audio Output=00
+Time=635000 State transition: 0 -> 1
+Time=635000 FETCH: PC hold
+Reading instruction at addr=00c: 0309
+Time=645000 Control State=1
+Time=645000 Instruction=0309 Data_Out=00 Data_In=00
+Time=645000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=645000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=645000 Audio Output=00
+Time=645000 State transition: 1 -> 2
+Reading instruction at addr=00d: 2005
+Time=655000 Control State=2
+Time=655000 Instruction=2005 Data_Out=00 Data_In=00
+Time=655000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=655000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=655000 Audio Output=00
+Time=655000 State transition: 2 -> 3
+Time=655000 EXECUTE: opcode=00 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=00d: 2005
+Time=665000 Control State=3
+Time=665000 Instruction=2005 Data_Out=00 Data_In=00
+Time=665000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=665000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=665000 Audio Output=00
+Time=665000 State transition: 3 -> 0
+Time=665000 WRITEBACK: PC increment
+Reading instruction at addr=00d: 2005
+Time=675000 Control State=0
+Time=675000 Instruction=2005 Data_Out=00 Data_In=00
+Time=675000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=675000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=675000 Audio Output=00
+Time=675000 State transition: 0 -> 1
+Time=675000 FETCH: PC hold
+Reading instruction at addr=00d: 2005
+Time=685000 Control State=1
+Time=685000 Instruction=2005 Data_Out=00 Data_In=00
+Time=685000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=685000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=685000 Audio Output=00
+Time=685000 State transition: 1 -> 2
+Reading instruction at addr=00e: 6000
+Time=695000 Control State=2
+Time=695000 Instruction=6000 Data_Out=00 Data_In=00
+Time=695000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=695000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=695000 Audio Output=00
+Time=695000 State transition: 2 -> 3
+Time=695000 EXECUTE: opcode=00 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=00e: 6000
+Time=705000 Control State=3
+Time=705000 Instruction=6000 Data_Out=00 Data_In=00
+Time=705000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=705000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=705000 Audio Output=00
+Time=705000 State transition: 3 -> 0
+Time=705000 WRITEBACK: PC increment
+Reading instruction at addr=00e: 6000
+Time=715000 Control State=0
+Time=715000 Instruction=6000 Data_Out=00 Data_In=00
+Time=715000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=715000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=715000 Audio Output=00
+Time=715000 State transition: 0 -> 1
+Time=715000 FETCH: PC hold
+Reading instruction at addr=00e: 6000
+Time=725000 Control State=1
+Time=725000 Instruction=6000 Data_Out=00 Data_In=00
+Time=725000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=725000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=725000 Audio Output=00
+Time=725000 State transition: 1 -> 2
+Reading instruction at addr=00f: 7001
+Time=735000 Control State=2
+Time=735000 Instruction=7001 Data_Out=00 Data_In=00
+Time=735000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=735000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=735000 Audio Output=00
+Time=735000 State transition: 2 -> 3
+Time=735000 EXECUTE: opcode=10 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=00f: 7001
+Time=745000 Control State=3
+Time=745000 Instruction=7001 Data_Out=00 Data_In=00
+Time=745000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=745000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=745000 Audio Output=00
+Time=745000 State transition: 3 -> 0
+Time=745000 WRITEBACK: PC increment
+Reading instruction at addr=00f: 7001
+Time=755000 Control State=0
+Time=755000 Instruction=7001 Data_Out=00 Data_In=00
+Time=755000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=755000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=755000 Audio Output=00
+Time=755000 State transition: 0 -> 1
+Time=755000 FETCH: PC hold
+Reading instruction at addr=00f: 7001
+Time=765000 Control State=1
+Time=765000 Instruction=7001 Data_Out=00 Data_In=00
+Time=765000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=765000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=765000 Audio Output=00
+Time=765000 State transition: 1 -> 2
+Reading instruction at addr=010: 4005
+Time=775000 Control State=2
+Time=775000 Instruction=4005 Data_Out=00 Data_In=00
+Time=775000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=775000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=775000 Audio Output=00
+Time=775000 State transition: 2 -> 3
+Time=775000 EXECUTE: opcode=00 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=010: 4005
+Time=785000 Control State=3
+Time=785000 Instruction=4005 Data_Out=00 Data_In=00
+Time=785000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=785000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=785000 Audio Output=00
+Time=785000 State transition: 3 -> 0
+Time=785000 WRITEBACK: PC increment
+Reading instruction at addr=010: 4005
+Time=795000 Control State=0
+Time=795000 Instruction=4005 Data_Out=00 Data_In=00
+Time=795000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=795000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=795000 Audio Output=00
+Time=795000 State transition: 0 -> 1
+Time=795000 FETCH: PC hold
+Reading instruction at addr=010: 4005
+Time=805000 Control State=1
+Time=805000 Instruction=4005 Data_Out=00 Data_In=00
+Time=805000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=805000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=805000 Audio Output=00
+Time=805000 State transition: 1 -> 2
+Reading instruction at addr=011: 0b00
+Time=815000 Control State=2
+Time=815000 Instruction=0b00 Data_Out=00 Data_In=00
+Time=815000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=815000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=815000 Audio Output=00
+Time=815000 State transition: 2 -> 3
+Time=815000 EXECUTE: opcode=0b we=0 selk=0 wa=2 KTE=07
+Time=815000 EXECUTE: JMP to 300
+Reading instruction at addr=011: 0b00
+Time=825000 Control State=3
+Time=825000 Instruction=0b00 Data_Out=00 Data_In=00
+Time=825000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=825000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=825000 Audio Output=00
+Time=825000 State transition: 3 -> 0
+PC updated to: 300
+Reading instruction at addr=011: 0b00
+Time=835000 Control State=0
+Time=835000 Instruction=0b00 Data_Out=00 Data_In=00
+Time=835000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=835000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=835000 Audio Output=00
+Time=835000 State transition: 0 -> 1
+Time=835000 FETCH: PC hold
+PC updated to: 300
+Reading instruction at addr=300: 0000
+Time=845000 Control State=1
+Time=845000 Instruction=0000 Data_Out=00 Data_In=00
+Time=845000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=845000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=845000 Audio Output=00
+Time=845000 State transition: 1 -> 2
+Reading instruction at addr=300: 0000
+Time=855000 Control State=2
+Time=855000 Instruction=0000 Data_Out=00 Data_In=00
+Time=855000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=855000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=855000 Audio Output=00
+Time=855000 State transition: 2 -> 3
+Time=855000 EXECUTE: opcode=00 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=300: 0000
+Time=865000 Control State=3
+Time=865000 Instruction=0000 Data_Out=00 Data_In=00
+Time=865000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=865000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=865000 Audio Output=00
+Time=865000 State transition: 3 -> 0
+Reading instruction at addr=300: 0000
+Time=875000 Control State=0
+Time=875000 Instruction=0000 Data_Out=00 Data_In=00
+Time=875000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=875000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=875000 Audio Output=00
+Time=875000 State transition: 0 -> 1
+Time=875000 FETCH: PC hold
+Reading instruction at addr=300: 0000
+Time=885000 Control State=1
+Time=885000 Instruction=0000 Data_Out=00 Data_In=00
+Time=885000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=885000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=885000 Audio Output=00
+Time=885000 State transition: 1 -> 2
+Reading instruction at addr=300: 0000
+Time=895000 Control State=2
+Time=895000 Instruction=0000 Data_Out=00 Data_In=00
+Time=895000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=895000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=895000 Audio Output=00
+Time=895000 State transition: 2 -> 3
+Time=895000 EXECUTE: opcode=00 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=300: 0000
+Time=905000 Control State=3
+Time=905000 Instruction=0000 Data_Out=00 Data_In=00
+Time=905000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=905000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=905000 Audio Output=00
+Time=905000 State transition: 3 -> 0
+Reading instruction at addr=300: 0000
+Time=915000 Control State=0
+Time=915000 Instruction=0000 Data_Out=00 Data_In=00
+Time=915000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=915000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=915000 Audio Output=00
+Time=915000 State transition: 0 -> 1
+Time=915000 FETCH: PC hold
+Reading instruction at addr=300: 0000
+Time=925000 Control State=1
+Time=925000 Instruction=0000 Data_Out=00 Data_In=00
+Time=925000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=925000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=925000 Audio Output=00
+Time=925000 State transition: 1 -> 2
+Reading instruction at addr=300: 0000
+Time=935000 Control State=2
+Time=935000 Instruction=0000 Data_Out=00 Data_In=00
+Time=935000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=935000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=935000 Audio Output=00
+Time=935000 State transition: 2 -> 3
+Time=935000 EXECUTE: opcode=00 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=300: 0000
+Time=945000 Control State=3
+Time=945000 Instruction=0000 Data_Out=00 Data_In=00
+Time=945000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=945000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=945000 Audio Output=00
+Time=945000 State transition: 3 -> 0
+Reading instruction at addr=300: 0000
+Time=955000 Control State=0
+Time=955000 Instruction=0000 Data_Out=00 Data_In=00
+Time=955000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=955000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=955000 Audio Output=00
+Time=955000 State transition: 0 -> 1
+Time=955000 FETCH: PC hold
+Reading instruction at addr=300: 0000
+Time=965000 Control State=1
+Time=965000 Instruction=0000 Data_Out=00 Data_In=00
+Time=965000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=965000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=965000 Audio Output=00
+Time=965000 State transition: 1 -> 2
+Reading instruction at addr=300: 0000
+Time=975000 Control State=2
+Time=975000 Instruction=0000 Data_Out=00 Data_In=00
+Time=975000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=975000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=975000 Audio Output=00
+Time=975000 State transition: 2 -> 3
+Time=975000 EXECUTE: opcode=00 we=0 selk=0 wa=2 KTE=07
+Reading instruction at addr=300: 0000
+Time=985000 Control State=3
+Time=985000 Instruction=0000 Data_Out=00 Data_In=00
+Time=985000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=985000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=985000 Audio Output=00
+Time=985000 State transition: 3 -> 0
+Reading instruction at addr=300: 0000
+Time=995000 Control State=0
+Time=995000 Instruction=0000 Data_Out=00 Data_In=00
+Time=995000 MIDI Note=  0 Note_On=0 Note_Valid=0
+Time=995000 Waveform=00 Attack=  0 Decay=  0 Sustain=  0 Release=  0
+Time=995000 Audio Output=00
+Time=995000 State transition: 0 -> 1
+Time=995000 FETCH: PC hold
+Reading instruction at addr=300: 0000

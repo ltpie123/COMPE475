@@ -1,0 +1,1364 @@
+Time resolution is 1 ps
+Instruction Memory Verification:
+0x000: 0200 (Expected: 0201)
+0x001: 4000 (Expected: 4000)
+0x00A: 0000 (Expected: 3006)
+First 16 instructions in memory:
+Addr 0: 0200
+Addr 1: 4000
+Addr 2: 0b00
+Addr 3: 0000
+Addr 4: 0000
+Addr 5: 0000
+Addr 6: 0000
+Addr 7: 0000
+Addr 8: 0000
+Addr 9: 0000
+Addr a: 0000
+Addr b: 0000
+Addr c: 0000
+Addr d: 0000
+Addr e: 0000
+Addr f: 0000
+Starting top module test at time 0
+Data Path Reset - PC set to 0
+Time=5000 Instruction=0000
+Time=5000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=5000 Reading instruction at addr=000: 0200
+Time=15000 Instruction=0200
+Time=15000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=15000 Reading instruction at addr=000: 0200
+Time=25000 Instruction=0200
+Time=25000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=25000 Reading instruction at addr=000: 0200
+Time=35000 Instruction=0200
+Time=35000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=35000 Reading instruction at addr=000: 0200
+Time=45000 Instruction=0200
+Time=45000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=45000 Reading instruction at addr=000: 0200
+Time=55000 Instruction=0200
+Time=55000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=55000 Reading instruction at addr=000: 0200
+Time=65000 Instruction=0200
+Time=65000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=65000 Reading instruction at addr=000: 0200
+Time=75000 Instruction=0200
+Time=75000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=75000 Reading instruction at addr=000: 0200
+Time=85000 Instruction=0200
+Time=85000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=85000 Reading instruction at addr=000: 0200
+Time=95000 Instruction=0200
+Time=95000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=95000 Reading instruction at addr=000: 0200
+Time=105000 Instruction=0200
+Time=105000 Audio Output=00
+Time=105000 State transition:  0 ->  1
+Time=105000 Reading instruction at addr=000: 0200
+Time=105000 Decoding instruction: 0200, Opcode: 02
+Decoded LDI instruction
+Time=115000 Instruction=0200
+Time=115000 State transition:  1 ->  2
+Time=115000 Reading instruction at addr=000: 0200
+Executing LDI: KTE=00, WA=2
+Debug Info - Time: 115000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=125000 Instruction=0200
+Time=125000 Audio Output=00
+Time=125000 State transition:  2 ->  3
+Debug Info - Time: 125000
+PC: 000, next_pc: 001
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=125000 Reading instruction at addr=000: 0200
+Debug Info - Time: 125000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=135000 Instruction=0200
+Time=135000 Audio Output=00
+Time=135000 State transition:  3 ->  0
+Debug Info - Time: 135000
+PC: 001, next_pc: 002
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=135000 Reading instruction at addr=001: 4000
+Time=145000 Instruction=4000
+Time=145000 Audio Output=00
+Time=145000 State transition:  0 ->  1
+Time=145000 Reading instruction at addr=002: 0b00
+Time=145000 Decoding instruction: 4000, Opcode: 40
+Time=145000 Decoding instruction: 0b00, Opcode: 0b
+Decoded JMP instruction
+Time=155000 Instruction=0b00
+Time=155000 Audio Output=00
+Time=155000 State transition:  1 ->  2
+Time=155000 Reading instruction at addr=002: 0b00
+Executing JMP: Target=300
+Debug Info - Time: 155000
+ldpc: 1, selpc: 1, ninst_addr: 300
+Time=165000 Instruction=0b00
+Time=165000 Audio Output=00
+Time=165000 State transition:  2 ->  3
+Debug Info - Time: 165000
+PC: 002, next_pc: 300
+ldpc: 1, selpc: 1, ninst_addr: 300
+Time=165000 Reading instruction at addr=002: 0b00
+Debug Info - Time: 165000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=175000 Instruction=0b00
+Time=175000 Audio Output=00
+Time=175000 State transition:  3 ->  0
+Debug Info - Time: 175000
+PC: 300, next_pc: 301
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=175000 Reading instruction at addr=300: 0000
+Time=185000 Instruction=0000
+Time=185000 Audio Output=00
+Time=185000 State transition:  0 ->  1
+Time=185000 Reading instruction at addr=301: 0000
+Time=185000 Decoding instruction: 0000, Opcode: 00
+Time=195000 Instruction=0000
+Time=195000 Audio Output=00
+Time=195000 State transition:  1 ->  2
+Time=195000 Reading instruction at addr=301: 0000
+Unknown opcode: 00
+Debug Info - Time: 195000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=205000 Instruction=0000
+Time=205000 Audio Output=00
+Time=205000 State transition:  2 ->  3
+Debug Info - Time: 205000
+PC: 301, next_pc: 302
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=205000 Reading instruction at addr=301: 0000
+Debug Info - Time: 205000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=215000 Instruction=0000
+Time=215000 Audio Output=00
+Time=215000 State transition:  3 ->  0
+Debug Info - Time: 215000
+PC: 302, next_pc: 303
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=215000 Reading instruction at addr=302: 0000
+Time=225000 Instruction=0000
+Time=225000 Audio Output=00
+Time=225000 State transition:  0 ->  1
+Time=225000 Reading instruction at addr=303: 0000
+Time=225000 Decoding instruction: 0000, Opcode: 00
+Time=235000 Instruction=0000
+Time=235000 Audio Output=00
+Time=235000 State transition:  1 ->  2
+Time=235000 Reading instruction at addr=303: 0000
+Unknown opcode: 00
+Debug Info - Time: 235000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=245000 Instruction=0000
+Time=245000 Audio Output=00
+Time=245000 State transition:  2 ->  3
+Debug Info - Time: 245000
+PC: 303, next_pc: 304
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=245000 Reading instruction at addr=303: 0000
+Debug Info - Time: 245000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=255000 Instruction=0000
+Time=255000 Audio Output=00
+Time=255000 State transition:  3 ->  0
+Debug Info - Time: 255000
+PC: 304, next_pc: 305
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=255000 Reading instruction at addr=304: 0000
+Time=265000 Instruction=0000
+Time=265000 Audio Output=00
+Time=265000 State transition:  0 ->  1
+Time=265000 Reading instruction at addr=305: 0000
+Time=265000 Decoding instruction: 0000, Opcode: 00
+Time=275000 Instruction=0000
+Time=275000 Audio Output=00
+Time=275000 State transition:  1 ->  2
+Time=275000 Reading instruction at addr=305: 0000
+Unknown opcode: 00
+Debug Info - Time: 275000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=285000 Instruction=0000
+Time=285000 Audio Output=00
+Time=285000 State transition:  2 ->  3
+Debug Info - Time: 285000
+PC: 305, next_pc: 306
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=285000 Reading instruction at addr=305: 0000
+Debug Info - Time: 285000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=295000 Instruction=0000
+Time=295000 Audio Output=00
+Time=295000 State transition:  3 ->  0
+Debug Info - Time: 295000
+PC: 306, next_pc: 307
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=295000 Reading instruction at addr=306: 0000
+Time=305000 Instruction=0000
+Time=305000 Audio Output=00
+Time=305000 State transition:  0 ->  1
+Time=305000 Reading instruction at addr=307: 0000
+Time=305000 Decoding instruction: 0000, Opcode: 00
+Time=315000 Instruction=0000
+Time=315000 Audio Output=00
+Time=315000 State transition:  1 ->  2
+Time=315000 Reading instruction at addr=307: 0000
+Unknown opcode: 00
+Debug Info - Time: 315000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=325000 Instruction=0000
+Time=325000 Audio Output=00
+Time=325000 State transition:  2 ->  3
+Debug Info - Time: 325000
+PC: 307, next_pc: 308
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=325000 Reading instruction at addr=307: 0000
+Debug Info - Time: 325000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=335000 Instruction=0000
+Time=335000 Audio Output=00
+Time=335000 State transition:  3 ->  0
+Debug Info - Time: 335000
+PC: 308, next_pc: 309
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=335000 Reading instruction at addr=308: 0000
+Time=345000 Instruction=0000
+Time=345000 Audio Output=00
+Time=345000 State transition:  0 ->  1
+Time=345000 Reading instruction at addr=309: 0000
+Time=345000 Decoding instruction: 0000, Opcode: 00
+Time=355000 Instruction=0000
+Time=355000 Audio Output=00
+Time=355000 State transition:  1 ->  2
+Time=355000 Reading instruction at addr=309: 0000
+Unknown opcode: 00
+Debug Info - Time: 355000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=365000 Instruction=0000
+Time=365000 Audio Output=00
+Time=365000 State transition:  2 ->  3
+Debug Info - Time: 365000
+PC: 309, next_pc: 30a
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=365000 Reading instruction at addr=309: 0000
+Debug Info - Time: 365000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=375000 Instruction=0000
+Time=375000 Audio Output=00
+Time=375000 State transition:  3 ->  0
+Debug Info - Time: 375000
+PC: 30a, next_pc: 30b
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=375000 Reading instruction at addr=30a: 0000
+Time=385000 Instruction=0000
+Time=385000 Audio Output=00
+Time=385000 State transition:  0 ->  1
+Time=385000 Reading instruction at addr=30b: 0000
+Time=385000 Decoding instruction: 0000, Opcode: 00
+Time=395000 Instruction=0000
+Time=395000 Audio Output=00
+Time=395000 State transition:  1 ->  2
+Time=395000 Reading instruction at addr=30b: 0000
+Unknown opcode: 00
+Debug Info - Time: 395000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=405000 Instruction=0000
+Time=405000 Audio Output=00
+Time=405000 State transition:  2 ->  3
+Debug Info - Time: 405000
+PC: 30b, next_pc: 30c
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=405000 Reading instruction at addr=30b: 0000
+Debug Info - Time: 405000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=415000 Instruction=0000
+Time=415000 Audio Output=00
+Time=415000 State transition:  3 ->  0
+Debug Info - Time: 415000
+PC: 30c, next_pc: 30d
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=415000 Reading instruction at addr=30c: 0000
+Time=425000 Instruction=0000
+Time=425000 Audio Output=00
+Time=425000 State transition:  0 ->  1
+Time=425000 Reading instruction at addr=30d: 0000
+Time=425000 Decoding instruction: 0000, Opcode: 00
+Time=435000 Instruction=0000
+Time=435000 Audio Output=00
+Time=435000 State transition:  1 ->  2
+Time=435000 Reading instruction at addr=30d: 0000
+Unknown opcode: 00
+Debug Info - Time: 435000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=445000 Instruction=0000
+Time=445000 Audio Output=00
+Time=445000 State transition:  2 ->  3
+Debug Info - Time: 445000
+PC: 30d, next_pc: 30e
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=445000 Reading instruction at addr=30d: 0000
+Debug Info - Time: 445000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=455000 Instruction=0000
+Time=455000 Audio Output=00
+Time=455000 State transition:  3 ->  0
+Debug Info - Time: 455000
+PC: 30e, next_pc: 30f
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=455000 Reading instruction at addr=30e: 0000
+Time=465000 Instruction=0000
+Time=465000 Audio Output=00
+Time=465000 State transition:  0 ->  1
+Time=465000 Reading instruction at addr=30f: 0000
+Time=465000 Decoding instruction: 0000, Opcode: 00
+Time=475000 Instruction=0000
+Time=475000 Audio Output=00
+Time=475000 State transition:  1 ->  2
+Time=475000 Reading instruction at addr=30f: 0000
+Unknown opcode: 00
+Debug Info - Time: 475000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=485000 Instruction=0000
+Time=485000 Audio Output=00
+Time=485000 State transition:  2 ->  3
+Debug Info - Time: 485000
+PC: 30f, next_pc: 310
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=485000 Reading instruction at addr=30f: 0000
+Debug Info - Time: 485000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=495000 Instruction=0000
+Time=495000 Audio Output=00
+Time=495000 State transition:  3 ->  0
+Debug Info - Time: 495000
+PC: 310, next_pc: 311
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=495000 Reading instruction at addr=310: 0000
+Time=505000 Instruction=0000
+Time=505000 Audio Output=00
+Time=505000 State transition:  0 ->  1
+Time=505000 Reading instruction at addr=311: 0000
+Time=505000 Decoding instruction: 0000, Opcode: 00
+Time=515000 Instruction=0000
+Time=515000 Audio Output=00
+Time=515000 State transition:  1 ->  2
+Time=515000 Reading instruction at addr=311: 0000
+Unknown opcode: 00
+Debug Info - Time: 515000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=525000 Instruction=0000
+Time=525000 Audio Output=00
+Time=525000 State transition:  2 ->  3
+Debug Info - Time: 525000
+PC: 311, next_pc: 312
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=525000 Reading instruction at addr=311: 0000
+Debug Info - Time: 525000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=535000 Instruction=0000
+Time=535000 Audio Output=00
+Time=535000 State transition:  3 ->  0
+Debug Info - Time: 535000
+PC: 312, next_pc: 313
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=535000 Reading instruction at addr=312: 0000
+Time=545000 Instruction=0000
+Time=545000 Audio Output=00
+Time=545000 State transition:  0 ->  1
+Time=545000 Reading instruction at addr=313: 0000
+Time=545000 Decoding instruction: 0000, Opcode: 00
+Time=555000 Instruction=0000
+Time=555000 Audio Output=00
+Time=555000 State transition:  1 ->  2
+Time=555000 Reading instruction at addr=313: 0000
+Unknown opcode: 00
+Debug Info - Time: 555000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=565000 Instruction=0000
+Time=565000 Audio Output=00
+Time=565000 State transition:  2 ->  3
+Debug Info - Time: 565000
+PC: 313, next_pc: 314
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=565000 Reading instruction at addr=313: 0000
+Debug Info - Time: 565000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=575000 Instruction=0000
+Time=575000 Audio Output=00
+Time=575000 State transition:  3 ->  0
+Debug Info - Time: 575000
+PC: 314, next_pc: 315
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=575000 Reading instruction at addr=314: 0000
+Time=585000 Instruction=0000
+Time=585000 Audio Output=00
+Time=585000 State transition:  0 ->  1
+Time=585000 Reading instruction at addr=315: 0000
+Time=585000 Decoding instruction: 0000, Opcode: 00
+Time=595000 Instruction=0000
+Time=595000 Audio Output=00
+Time=595000 State transition:  1 ->  2
+Time=595000 Reading instruction at addr=315: 0000
+Unknown opcode: 00
+Debug Info - Time: 595000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=605000 Instruction=0000
+Time=605000 Audio Output=00
+Time=605000 State transition:  2 ->  3
+Debug Info - Time: 605000
+PC: 315, next_pc: 316
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=605000 Reading instruction at addr=315: 0000
+Debug Info - Time: 605000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=615000 Instruction=0000
+Time=615000 Audio Output=00
+Time=615000 State transition:  3 ->  0
+Debug Info - Time: 615000
+PC: 316, next_pc: 317
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=615000 Reading instruction at addr=316: 0000
+Time=625000 Instruction=0000
+Time=625000 Audio Output=00
+Time=625000 State transition:  0 ->  1
+Time=625000 Reading instruction at addr=317: 0000
+Time=625000 Decoding instruction: 0000, Opcode: 00
+Time=635000 Instruction=0000
+Time=635000 Audio Output=00
+Time=635000 State transition:  1 ->  2
+Time=635000 Reading instruction at addr=317: 0000
+Unknown opcode: 00
+Debug Info - Time: 635000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=645000 Instruction=0000
+Time=645000 Audio Output=00
+Time=645000 State transition:  2 ->  3
+Debug Info - Time: 645000
+PC: 317, next_pc: 318
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=645000 Reading instruction at addr=317: 0000
+Debug Info - Time: 645000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=655000 Instruction=0000
+Time=655000 Audio Output=00
+Time=655000 State transition:  3 ->  0
+Debug Info - Time: 655000
+PC: 318, next_pc: 319
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=655000 Reading instruction at addr=318: 0000
+Time=665000 Instruction=0000
+Time=665000 Audio Output=00
+Time=665000 State transition:  0 ->  1
+Time=665000 Reading instruction at addr=319: 0000
+Time=665000 Decoding instruction: 0000, Opcode: 00
+Time=675000 Instruction=0000
+Time=675000 Audio Output=00
+Time=675000 State transition:  1 ->  2
+Time=675000 Reading instruction at addr=319: 0000
+Unknown opcode: 00
+Debug Info - Time: 675000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=685000 Instruction=0000
+Time=685000 Audio Output=00
+Time=685000 State transition:  2 ->  3
+Debug Info - Time: 685000
+PC: 319, next_pc: 31a
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=685000 Reading instruction at addr=319: 0000
+Debug Info - Time: 685000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=695000 Instruction=0000
+Time=695000 Audio Output=00
+Time=695000 State transition:  3 ->  0
+Debug Info - Time: 695000
+PC: 31a, next_pc: 31b
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=695000 Reading instruction at addr=31a: 0000
+Time=705000 Instruction=0000
+Time=705000 Audio Output=00
+Time=705000 State transition:  0 ->  1
+Time=705000 Reading instruction at addr=31b: 0000
+Time=705000 Decoding instruction: 0000, Opcode: 00
+Time=715000 Instruction=0000
+Time=715000 Audio Output=00
+Time=715000 State transition:  1 ->  2
+Time=715000 Reading instruction at addr=31b: 0000
+Unknown opcode: 00
+Debug Info - Time: 715000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=725000 Instruction=0000
+Time=725000 Audio Output=00
+Time=725000 State transition:  2 ->  3
+Debug Info - Time: 725000
+PC: 31b, next_pc: 31c
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=725000 Reading instruction at addr=31b: 0000
+Debug Info - Time: 725000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=735000 Instruction=0000
+Time=735000 Audio Output=00
+Time=735000 State transition:  3 ->  0
+Debug Info - Time: 735000
+PC: 31c, next_pc: 31d
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=735000 Reading instruction at addr=31c: 0000
+Time=745000 Instruction=0000
+Time=745000 Audio Output=00
+Time=745000 State transition:  0 ->  1
+Time=745000 Reading instruction at addr=31d: 0000
+Time=745000 Decoding instruction: 0000, Opcode: 00
+Time=755000 Instruction=0000
+Time=755000 Audio Output=00
+Time=755000 State transition:  1 ->  2
+Time=755000 Reading instruction at addr=31d: 0000
+Unknown opcode: 00
+Debug Info - Time: 755000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=765000 Instruction=0000
+Time=765000 Audio Output=00
+Time=765000 State transition:  2 ->  3
+Debug Info - Time: 765000
+PC: 31d, next_pc: 31e
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=765000 Reading instruction at addr=31d: 0000
+Debug Info - Time: 765000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=775000 Instruction=0000
+Time=775000 Audio Output=00
+Time=775000 State transition:  3 ->  0
+Debug Info - Time: 775000
+PC: 31e, next_pc: 31f
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=775000 Reading instruction at addr=31e: 0000
+Time=785000 Instruction=0000
+Time=785000 Audio Output=00
+Time=785000 State transition:  0 ->  1
+Time=785000 Reading instruction at addr=31f: 0000
+Time=785000 Decoding instruction: 0000, Opcode: 00
+Time=795000 Instruction=0000
+Time=795000 Audio Output=00
+Time=795000 State transition:  1 ->  2
+Time=795000 Reading instruction at addr=31f: 0000
+Unknown opcode: 00
+Debug Info - Time: 795000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=805000 Instruction=0000
+Time=805000 Audio Output=00
+Time=805000 State transition:  2 ->  3
+Debug Info - Time: 805000
+PC: 31f, next_pc: 320
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=805000 Reading instruction at addr=31f: 0000
+Debug Info - Time: 805000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=815000 Instruction=0000
+Time=815000 Audio Output=00
+Time=815000 State transition:  3 ->  0
+Debug Info - Time: 815000
+PC: 320, next_pc: 321
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=815000 Reading instruction at addr=320: 0000
+Time=825000 Instruction=0000
+Time=825000 Audio Output=00
+Time=825000 State transition:  0 ->  1
+Time=825000 Reading instruction at addr=321: 0000
+Time=825000 Decoding instruction: 0000, Opcode: 00
+Time=835000 Instruction=0000
+Time=835000 Audio Output=00
+Time=835000 State transition:  1 ->  2
+Time=835000 Reading instruction at addr=321: 0000
+Unknown opcode: 00
+Debug Info - Time: 835000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=845000 Instruction=0000
+Time=845000 Audio Output=00
+Time=845000 State transition:  2 ->  3
+Debug Info - Time: 845000
+PC: 321, next_pc: 322
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=845000 Reading instruction at addr=321: 0000
+Debug Info - Time: 845000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=855000 Instruction=0000
+Time=855000 Audio Output=00
+Time=855000 State transition:  3 ->  0
+Debug Info - Time: 855000
+PC: 322, next_pc: 323
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=855000 Reading instruction at addr=322: 0000
+Time=865000 Instruction=0000
+Time=865000 Audio Output=00
+Time=865000 State transition:  0 ->  1
+Time=865000 Reading instruction at addr=323: 0000
+Time=865000 Decoding instruction: 0000, Opcode: 00
+Time=875000 Instruction=0000
+Time=875000 Audio Output=00
+Time=875000 State transition:  1 ->  2
+Time=875000 Reading instruction at addr=323: 0000
+Unknown opcode: 00
+Debug Info - Time: 875000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=885000 Instruction=0000
+Time=885000 Audio Output=00
+Time=885000 State transition:  2 ->  3
+Debug Info - Time: 885000
+PC: 323, next_pc: 324
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=885000 Reading instruction at addr=323: 0000
+Debug Info - Time: 885000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=895000 Instruction=0000
+Time=895000 Audio Output=00
+Time=895000 State transition:  3 ->  0
+Debug Info - Time: 895000
+PC: 324, next_pc: 325
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=895000 Reading instruction at addr=324: 0000
+Time=905000 Instruction=0000
+Time=905000 Audio Output=00
+Time=905000 State transition:  0 ->  1
+Time=905000 Reading instruction at addr=325: 0000
+Time=905000 Decoding instruction: 0000, Opcode: 00
+Time=915000 Instruction=0000
+Time=915000 Audio Output=00
+Time=915000 State transition:  1 ->  2
+Time=915000 Reading instruction at addr=325: 0000
+Unknown opcode: 00
+Debug Info - Time: 915000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=925000 Instruction=0000
+Time=925000 Audio Output=00
+Time=925000 State transition:  2 ->  3
+Debug Info - Time: 925000
+PC: 325, next_pc: 326
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=925000 Reading instruction at addr=325: 0000
+Debug Info - Time: 925000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=935000 Instruction=0000
+Time=935000 Audio Output=00
+Time=935000 State transition:  3 ->  0
+Debug Info - Time: 935000
+PC: 326, next_pc: 327
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=935000 Reading instruction at addr=326: 0000
+Time=945000 Instruction=0000
+Time=945000 Audio Output=00
+Time=945000 State transition:  0 ->  1
+Time=945000 Reading instruction at addr=327: 0000
+Time=945000 Decoding instruction: 0000, Opcode: 00
+Time=955000 Instruction=0000
+Time=955000 Audio Output=00
+Time=955000 State transition:  1 ->  2
+Time=955000 Reading instruction at addr=327: 0000
+Unknown opcode: 00
+Debug Info - Time: 955000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=965000 Instruction=0000
+Time=965000 Audio Output=00
+Time=965000 State transition:  2 ->  3
+Debug Info - Time: 965000
+PC: 327, next_pc: 328
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=965000 Reading instruction at addr=327: 0000
+Debug Info - Time: 965000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=975000 Instruction=0000
+Time=975000 Audio Output=00
+Time=975000 State transition:  3 ->  0
+Debug Info - Time: 975000
+PC: 328, next_pc: 329
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=975000 Reading instruction at addr=328: 0000
+Time=985000 Instruction=0000
+Time=985000 Audio Output=00
+Time=985000 State transition:  0 ->  1
+Time=985000 Reading instruction at addr=329: 0000
+Time=985000 Decoding instruction: 0000, Opcode: 00
+Time=995000 Instruction=0000
+Time=995000 Audio Output=00
+Time=995000 State transition:  1 ->  2
+Time=995000 Reading instruction at addr=329: 0000
+Unknown opcode: 00
+Debug Info - Time: 995000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Instruction Memory Verification:
+0x000: 0200 (Expected: 0201)
+0x001: 4000 (Expected: 4000)
+0x00A: 0000 (Expected: 3006)
+First 16 instructions in memory:
+Addr 0: 0200
+Addr 1: 4000
+Addr 2: 0b00
+Addr 3: 0000
+Addr 4: 0000
+Addr 5: 0000
+Addr 6: 0000
+Addr 7: 0000
+Addr 8: 0000
+Addr 9: 0000
+Addr a: 0000
+Addr b: 0000
+Addr c: 0000
+Addr d: 0000
+Addr e: 0000
+Addr f: 0000
+Starting top module test at time 0
+Data Path Reset - PC set to 0
+Time=5000 Instruction=0000
+Time=5000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=5000 Reading instruction at addr=000: 0200
+Time=15000 Instruction=0200
+Time=15000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=15000 Reading instruction at addr=000: 0200
+Time=25000 Instruction=0200
+Time=25000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=25000 Reading instruction at addr=000: 0200
+Time=35000 Instruction=0200
+Time=35000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=35000 Reading instruction at addr=000: 0200
+Time=45000 Instruction=0200
+Time=45000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=45000 Reading instruction at addr=000: 0200
+Time=55000 Instruction=0200
+Time=55000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=55000 Reading instruction at addr=000: 0200
+Time=65000 Instruction=0200
+Time=65000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=65000 Reading instruction at addr=000: 0200
+Time=75000 Instruction=0200
+Time=75000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=75000 Reading instruction at addr=000: 0200
+Time=85000 Instruction=0200
+Time=85000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=85000 Reading instruction at addr=000: 0200
+Time=95000 Instruction=0200
+Time=95000 Audio Output=00
+Reset: State set to FETCH
+Data Path Reset - PC set to 0
+Time=95000 Reading instruction at addr=000: 0200
+Time=105000 Instruction=0200
+Time=105000 Audio Output=00
+Time=105000 State transition:  0 ->  1
+Time=105000 Reading instruction at addr=000: 0200
+Time=105000 Decoding instruction: 0200, Opcode: 02
+Decoded LDI instruction
+Time=115000 Instruction=0200
+Time=115000 State transition:  1 ->  2
+Time=115000 Reading instruction at addr=000: 0200
+Executing LDI: KTE=00, WA=2
+Debug Info - Time: 115000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=125000 Instruction=0200
+Time=125000 Audio Output=00
+Time=125000 State transition:  2 ->  3
+Debug Info - Time: 125000
+PC: 000, next_pc: 001
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=125000 Reading instruction at addr=000: 0200
+Debug Info - Time: 125000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=135000 Instruction=0200
+Time=135000 Audio Output=00
+Time=135000 State transition:  3 ->  0
+Debug Info - Time: 135000
+PC: 001, next_pc: 002
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=135000 Reading instruction at addr=001: 4000
+Time=145000 Instruction=4000
+Time=145000 Audio Output=00
+Time=145000 State transition:  0 ->  1
+Time=145000 Reading instruction at addr=002: 0b00
+Time=145000 Decoding instruction: 4000, Opcode: 40
+Time=145000 Decoding instruction: 0b00, Opcode: 0b
+Decoded JMP instruction
+Time=155000 Instruction=0b00
+Time=155000 Audio Output=00
+Time=155000 State transition:  1 ->  2
+Time=155000 Reading instruction at addr=002: 0b00
+Executing JMP: Target=300
+Debug Info - Time: 155000
+ldpc: 1, selpc: 1, ninst_addr: 300
+Time=165000 Instruction=0b00
+Time=165000 Audio Output=00
+Time=165000 State transition:  2 ->  3
+Debug Info - Time: 165000
+PC: 002, next_pc: 300
+ldpc: 1, selpc: 1, ninst_addr: 300
+Time=165000 Reading instruction at addr=002: 0b00
+Debug Info - Time: 165000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=175000 Instruction=0b00
+Time=175000 Audio Output=00
+Time=175000 State transition:  3 ->  0
+Debug Info - Time: 175000
+PC: 300, next_pc: 301
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=175000 Reading instruction at addr=300: 0000
+Time=185000 Instruction=0000
+Time=185000 Audio Output=00
+Time=185000 State transition:  0 ->  1
+Time=185000 Reading instruction at addr=301: 0000
+Time=185000 Decoding instruction: 0000, Opcode: 00
+Time=195000 Instruction=0000
+Time=195000 Audio Output=00
+Time=195000 State transition:  1 ->  2
+Time=195000 Reading instruction at addr=301: 0000
+Unknown opcode: 00
+Debug Info - Time: 195000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=205000 Instruction=0000
+Time=205000 Audio Output=00
+Time=205000 State transition:  2 ->  3
+Debug Info - Time: 205000
+PC: 301, next_pc: 302
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=205000 Reading instruction at addr=301: 0000
+Debug Info - Time: 205000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=215000 Instruction=0000
+Time=215000 Audio Output=00
+Time=215000 State transition:  3 ->  0
+Debug Info - Time: 215000
+PC: 302, next_pc: 303
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=215000 Reading instruction at addr=302: 0000
+Time=225000 Instruction=0000
+Time=225000 Audio Output=00
+Time=225000 State transition:  0 ->  1
+Time=225000 Reading instruction at addr=303: 0000
+Time=225000 Decoding instruction: 0000, Opcode: 00
+Time=235000 Instruction=0000
+Time=235000 Audio Output=00
+Time=235000 State transition:  1 ->  2
+Time=235000 Reading instruction at addr=303: 0000
+Unknown opcode: 00
+Debug Info - Time: 235000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=245000 Instruction=0000
+Time=245000 Audio Output=00
+Time=245000 State transition:  2 ->  3
+Debug Info - Time: 245000
+PC: 303, next_pc: 304
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=245000 Reading instruction at addr=303: 0000
+Debug Info - Time: 245000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=255000 Instruction=0000
+Time=255000 Audio Output=00
+Time=255000 State transition:  3 ->  0
+Debug Info - Time: 255000
+PC: 304, next_pc: 305
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=255000 Reading instruction at addr=304: 0000
+Time=265000 Instruction=0000
+Time=265000 Audio Output=00
+Time=265000 State transition:  0 ->  1
+Time=265000 Reading instruction at addr=305: 0000
+Time=265000 Decoding instruction: 0000, Opcode: 00
+Time=275000 Instruction=0000
+Time=275000 Audio Output=00
+Time=275000 State transition:  1 ->  2
+Time=275000 Reading instruction at addr=305: 0000
+Unknown opcode: 00
+Debug Info - Time: 275000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=285000 Instruction=0000
+Time=285000 Audio Output=00
+Time=285000 State transition:  2 ->  3
+Debug Info - Time: 285000
+PC: 305, next_pc: 306
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=285000 Reading instruction at addr=305: 0000
+Debug Info - Time: 285000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=295000 Instruction=0000
+Time=295000 Audio Output=00
+Time=295000 State transition:  3 ->  0
+Debug Info - Time: 295000
+PC: 306, next_pc: 307
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=295000 Reading instruction at addr=306: 0000
+Time=305000 Instruction=0000
+Time=305000 Audio Output=00
+Time=305000 State transition:  0 ->  1
+Time=305000 Reading instruction at addr=307: 0000
+Time=305000 Decoding instruction: 0000, Opcode: 00
+Time=315000 Instruction=0000
+Time=315000 Audio Output=00
+Time=315000 State transition:  1 ->  2
+Time=315000 Reading instruction at addr=307: 0000
+Unknown opcode: 00
+Debug Info - Time: 315000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=325000 Instruction=0000
+Time=325000 Audio Output=00
+Time=325000 State transition:  2 ->  3
+Debug Info - Time: 325000
+PC: 307, next_pc: 308
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=325000 Reading instruction at addr=307: 0000
+Debug Info - Time: 325000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=335000 Instruction=0000
+Time=335000 Audio Output=00
+Time=335000 State transition:  3 ->  0
+Debug Info - Time: 335000
+PC: 308, next_pc: 309
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=335000 Reading instruction at addr=308: 0000
+Time=345000 Instruction=0000
+Time=345000 Audio Output=00
+Time=345000 State transition:  0 ->  1
+Time=345000 Reading instruction at addr=309: 0000
+Time=345000 Decoding instruction: 0000, Opcode: 00
+Time=355000 Instruction=0000
+Time=355000 Audio Output=00
+Time=355000 State transition:  1 ->  2
+Time=355000 Reading instruction at addr=309: 0000
+Unknown opcode: 00
+Debug Info - Time: 355000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=365000 Instruction=0000
+Time=365000 Audio Output=00
+Time=365000 State transition:  2 ->  3
+Debug Info - Time: 365000
+PC: 309, next_pc: 30a
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=365000 Reading instruction at addr=309: 0000
+Debug Info - Time: 365000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=375000 Instruction=0000
+Time=375000 Audio Output=00
+Time=375000 State transition:  3 ->  0
+Debug Info - Time: 375000
+PC: 30a, next_pc: 30b
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=375000 Reading instruction at addr=30a: 0000
+Time=385000 Instruction=0000
+Time=385000 Audio Output=00
+Time=385000 State transition:  0 ->  1
+Time=385000 Reading instruction at addr=30b: 0000
+Time=385000 Decoding instruction: 0000, Opcode: 00
+Time=395000 Instruction=0000
+Time=395000 Audio Output=00
+Time=395000 State transition:  1 ->  2
+Time=395000 Reading instruction at addr=30b: 0000
+Unknown opcode: 00
+Debug Info - Time: 395000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=405000 Instruction=0000
+Time=405000 Audio Output=00
+Time=405000 State transition:  2 ->  3
+Debug Info - Time: 405000
+PC: 30b, next_pc: 30c
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=405000 Reading instruction at addr=30b: 0000
+Debug Info - Time: 405000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=415000 Instruction=0000
+Time=415000 Audio Output=00
+Time=415000 State transition:  3 ->  0
+Debug Info - Time: 415000
+PC: 30c, next_pc: 30d
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=415000 Reading instruction at addr=30c: 0000
+Time=425000 Instruction=0000
+Time=425000 Audio Output=00
+Time=425000 State transition:  0 ->  1
+Time=425000 Reading instruction at addr=30d: 0000
+Time=425000 Decoding instruction: 0000, Opcode: 00
+Time=435000 Instruction=0000
+Time=435000 Audio Output=00
+Time=435000 State transition:  1 ->  2
+Time=435000 Reading instruction at addr=30d: 0000
+Unknown opcode: 00
+Debug Info - Time: 435000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=445000 Instruction=0000
+Time=445000 Audio Output=00
+Time=445000 State transition:  2 ->  3
+Debug Info - Time: 445000
+PC: 30d, next_pc: 30e
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=445000 Reading instruction at addr=30d: 0000
+Debug Info - Time: 445000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=455000 Instruction=0000
+Time=455000 Audio Output=00
+Time=455000 State transition:  3 ->  0
+Debug Info - Time: 455000
+PC: 30e, next_pc: 30f
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=455000 Reading instruction at addr=30e: 0000
+Time=465000 Instruction=0000
+Time=465000 Audio Output=00
+Time=465000 State transition:  0 ->  1
+Time=465000 Reading instruction at addr=30f: 0000
+Time=465000 Decoding instruction: 0000, Opcode: 00
+Time=475000 Instruction=0000
+Time=475000 Audio Output=00
+Time=475000 State transition:  1 ->  2
+Time=475000 Reading instruction at addr=30f: 0000
+Unknown opcode: 00
+Debug Info - Time: 475000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=485000 Instruction=0000
+Time=485000 Audio Output=00
+Time=485000 State transition:  2 ->  3
+Debug Info - Time: 485000
+PC: 30f, next_pc: 310
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=485000 Reading instruction at addr=30f: 0000
+Debug Info - Time: 485000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=495000 Instruction=0000
+Time=495000 Audio Output=00
+Time=495000 State transition:  3 ->  0
+Debug Info - Time: 495000
+PC: 310, next_pc: 311
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=495000 Reading instruction at addr=310: 0000
+Time=505000 Instruction=0000
+Time=505000 Audio Output=00
+Time=505000 State transition:  0 ->  1
+Time=505000 Reading instruction at addr=311: 0000
+Time=505000 Decoding instruction: 0000, Opcode: 00
+Time=515000 Instruction=0000
+Time=515000 Audio Output=00
+Time=515000 State transition:  1 ->  2
+Time=515000 Reading instruction at addr=311: 0000
+Unknown opcode: 00
+Debug Info - Time: 515000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=525000 Instruction=0000
+Time=525000 Audio Output=00
+Time=525000 State transition:  2 ->  3
+Debug Info - Time: 525000
+PC: 311, next_pc: 312
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=525000 Reading instruction at addr=311: 0000
+Debug Info - Time: 525000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=535000 Instruction=0000
+Time=535000 Audio Output=00
+Time=535000 State transition:  3 ->  0
+Debug Info - Time: 535000
+PC: 312, next_pc: 313
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=535000 Reading instruction at addr=312: 0000
+Time=545000 Instruction=0000
+Time=545000 Audio Output=00
+Time=545000 State transition:  0 ->  1
+Time=545000 Reading instruction at addr=313: 0000
+Time=545000 Decoding instruction: 0000, Opcode: 00
+Time=555000 Instruction=0000
+Time=555000 Audio Output=00
+Time=555000 State transition:  1 ->  2
+Time=555000 Reading instruction at addr=313: 0000
+Unknown opcode: 00
+Debug Info - Time: 555000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=565000 Instruction=0000
+Time=565000 Audio Output=00
+Time=565000 State transition:  2 ->  3
+Debug Info - Time: 565000
+PC: 313, next_pc: 314
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=565000 Reading instruction at addr=313: 0000
+Debug Info - Time: 565000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=575000 Instruction=0000
+Time=575000 Audio Output=00
+Time=575000 State transition:  3 ->  0
+Debug Info - Time: 575000
+PC: 314, next_pc: 315
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=575000 Reading instruction at addr=314: 0000
+Time=585000 Instruction=0000
+Time=585000 Audio Output=00
+Time=585000 State transition:  0 ->  1
+Time=585000 Reading instruction at addr=315: 0000
+Time=585000 Decoding instruction: 0000, Opcode: 00
+Time=595000 Instruction=0000
+Time=595000 Audio Output=00
+Time=595000 State transition:  1 ->  2
+Time=595000 Reading instruction at addr=315: 0000
+Unknown opcode: 00
+Debug Info - Time: 595000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=605000 Instruction=0000
+Time=605000 Audio Output=00
+Time=605000 State transition:  2 ->  3
+Debug Info - Time: 605000
+PC: 315, next_pc: 316
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=605000 Reading instruction at addr=315: 0000
+Debug Info - Time: 605000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=615000 Instruction=0000
+Time=615000 Audio Output=00
+Time=615000 State transition:  3 ->  0
+Debug Info - Time: 615000
+PC: 316, next_pc: 317
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=615000 Reading instruction at addr=316: 0000
+Time=625000 Instruction=0000
+Time=625000 Audio Output=00
+Time=625000 State transition:  0 ->  1
+Time=625000 Reading instruction at addr=317: 0000
+Time=625000 Decoding instruction: 0000, Opcode: 00
+Time=635000 Instruction=0000
+Time=635000 Audio Output=00
+Time=635000 State transition:  1 ->  2
+Time=635000 Reading instruction at addr=317: 0000
+Unknown opcode: 00
+Debug Info - Time: 635000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=645000 Instruction=0000
+Time=645000 Audio Output=00
+Time=645000 State transition:  2 ->  3
+Debug Info - Time: 645000
+PC: 317, next_pc: 318
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=645000 Reading instruction at addr=317: 0000
+Debug Info - Time: 645000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=655000 Instruction=0000
+Time=655000 Audio Output=00
+Time=655000 State transition:  3 ->  0
+Debug Info - Time: 655000
+PC: 318, next_pc: 319
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=655000 Reading instruction at addr=318: 0000
+Time=665000 Instruction=0000
+Time=665000 Audio Output=00
+Time=665000 State transition:  0 ->  1
+Time=665000 Reading instruction at addr=319: 0000
+Time=665000 Decoding instruction: 0000, Opcode: 00
+Time=675000 Instruction=0000
+Time=675000 Audio Output=00
+Time=675000 State transition:  1 ->  2
+Time=675000 Reading instruction at addr=319: 0000
+Unknown opcode: 00
+Debug Info - Time: 675000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=685000 Instruction=0000
+Time=685000 Audio Output=00
+Time=685000 State transition:  2 ->  3
+Debug Info - Time: 685000
+PC: 319, next_pc: 31a
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=685000 Reading instruction at addr=319: 0000
+Debug Info - Time: 685000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=695000 Instruction=0000
+Time=695000 Audio Output=00
+Time=695000 State transition:  3 ->  0
+Debug Info - Time: 695000
+PC: 31a, next_pc: 31b
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=695000 Reading instruction at addr=31a: 0000
+Time=705000 Instruction=0000
+Time=705000 Audio Output=00
+Time=705000 State transition:  0 ->  1
+Time=705000 Reading instruction at addr=31b: 0000
+Time=705000 Decoding instruction: 0000, Opcode: 00
+Time=715000 Instruction=0000
+Time=715000 Audio Output=00
+Time=715000 State transition:  1 ->  2
+Time=715000 Reading instruction at addr=31b: 0000
+Unknown opcode: 00
+Debug Info - Time: 715000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=725000 Instruction=0000
+Time=725000 Audio Output=00
+Time=725000 State transition:  2 ->  3
+Debug Info - Time: 725000
+PC: 31b, next_pc: 31c
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=725000 Reading instruction at addr=31b: 0000
+Debug Info - Time: 725000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=735000 Instruction=0000
+Time=735000 Audio Output=00
+Time=735000 State transition:  3 ->  0
+Debug Info - Time: 735000
+PC: 31c, next_pc: 31d
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=735000 Reading instruction at addr=31c: 0000
+Time=745000 Instruction=0000
+Time=745000 Audio Output=00
+Time=745000 State transition:  0 ->  1
+Time=745000 Reading instruction at addr=31d: 0000
+Time=745000 Decoding instruction: 0000, Opcode: 00
+Time=755000 Instruction=0000
+Time=755000 Audio Output=00
+Time=755000 State transition:  1 ->  2
+Time=755000 Reading instruction at addr=31d: 0000
+Unknown opcode: 00
+Debug Info - Time: 755000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=765000 Instruction=0000
+Time=765000 Audio Output=00
+Time=765000 State transition:  2 ->  3
+Debug Info - Time: 765000
+PC: 31d, next_pc: 31e
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=765000 Reading instruction at addr=31d: 0000
+Debug Info - Time: 765000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=775000 Instruction=0000
+Time=775000 Audio Output=00
+Time=775000 State transition:  3 ->  0
+Debug Info - Time: 775000
+PC: 31e, next_pc: 31f
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=775000 Reading instruction at addr=31e: 0000
+Time=785000 Instruction=0000
+Time=785000 Audio Output=00
+Time=785000 State transition:  0 ->  1
+Time=785000 Reading instruction at addr=31f: 0000
+Time=785000 Decoding instruction: 0000, Opcode: 00
+Time=795000 Instruction=0000
+Time=795000 Audio Output=00
+Time=795000 State transition:  1 ->  2
+Time=795000 Reading instruction at addr=31f: 0000
+Unknown opcode: 00
+Debug Info - Time: 795000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=805000 Instruction=0000
+Time=805000 Audio Output=00
+Time=805000 State transition:  2 ->  3
+Debug Info - Time: 805000
+PC: 31f, next_pc: 320
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=805000 Reading instruction at addr=31f: 0000
+Debug Info - Time: 805000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=815000 Instruction=0000
+Time=815000 Audio Output=00
+Time=815000 State transition:  3 ->  0
+Debug Info - Time: 815000
+PC: 320, next_pc: 321
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=815000 Reading instruction at addr=320: 0000
+Time=825000 Instruction=0000
+Time=825000 Audio Output=00
+Time=825000 State transition:  0 ->  1
+Time=825000 Reading instruction at addr=321: 0000
+Time=825000 Decoding instruction: 0000, Opcode: 00
+Time=835000 Instruction=0000
+Time=835000 Audio Output=00
+Time=835000 State transition:  1 ->  2
+Time=835000 Reading instruction at addr=321: 0000
+Unknown opcode: 00
+Debug Info - Time: 835000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=845000 Instruction=0000
+Time=845000 Audio Output=00
+Time=845000 State transition:  2 ->  3
+Debug Info - Time: 845000
+PC: 321, next_pc: 322
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=845000 Reading instruction at addr=321: 0000
+Debug Info - Time: 845000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=855000 Instruction=0000
+Time=855000 Audio Output=00
+Time=855000 State transition:  3 ->  0
+Debug Info - Time: 855000
+PC: 322, next_pc: 323
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=855000 Reading instruction at addr=322: 0000
+Time=865000 Instruction=0000
+Time=865000 Audio Output=00
+Time=865000 State transition:  0 ->  1
+Time=865000 Reading instruction at addr=323: 0000
+Time=865000 Decoding instruction: 0000, Opcode: 00
+Time=875000 Instruction=0000
+Time=875000 Audio Output=00
+Time=875000 State transition:  1 ->  2
+Time=875000 Reading instruction at addr=323: 0000
+Unknown opcode: 00
+Debug Info - Time: 875000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=885000 Instruction=0000
+Time=885000 Audio Output=00
+Time=885000 State transition:  2 ->  3
+Debug Info - Time: 885000
+PC: 323, next_pc: 324
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=885000 Reading instruction at addr=323: 0000
+Debug Info - Time: 885000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=895000 Instruction=0000
+Time=895000 Audio Output=00
+Time=895000 State transition:  3 ->  0
+Debug Info - Time: 895000
+PC: 324, next_pc: 325
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=895000 Reading instruction at addr=324: 0000
+Time=905000 Instruction=0000
+Time=905000 Audio Output=00
+Time=905000 State transition:  0 ->  1
+Time=905000 Reading instruction at addr=325: 0000
+Time=905000 Decoding instruction: 0000, Opcode: 00
+Time=915000 Instruction=0000
+Time=915000 Audio Output=00
+Time=915000 State transition:  1 ->  2
+Time=915000 Reading instruction at addr=325: 0000
+Unknown opcode: 00
+Debug Info - Time: 915000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=925000 Instruction=0000
+Time=925000 Audio Output=00
+Time=925000 State transition:  2 ->  3
+Debug Info - Time: 925000
+PC: 325, next_pc: 326
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=925000 Reading instruction at addr=325: 0000
+Debug Info - Time: 925000
+ldpc: 1, selpc: 0, ninst_addr: 000
+Time=935000 Instruction=0000
+Time=935000 Audio Output=00
+Time=935000 State transition:  3 ->  0
+Debug Info - Tim

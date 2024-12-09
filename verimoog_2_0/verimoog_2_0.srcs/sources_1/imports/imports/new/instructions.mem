@@ -1,0 +1,25 @@
+// Initialize registers
+0200  // LDI R0, 0x00
+0201  // LDI R1, 0x01
+0202  // LDI R2, 0x02
+0203  // LDI R3, 0x03
+0204  // LDI R4, 0x04
+0205  // LDI R5, 0x05
+0206  // LDI R6, 0x06
+0207  // LDI R7, 0x07
+
+// Load MIDI note and envelope parameters
+0305  // LDM R5, 0x05 (MIDI note)
+0306  // LDM R6, 0x06 (Attack time)
+0307  // LDM R7, 0x07 (Decay time)
+0308  // LDM R0, 0x08 (Sustain level)
+0309  // LDM R1, 0x09 (Release time)
+
+// Generate waveform and apply envelope
+2005  // LDI R5, 0x00 (Waveform select)
+6000  // ADD R0, R0 (Attack phase)
+7001  // SUB R1, R1 (Decay phase)
+4005  // STM R5, 0x05 (Output waveform)
+
+// Loop back to the beginning
+0B00  // JMP 0x000

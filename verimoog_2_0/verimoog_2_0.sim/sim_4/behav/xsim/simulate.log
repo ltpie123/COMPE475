@@ -1,0 +1,205 @@
+Time resolution is 1 ps
+=== Starting ADSR Envelope Testbench with Waveform Generator ===
+Time=0 ADSR Reset
+Time=5000, wav_out=00, voice_out=00
+Time=5000 ADSR Reset
+Time=15000, wav_out=00, voice_out=00
+Time=15000 ADSR Reset
+Time=25000, wav_out=00, voice_out=00
+Time=25000 ADSR Reset
+Time=35000, wav_out=00, voice_out=00
+Time=35000 ADSR Reset
+Time=45000, wav_out=00, voice_out=00
+Time=45000 ADSR Reset
+Time=55000, wav_out=00, voice_out=00
+Time=55000 ADSR Reset
+Time=65000, wav_out=00, voice_out=00
+Time=65000 ADSR Reset
+Time=75000, wav_out=00, voice_out=00
+Time=75000 ADSR Reset
+Time=85000, wav_out=00, voice_out=00
+Time=85000 ADSR Reset
+Time=95000, wav_out=00, voice_out=00
+Time=95000 ADSR Reset
+Time=100000 ADSR Reset Released
+Time=105000, wav_out=00, voice_out=00
+Time=105000 ADSR State: IDLE, Envelope=00, Output=00
+Time=115000, wav_out=00, voice_out=00
+Time=115000 ADSR State: IDLE, Envelope=00, Output=00
+Time=125000, wav_out=00, voice_out=00
+Time=125000 ADSR State: IDLE, Envelope=00, Output=00
+Time=135000, wav_out=xx, voice_out=00
+Time=135000 ADSR State: IDLE, Envelope=00, Output=00
+Time=145000, wav_out=xx, voice_out=00
+Time=145000 ADSR State: IDLE, Envelope=00, Output=00
+Time=155000, wav_out=xx, voice_out=00
+Time=155000 ADSR State: IDLE, Envelope=00, Output=00
+Time=165000, wav_out=xx, voice_out=00
+Time=165000 ADSR State: IDLE, Envelope=00, Output=00
+Time=175000, wav_out=xx, voice_out=00
+Time=175000 ADSR State: IDLE, Envelope=00, Output=00
+Time=185000, wav_out=xx, voice_out=00
+Time=185000 ADSR State: IDLE, Envelope=00, Output=00
+Time=195000, wav_out=xx, voice_out=00
+Time=195000 ADSR State: IDLE, Envelope=00, Output=00
+Time=200000 Voice Trigger Activated
+Time=205000, wav_out=xx, voice_out=00
+Time=205000 ADSR State: IDLE, Envelope=00, Output=00
+Time=215000, wav_out=xx, voice_out=00
+Time=215000 ATTACK, Envelope=00, Voice_in=xx, Temp_Product=xxxx, Output=00
+Time=225000, wav_out=xx, voice_out=xx
+Time=225000 ATTACK, Envelope=10, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=235000, wav_out=xx, voice_out=xx
+Time=235000 ATTACK, Envelope=20, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=245000, wav_out=xx, voice_out=xx
+Time=245000 ATTACK, Envelope=30, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=255000, wav_out=xx, voice_out=xx
+Time=255000 ATTACK, Envelope=40, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=265000, wav_out=xx, voice_out=xx
+Time=265000 ATTACK, Envelope=50, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=275000, wav_out=xx, voice_out=xx
+Time=275000 ATTACK, Envelope=60, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=285000, wav_out=xx, voice_out=xx
+Time=285000 ATTACK, Envelope=70, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=295000, wav_out=xx, voice_out=xx
+Time=295000 ATTACK, Envelope=80, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=305000, wav_out=xx, voice_out=xx
+Time=305000 ATTACK, Envelope=90, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=315000, wav_out=xx, voice_out=xx
+Time=315000 ATTACK, Envelope=a0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=325000, wav_out=xx, voice_out=xx
+Time=325000 ATTACK, Envelope=b0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=335000, wav_out=xx, voice_out=xx
+Time=335000 ATTACK, Envelope=c0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=345000, wav_out=xx, voice_out=xx
+Time=345000 ATTACK, Envelope=d0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=355000, wav_out=xx, voice_out=xx
+Time=355000 ATTACK, Envelope=e0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=365000, wav_out=xx, voice_out=xx
+Time=365000 ATTACK, Envelope=f0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=375000, wav_out=xx, voice_out=xx
+Time=375000 ATTACK, Envelope=00, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=385000, wav_out=xx, voice_out=xx
+Time=385000 ATTACK, Envelope=10, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=395000, wav_out=xx, voice_out=xx
+Time=395000 ATTACK, Envelope=20, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=405000, wav_out=xx, voice_out=xx
+Time=405000 ATTACK, Envelope=30, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=415000, wav_out=xx, voice_out=xx
+Time=415000 ATTACK, Envelope=40, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=425000, wav_out=xx, voice_out=xx
+Time=425000 ATTACK, Envelope=50, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=435000, wav_out=xx, voice_out=xx
+Time=435000 ATTACK, Envelope=60, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=445000, wav_out=xx, voice_out=xx
+Time=445000 ATTACK, Envelope=70, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=455000, wav_out=xx, voice_out=xx
+Time=455000 ATTACK, Envelope=80, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=465000, wav_out=xx, voice_out=xx
+Time=465000 ATTACK, Envelope=90, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=475000, wav_out=xx, voice_out=xx
+Time=475000 ATTACK, Envelope=a0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=485000, wav_out=xx, voice_out=xx
+Time=485000 ATTACK, Envelope=b0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=495000, wav_out=xx, voice_out=xx
+Time=495000 ATTACK, Envelope=c0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=505000, wav_out=xx, voice_out=xx
+Time=505000 ATTACK, Envelope=d0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=515000, wav_out=xx, voice_out=xx
+Time=515000 ATTACK, Envelope=e0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=525000, wav_out=xx, voice_out=xx
+Time=525000 ATTACK, Envelope=f0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=535000, wav_out=xx, voice_out=xx
+Time=535000 ATTACK, Envelope=00, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=545000, wav_out=xx, voice_out=xx
+Time=545000 ATTACK, Envelope=10, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=555000, wav_out=xx, voice_out=xx
+Time=555000 ATTACK, Envelope=20, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=565000, wav_out=xx, voice_out=xx
+Time=565000 ATTACK, Envelope=30, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=575000, wav_out=xx, voice_out=xx
+Time=575000 ATTACK, Envelope=40, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=585000, wav_out=xx, voice_out=xx
+Time=585000 ATTACK, Envelope=50, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=595000, wav_out=xx, voice_out=xx
+Time=595000 ATTACK, Envelope=60, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=605000, wav_out=xx, voice_out=xx
+Time=605000 ATTACK, Envelope=70, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=615000, wav_out=xx, voice_out=xx
+Time=615000 ATTACK, Envelope=80, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=625000, wav_out=xx, voice_out=xx
+Time=625000 ATTACK, Envelope=90, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=635000, wav_out=xx, voice_out=xx
+Time=635000 ATTACK, Envelope=a0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=645000, wav_out=xx, voice_out=xx
+Time=645000 ATTACK, Envelope=b0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=655000, wav_out=xx, voice_out=xx
+Time=655000 ATTACK, Envelope=c0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=665000, wav_out=xx, voice_out=xx
+Time=665000 ATTACK, Envelope=d0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=675000, wav_out=xx, voice_out=xx
+Time=675000 ATTACK, Envelope=e0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=685000, wav_out=xx, voice_out=xx
+Time=685000 ATTACK, Envelope=f0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=695000, wav_out=xx, voice_out=xx
+Time=695000 ATTACK, Envelope=00, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=705000, wav_out=xx, voice_out=xx
+Time=705000 ATTACK, Envelope=10, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=715000, wav_out=xx, voice_out=xx
+Time=715000 ATTACK, Envelope=20, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=725000, wav_out=xx, voice_out=xx
+Time=725000 ATTACK, Envelope=30, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=735000, wav_out=xx, voice_out=xx
+Time=735000 ATTACK, Envelope=40, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=745000, wav_out=xx, voice_out=xx
+Time=745000 ATTACK, Envelope=50, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=755000, wav_out=xx, voice_out=xx
+Time=755000 ATTACK, Envelope=60, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=765000, wav_out=xx, voice_out=xx
+Time=765000 ATTACK, Envelope=70, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=775000, wav_out=xx, voice_out=xx
+Time=775000 ATTACK, Envelope=80, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=785000, wav_out=xx, voice_out=xx
+Time=785000 ATTACK, Envelope=90, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=795000, wav_out=xx, voice_out=xx
+Time=795000 ATTACK, Envelope=a0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=805000, wav_out=xx, voice_out=xx
+Time=805000 ATTACK, Envelope=b0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=815000, wav_out=xx, voice_out=xx
+Time=815000 ATTACK, Envelope=c0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=825000, wav_out=xx, voice_out=xx
+Time=825000 ATTACK, Envelope=d0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=835000, wav_out=xx, voice_out=xx
+Time=835000 ATTACK, Envelope=e0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=845000, wav_out=xx, voice_out=xx
+Time=845000 ATTACK, Envelope=f0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=855000, wav_out=xx, voice_out=xx
+Time=855000 ATTACK, Envelope=00, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=865000, wav_out=xx, voice_out=xx
+Time=865000 ATTACK, Envelope=10, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=875000, wav_out=xx, voice_out=xx
+Time=875000 ATTACK, Envelope=20, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=885000, wav_out=xx, voice_out=xx
+Time=885000 ATTACK, Envelope=30, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=895000, wav_out=xx, voice_out=xx
+Time=895000 ATTACK, Envelope=40, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=905000, wav_out=xx, voice_out=xx
+Time=905000 ATTACK, Envelope=50, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=915000, wav_out=xx, voice_out=xx
+Time=915000 ATTACK, Envelope=60, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=925000, wav_out=xx, voice_out=xx
+Time=925000 ATTACK, Envelope=70, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=935000, wav_out=xx, voice_out=xx
+Time=935000 ATTACK, Envelope=80, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=945000, wav_out=xx, voice_out=xx
+Time=945000 ATTACK, Envelope=90, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=955000, wav_out=xx, voice_out=xx
+Time=955000 ATTACK, Envelope=a0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=965000, wav_out=xx, voice_out=xx
+Time=965000 ATTACK, Envelope=b0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=975000, wav_out=xx, voice_out=xx
+Time=975000 ATTACK, Envelope=c0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=985000, wav_out=xx, voice_out=xx
+Time=985000 ATTACK, Envelope=d0, Voice_in=xx, Temp_Product=xxxx, Output=xx
+Time=995000, wav_out=xx, voice_out=xx
+Time=995000 ATTACK, Envelope=e0, Voice_in=xx, Temp_Product=xxxx, Output=xx

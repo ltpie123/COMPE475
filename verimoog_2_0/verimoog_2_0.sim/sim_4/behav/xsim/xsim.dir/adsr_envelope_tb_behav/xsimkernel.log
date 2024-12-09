@@ -1,0 +1,7 @@
+Running: xsim.dir/adsr_envelope_tb_behav/xsimk.exe -simmode gui -wdb adsr_envelope_tb_behav.wdb -simrunnum 0 -socket 50985
+Design successfully loaded
+Design Loading Memory Usage: 7416 KB (Peak: 7416 KB)
+Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 8028 KB (Peak: 8028 KB)
+Simulation CPU Usage: 31 ms

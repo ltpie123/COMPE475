@@ -1,0 +1,29 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../verimoog_2_0.srcs/sources_1/imports/processor_core/ALU.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/processor_core/LIFO.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/imports/imports/new/adsr_envelope.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/processor_core/control_unit.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/processor_core/data_path.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/processor_core/instruction_memory.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/imports/imports/new/midi_input.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/imports/imports/new/midi_to_freq.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/processor_core/natalius_processor.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/imports/imports/new/pwm_audio.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/processor_core/regfile.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/imports/imports/new/saw_wav_gen.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/processor_core/shiftbyte.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/imports/imports/new/sin_wav_gen.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/imports/imports/new/sqr_wav_gen.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/imports/imports/new/synth.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/imports/imports/new/top.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/imports/imports/new/tri_wav_gen.v" \
+"../../../../verimoog_2_0.srcs/sources_1/imports/imports/imports/new/wav_selector.v" \
+"../../../../verimoog_2_0.srcs/sim_1/imports/verimoog_1_9.srcs/sim_3/new/top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

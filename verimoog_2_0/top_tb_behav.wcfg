@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="245.469 ns"></ZoomEndTime>
+      <Cursor1Time time="25.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="363"></NameColumnWidth>
+      <ValueColumnWidth column_width="187"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="52" />
+   <wvobject fp_name="/top_tb/clk" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/reset" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/midi_rx" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">midi_rx</obj_property>
+      <obj_property name="ObjectShortName">midi_rx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/pwm_audio_out" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">pwm_audio_out</obj_property>
+      <obj_property name="ObjectShortName">pwm_audio_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/instruction" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">instruction[15:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/proc_data_out" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">proc_data_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">proc_data_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/proc_data_in" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">proc_data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">proc_data_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/control_state" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">control_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">control_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/midi_note" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">midi_note[6:0]</obj_property>
+      <obj_property name="ObjectShortName">midi_note[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/note_on" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">note_on</obj_property>
+      <obj_property name="ObjectShortName">note_on</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/note_valid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">note_valid</obj_property>
+      <obj_property name="ObjectShortName">note_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/wav_sel" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">wav_sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">wav_sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/attack_time" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">attack_time[7:0]</obj_property>
+      <obj_property name="ObjectShortName">attack_time[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/decay_time" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">decay_time[7:0]</obj_property>
+      <obj_property name="ObjectShortName">decay_time[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/sustain_level" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">sustain_level[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sustain_level[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/release_time" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">release_time[7:0]</obj_property>
+      <obj_property name="ObjectShortName">release_time[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/synth_audio_out" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">synth_audio_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">synth_audio_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/CLK_PERIOD" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/MIDI_BIT_PERIOD" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">MIDI_BIT_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MIDI_BIT_PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/inst_mem/instruction" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">instruction[15:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/control_unit_i/state" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/control_unit_i/opcode" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">opcode[4:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/control_unit_i/we" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">we</obj_property>
+      <obj_property name="ObjectShortName">we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/control_unit_i/raa" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">raa[2:0]</obj_property>
+      <obj_property name="ObjectShortName">raa[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/control_unit_i/rab" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">rab[2:0]</obj_property>
+      <obj_property name="ObjectShortName">rab[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/control_unit_i/wa" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">wa[2:0]</obj_property>
+      <obj_property name="ObjectShortName">wa[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/control_unit_i/opalu" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">opalu[2:0]</obj_property>
+      <obj_property name="ObjectShortName">opalu[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/control_unit_i/sh" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">sh[2:0]</obj_property>
+      <obj_property name="ObjectShortName">sh[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/control_unit_i/selpc" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">selpc</obj_property>
+      <obj_property name="ObjectShortName">selpc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/control_unit_i/ldpc" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">ldpc</obj_property>
+      <obj_property name="ObjectShortName">ldpc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/control_unit_i/ldflag" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">ldflag</obj_property>
+      <obj_property name="ObjectShortName">ldflag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/control_unit_i/naddress" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">naddress[10:0]</obj_property>
+      <obj_property name="ObjectShortName">naddress[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/control_unit_i/selk" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">selk</obj_property>
+      <obj_property name="ObjectShortName">selk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/control_unit_i/selimm" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">selimm</obj_property>
+      <obj_property name="ObjectShortName">selimm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/data_path_i/PC" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">PC[10:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/data_path_i/portA" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">portA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">portA[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/data_path_i/portB" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">portB[7:0]</obj_property>
+      <obj_property name="ObjectShortName">portB[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/data_path_i/aluresu" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">aluresu[7:0]</obj_property>
+      <obj_property name="ObjectShortName">aluresu[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/data_path_i/z" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">z</obj_property>
+      <obj_property name="ObjectShortName">z</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/data_path_i/c" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">c</obj_property>
+      <obj_property name="ObjectShortName">c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/data_path_i/regmux" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">regmux[7:0]</obj_property>
+      <obj_property name="ObjectShortName">regmux[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/data_path_i/muxkte" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">muxkte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">muxkte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/processor_inst/data_path_i/muximm" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">muximm[7:0]</obj_property>
+      <obj_property name="ObjectShortName">muximm[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/synth_inst/midi_note" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">midi_note[6:0]</obj_property>
+      <obj_property name="ObjectShortName">midi_note[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/synth_inst/note_on" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">note_on</obj_property>
+      <obj_property name="ObjectShortName">note_on</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/synth_inst/note_valid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">note_valid</obj_property>
+      <obj_property name="ObjectShortName">note_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/synth_inst/wav_sel" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">wav_sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">wav_sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/synth_inst/attack_time" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">attack_time[7:0]</obj_property>
+      <obj_property name="ObjectShortName">attack_time[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/synth_inst/decay_time" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">decay_time[7:0]</obj_property>
+      <obj_property name="ObjectShortName">decay_time[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/synth_inst/sustain_level" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">sustain_level[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sustain_level[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/synth_inst/release_time" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">release_time[7:0]</obj_property>
+      <obj_property name="ObjectShortName">release_time[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/dut/synth_inst/wav_out" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">wav_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wav_out[7:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,14 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.sim/sim_3/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sim_3/new/synth_tb.v,1733717562,verilog,,,,synth_tb,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/adsr_envelope.v,1733704645,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/midi_to_freq.v,,adsr_envelope,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/midi_to_freq.v,1733687991,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/saw_wav_gen.v,,midi_to_freq,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/saw_wav_gen.v,1733687991,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/sin_wav_gen.v,,saw_wav_gen,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/sin_wav_gen.v,1733687991,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/sqr_wav_gen.v,,sin_wav_gen,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/sqr_wav_gen.v,1733687991,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/synth.v,,sqr_wav_gen,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/synth.v,1733717890,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/tri_wav_gen.v,,synth,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/tri_wav_gen.v,1733687991,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/wav_selector.v,,tri_wav_gen,,,,,,,,
+C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/wav_selector.v,1733717088,verilog,,C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sim_3/new/synth_tb.v,,wav_selector,,,,,,,,

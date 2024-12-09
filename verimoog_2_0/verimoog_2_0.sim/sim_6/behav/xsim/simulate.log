@@ -1,0 +1,9 @@
+Time resolution is 1 ps
+MIDI:  60, Frequency:        262
+MIDI:  69, Frequency:        440
+MIDI:  48, Frequency:        131
+MIDI:  84, Frequency:       1047
+MIDI:   0, Frequency:          0
+MIDI: 127, Frequency:          0
+MIDI:  67, Frequency:        392
+$stop called at time : 70 ns : File "C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/Wave Generators/new/midi_to_freq_tb.v" Line 66

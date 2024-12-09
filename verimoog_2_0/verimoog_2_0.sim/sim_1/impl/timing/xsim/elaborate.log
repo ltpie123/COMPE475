@@ -1,0 +1,21 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Xilnix/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot top_tb_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2991] 'processor_inst' is not declared under prefix 'dut' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sim_1/imports/verimoog_1_9.srcs/sim_3/new/top_tb.v:63]
+ERROR: [VRFC 10-2991] 'processor_inst' is not declared under prefix 'dut' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sim_1/imports/verimoog_1_9.srcs/sim_3/new/top_tb.v:64]
+ERROR: [VRFC 10-2991] 'processor_inst' is not declared under prefix 'dut' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sim_1/imports/verimoog_1_9.srcs/sim_3/new/top_tb.v:65]
+ERROR: [VRFC 10-2991] 'processor_inst' is not declared under prefix 'dut' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sim_1/imports/verimoog_1_9.srcs/sim_3/new/top_tb.v:66]
+ERROR: [VRFC 10-2991] 'midi_input_inst' is not declared under prefix 'dut' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sim_1/imports/verimoog_1_9.srcs/sim_3/new/top_tb.v:67]
+ERROR: [VRFC 10-2991] 'midi_input_inst' is not declared under prefix 'dut' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sim_1/imports/verimoog_1_9.srcs/sim_3/new/top_tb.v:68]
+ERROR: [VRFC 10-2991] 'midi_input_inst' is not declared under prefix 'dut' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sim_1/imports/verimoog_1_9.srcs/sim_3/new/top_tb.v:69]
+ERROR: [VRFC 10-2991] 'interface_inst' is not declared under prefix 'dut' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sim_1/imports/verimoog_1_9.srcs/sim_3/new/top_tb.v:70]
+ERROR: [VRFC 10-2991] 'interface_inst' is not declared under prefix 'dut' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sim_1/imports/verimoog_1_9.srcs/sim_3/new/top_tb.v:71]
+ERROR: [VRFC 10-2991] 'interface_inst' is not declared under prefix 'dut' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sim_1/imports/verimoog_1_9.srcs/sim_3/new/top_tb.v:72]
+ERROR: [VRFC 10-2991] 'interface_inst' is not declared under prefix 'dut' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sim_1/imports/verimoog_1_9.srcs/sim_3/new/top_tb.v:73]
+ERROR: [VRFC 10-2991] 'interface_inst' is not declared under prefix 'dut' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sim_1/imports/verimoog_1_9.srcs/sim_3/new/top_tb.v:74]
+ERROR: [VRFC 10-2991] 'synth_inst' is not declared under prefix 'dut' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sim_1/imports/verimoog_1_9.srcs/sim_3/new/top_tb.v:75]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

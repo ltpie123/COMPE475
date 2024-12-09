@@ -1,0 +1,4 @@
+// Basic test program
+0200  // LDI R0, 0x00
+4000  // STM R0, 0x00
+0B00  // JMP 0x000
