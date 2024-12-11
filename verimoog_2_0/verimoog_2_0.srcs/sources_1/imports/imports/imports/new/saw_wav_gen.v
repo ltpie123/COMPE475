@@ -51,33 +51,45 @@
 //    - Could implement anti-aliasing filtering
 //////////////////////////////////////////////////////////////////////////////////
 
-module saw_wav_gen (
+module saw_wav_gen(
     input wire clk,
     input wire reset,
     input wire [31:0] freq,
     output reg [7:0] wav_out
 );
-    reg [31:0] phase_accumulator;
-    reg [31:0] phase_increment;
+    // Pipeline registers
+    reg [31:0] freq_reg1, freq_reg2;
+    reg [31:0] phase_acc;
+    reg [31:0] phase_inc;
 
-    // Calculate phase increment using 32-bit arithmetic
-    wire [31:0] phase_inc_calc;
-    assign phase_inc_calc = ((freq * 32'h100000000) / 100_000_000);
-
+    // Intermediate calculation registers - expanded precision
+    reg [63:0] phase_calc;  // Full 64-bit precision for calculations
+    
+    // Constants for phase increment calculation
+    localparam [63:0] PHASE_MULT = 64'd18446744073709551615;  // 2^64 / 100_000_000
+    
+    // First stage - register input frequency
     always @(posedge clk) begin
         if (reset) begin
-            phase_accumulator <= 0;
-            phase_increment <= 0;
-            wav_out <= 0;
+            freq_reg1 <= 32'd0;
+            freq_reg2 <= 32'd0;
+            phase_acc <= 32'd0;
+            phase_inc <= 32'd0;
+            wav_out <= 8'h80;
+            phase_calc <= 64'd0;
         end else begin
-            // Update phase increment (registered to prevent glitches)
-            phase_increment <= phase_inc_calc[31:0];
-
-            // Update phase accumulator
-            phase_accumulator <= phase_accumulator + phase_increment;
-
-            // Use upper 8 bits of phase accumulator for output
-            wav_out <= phase_accumulator[31:24];
+            freq_reg1 <= freq;
+            freq_reg2 <= freq_reg1;
+            
+            // Calculate phase increment with full precision
+            phase_calc <= freq_reg2 * (PHASE_MULT / 100_000_000);
+            phase_inc <= phase_calc[63:32];  // Take upper 32 bits
+            
+            // Accumulate phase
+            phase_acc <= phase_acc + phase_inc;
+            
+            // Generate output
+            wav_out <= phase_acc[31:24];
         end
     end
 

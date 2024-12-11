@@ -27,25 +27,28 @@ module top(
     output wire pwm_audio_out   // PWM audio output pin
 );
 
-    // Internal signals from MIDI input module
+    // Internal signals - MIDI interface
     wire [6:0] midi_note;
     wire note_on;
+    wire note_valid;
     wire [7:0] wav_out;
-
+    
     // Processor interface signals
     wire [7:0] proc_addr;
     wire proc_write;
+    wire proc_read;
     wire [7:0] proc_data_in;
     wire [7:0] proc_data_out;
 
-    // Synth control signals
+    // Synth control signals from interface
     wire [1:0] wav_sel;
-    wire [7:0] attack_time;
-    wire [7:0] decay_time;
+    wire [15:0] attack_time;
+    wire [15:0] decay_time;
     wire [7:0] sustain_level;
-    wire [7:0] release_time;
-
-    // Synchronized MIDI signals
+    wire [15:0] release_time;
+    
+    // Synchronized signals
+    wire midi_valid_sync;
     wire [6:0] midi_note_sync;
     wire note_on_sync;
 
@@ -55,48 +58,54 @@ module top(
         .reset(reset),
         .midi_rx(midi_rx),
         .midi_note(midi_note),
-        .note_on(note_on)
+        .note_on(note_on),
+        .note_valid(note_valid)
     );
 
-    // Processor instance
+    // Processor
     natalius_processor processor_inst(
         .clk(clk),
         .rst(reset),
         .port_addr(proc_addr),
+        .read_e(proc_read),
         .write_e(proc_write),
         .data_in(proc_data_in),
         .data_out(proc_data_out)
     );
 
-    // Processor-Synthesizer interface
+    // Processor-Synth Interface
     processor_synth_interface interface_inst(
         .clk(clk),
         .rst(reset),
         // Processor side
         .proc_addr(proc_addr),
         .proc_write(proc_write),
+        .proc_read(proc_read),
         .proc_data_out(proc_data_out),
         .proc_data_in(proc_data_in),
-        // MIDI input side
+        // MIDI side
         .midi_note(midi_note),
         .note_on(note_on),
-        // Synth control side
+        .note_valid(note_valid),
+        // Synth control
         .wav_sel(wav_sel),
         .attack_time(attack_time),
         .decay_time(decay_time),
         .sustain_level(sustain_level),
         .release_time(release_time),
         // Synchronized outputs
+        .midi_valid_sync(midi_valid_sync),
         .midi_note_sync(midi_note_sync),
         .note_on_sync(note_on_sync)
     );
 
-    // Synthesizer core
+    // Synthesizer
     synth synth_inst(
         .clk(clk),
         .reset(reset),
         .midi_note(midi_note_sync),
         .note_on(note_on_sync),
+        .note_valid(midi_valid_sync),
         .wav_sel(wav_sel),
         .attack_time(attack_time),
         .decay_time(decay_time),
@@ -105,7 +114,7 @@ module top(
         .wav_out(wav_out)
     );
 
-    // PWM audio output
+    // PWM Audio Output
     pwm_audio pwm_audio_inst(
         .clk(clk),
         .reset(reset),

@@ -14,7 +14,7 @@ ECHO is off.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source top.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 484.941 ; gain = 179.238
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 485.973 ; gain = 182.172
 Command: read_checkpoint -auto_incremental -incremental C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/utils_1/imports/synth_1/top.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -27,30 +27,31 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 40076
+INFO: [Synth 8-7075] Helper process launched with PID 43820
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1321.992 ; gain = 440.320
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1322.508 ; gain = 439.672
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-10929] literal value 'h100000000 truncated to fit in 32 bits [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/saw_wav_gen.v:65]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'state' is not allowed [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/control_unit.v:83]
+WARNING: [Synth 8-10929] literal value 'd18446744073709551616 truncated to fit in 64 bits [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/saw_wav_gen.v:69]
 WARNING: [Synth 8-10604] concatenation with an unsized literal will be treated as 32 bits [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/shiftbyte.v:29]
 WARNING: [Synth 8-10604] concatenation with an unsized literal will be treated as 32 bits [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/shiftbyte.v:31]
 WARNING: [Synth 8-10604] concatenation with an unsized literal will be treated as 32 bits [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/shiftbyte.v:34]
 WARNING: [Synth 8-10604] concatenation with an unsized literal will be treated as 32 bits [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/shiftbyte.v:35]
-WARNING: [Synth 8-10929] literal value 'd4294967296 truncated to fit in 32 bits [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/sin_wav_gen.v:137]
-INFO: [Synth 8-11241] undeclared symbol 'wav_sel_wav_out', assumed default net type 'wire' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/synth.v:92]
-WARNING: [Synth 8-10929] literal value 'h100000000 truncated to fit in 32 bits [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/tri_wav_gen.v:69]
+WARNING: [Synth 8-10929] literal value 'd18446744073709551616 truncated to fit in 64 bits [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/sin_wav_gen.v:69]
+WARNING: [Synth 8-10929] literal value 'd18446744073709551616 truncated to fit in 64 bits [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/sqr_wav_gen.v:66]
+WARNING: [Synth 8-10929] literal value 'd18446744073709551616 truncated to fit in 64 bits [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/tri_wav_gen.v:67]
 INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/top.v:23]
 INFO: [Synth 8-6157] synthesizing module 'midi_input' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/midi_input.v:45]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/midi_input.v:93]
 INFO: [Synth 8-6155] done synthesizing module 'midi_input' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/midi_input.v:45]
-WARNING: [Synth 8-7071] port 'note_valid' of module 'midi_input' is unconnected for instance 'midi_input_inst' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/top.v:53]
-WARNING: [Synth 8-7023] instance 'midi_input_inst' of module 'midi_input' has 6 connections declared, but only 5 given [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/top.v:53]
 INFO: [Synth 8-6157] synthesizing module 'natalius_processor' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/natalius_processor.v:21]
 INFO: [Synth 8-6157] synthesizing module 'control_unit' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/control_unit.v:22]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/control_unit.v:187]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/control_unit.v:218]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/control_unit.v:173]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/control_unit.v:188]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/control_unit.v:219]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/control_unit.v:174]
 INFO: [Synth 8-6155] done synthesizing module 'control_unit' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/control_unit.v:22]
+WARNING: [Synth 8-7071] port 'state' of module 'control_unit' is unconnected for instance 'control_unit_i' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/natalius_processor.v:52]
+WARNING: [Synth 8-7023] instance 'control_unit_i' of module 'control_unit' has 27 connections declared, but only 26 given [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/natalius_processor.v:52]
 INFO: [Synth 8-6157] synthesizing module 'data_path' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/data_path.v:22]
 INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/regfile.v:22]
 INFO: [Synth 8-6155] done synthesizing module 'regfile' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/regfile.v:22]
@@ -84,13 +85,9 @@ INFO: [Synth 8-251] Addr f: xxxx [C:/Users/ltpie/Documents/GitHub/COMPE475/verim
 INFO: [Synth 8-251] Reading instruction at addr=xxx: xxxx [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/instruction_memory.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'instruction_memory' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/instruction_memory.v:22]
 INFO: [Synth 8-6155] done synthesizing module 'natalius_processor' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/processor_core/natalius_processor.v:21]
-WARNING: [Synth 8-7071] port 'read_e' of module 'natalius_processor' is unconnected for instance 'processor_inst' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/top.v:62]
-WARNING: [Synth 8-7023] instance 'processor_inst' of module 'natalius_processor' has 7 connections declared, but only 6 given [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/top.v:62]
 INFO: [Synth 8-6157] synthesizing module 'processor_synth_interface' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:22]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:87]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:85]
 INFO: [Synth 8-6155] done synthesizing module 'processor_synth_interface' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:22]
-WARNING: [Synth 8-7071] port 'midi_valid_sync' of module 'processor_synth_interface' is unconnected for instance 'interface_inst' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/top.v:72]
-WARNING: [Synth 8-7023] instance 'interface_inst' of module 'processor_synth_interface' has 16 connections declared, but only 15 given [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/top.v:72]
 INFO: [Synth 8-6157] synthesizing module 'synth' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/synth.v:64]
 INFO: [Synth 8-6157] synthesizing module 'midi_to_freq' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/midi_to_freq.v:54]
 INFO: [Synth 8-6155] done synthesizing module 'midi_to_freq' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/midi_to_freq.v:54]
@@ -99,13 +96,11 @@ INFO: [Synth 8-6157] synthesizing module 'saw_wav_gen' [C:/Users/ltpie/Documents
 INFO: [Synth 8-6155] done synthesizing module 'saw_wav_gen' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/saw_wav_gen.v:54]
 INFO: [Synth 8-6157] synthesizing module 'sqr_wav_gen' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/sqr_wav_gen.v:55]
 INFO: [Synth 8-6155] done synthesizing module 'sqr_wav_gen' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/sqr_wav_gen.v:55]
-INFO: [Synth 8-6157] synthesizing module 'tri_wav_gen' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/tri_wav_gen.v:56]
-INFO: [Synth 8-6155] done synthesizing module 'tri_wav_gen' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/tri_wav_gen.v:56]
+INFO: [Synth 8-6157] synthesizing module 'tri_wav_gen' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/tri_wav_gen.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'tri_wav_gen' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/tri_wav_gen.v:55]
 INFO: [Synth 8-6157] synthesizing module 'sin_wav_gen' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/sin_wav_gen.v:56]
 INFO: [Synth 8-6155] done synthesizing module 'sin_wav_gen' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/sin_wav_gen.v:56]
-INFO: [Synth 8-226] default block is never used [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/wav_selector.v:109]
 INFO: [Synth 8-6155] done synthesizing module 'wav_selector' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/wav_selector.v:60]
-WARNING: [Synth 8-689] width (1) of port connection 'wav_out' does not match port width (8) of module 'wav_selector' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/synth.v:92]
 INFO: [Synth 8-6157] synthesizing module 'adsr_envelope' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/adsr_envelope.v:49]
 INFO: [Synth 8-6155] done synthesizing module 'adsr_envelope' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/adsr_envelope.v:49]
 INFO: [Synth 8-6155] done synthesizing module 'synth' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/synth.v:64]
@@ -113,7 +108,14 @@ INFO: [Synth 8-6157] synthesizing module 'pwm_audio' [C:/Users/ltpie/Documents/G
 INFO: [Synth 8-6155] done synthesizing module 'pwm_audio' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/pwm_audio.v:65]
 INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/top.v:23]
 WARNING: [Synth 8-6014] Unused sequential element data_byte1_reg was removed.  [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/midi_input.v:85]
-WARNING: [Synth 8-6014] Unused sequential element direction_reg was removed.  [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/tri_wav_gen.v:75]
+WARNING: [Synth 8-6014] Unused sequential element freq_reg1_reg was removed.  [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/saw_wav_gen.v:74]
+WARNING: [Synth 8-6014] Unused sequential element freq_reg2_reg was removed.  [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/saw_wav_gen.v:75]
+WARNING: [Synth 8-6014] Unused sequential element freq_reg1_reg was removed.  [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/sqr_wav_gen.v:70]
+WARNING: [Synth 8-6014] Unused sequential element freq_reg2_reg was removed.  [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/sqr_wav_gen.v:71]
+WARNING: [Synth 8-6014] Unused sequential element freq_reg1_reg was removed.  [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/tri_wav_gen.v:71]
+WARNING: [Synth 8-6014] Unused sequential element freq_reg2_reg was removed.  [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/tri_wav_gen.v:72]
+WARNING: [Synth 8-6014] Unused sequential element freq_reg1_reg was removed.  [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/sin_wav_gen.v:81]
+WARNING: [Synth 8-6014] Unused sequential element freq_reg2_reg was removed.  [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/sin_wav_gen.v:82]
 WARNING: [Synth 8-7137] Register mult_temp_reg in module adsr_envelope has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/imports/new/adsr_envelope.v:172]
 WARNING: [Synth 8-7129] Port freq[31] in module sin_wav_gen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port freq[30] in module sin_wav_gen is either unconnected or has no load
@@ -179,84 +181,90 @@ WARNING: [Synth 8-7129] Port freq[3] in module tri_wav_gen is either unconnected
 WARNING: [Synth 8-7129] Port freq[2] in module tri_wav_gen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port freq[1] in module tri_wav_gen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port freq[0] in module tri_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[31] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[30] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[29] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[28] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[27] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[26] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[25] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[24] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[23] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[22] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[21] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[20] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[19] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[18] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[17] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[16] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[15] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[14] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[13] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[12] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[11] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[10] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[9] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[8] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[7] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[6] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[5] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[4] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[3] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[2] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[1] in module sqr_wav_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port freq[0] in module sqr_wav_gen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port freq[31] in module saw_wav_gen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port freq[30] in module saw_wav_gen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port freq[29] in module saw_wav_gen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port freq[28] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[27] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[26] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[25] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[24] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[23] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[22] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[21] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[20] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[19] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[18] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[17] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[16] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[15] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[14] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[13] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[12] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[11] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[10] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[9] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[8] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[7] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[6] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[5] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[4] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[3] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[2] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[1] in module saw_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[0] in module saw_wav_gen is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1441.605 ; gain = 559.934
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1441.633 ; gain = 558.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1441.605 ; gain = 559.934
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1441.633 ; gain = 558.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1441.605 ; gain = 559.934
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1441.633 ; gain = 558.797
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1441.605 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1441.633 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/constrs_1/new/constraints.xdc]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/constrs_1/new/constraints.xdc:20]
 Finished Parsing XDC File [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/constrs_1/new/constraints.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1489.891 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1539.453 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 The system cannot find the path specified.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1489.891 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1539.453 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1489.891 ; gain = 608.219
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1539.453 ; gain = 656.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1489.891 ; gain = 608.219
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1539.453 ; gain = 656.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1489.891 ; gain = 608.219
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1539.453 ; gain = 656.617
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'midi_input'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'control_unit'
@@ -280,7 +288,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'control_unit'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1489.891 ; gain = 608.219
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1539.453 ; gain = 656.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -296,38 +304,40 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input      8 Bit         XORs := 1     
 +---Registers : 
-	               32 Bit    Registers := 3     
-	               16 Bit    Registers := 3     
+	               64 Bit    Registers := 4     
+	               32 Bit    Registers := 8     
+	               16 Bit    Registers := 9     
 	               11 Bit    Registers := 3     
-	                8 Bit    Registers := 25    
-	                7 Bit    Registers := 3     
+	                8 Bit    Registers := 32    
+	                7 Bit    Registers := 6     
 	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 6     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 19    
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 26    
 +---ROMs : 
-	                    ROMs := 2     
+	                    ROMs := 3     
 +---Muxes : 
-	   2 Input   27 Bit        Muxes := 1     
 	   2 Input   16 Bit        Muxes := 8     
 	   3 Input   16 Bit        Muxes := 1     
 	   5 Input   16 Bit        Muxes := 1     
+	  10 Input   16 Bit        Muxes := 3     
 	   2 Input   11 Bit        Muxes := 1     
 	   5 Input    8 Bit        Muxes := 2     
-	   2 Input    8 Bit        Muxes := 10    
+	   2 Input    8 Bit        Muxes := 8     
 	   4 Input    8 Bit        Muxes := 1     
 	   5 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 2     
 	   5 Input    3 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 3     
 	   7 Input    3 Bit        Muxes := 1     
 	   3 Input    2 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 42    
+	   2 Input    1 Bit        Muxes := 39    
 	   5 Input    1 Bit        Muxes := 12    
-	   6 Input    1 Bit        Muxes := 10    
+	   6 Input    1 Bit        Muxes := 5     
 	   4 Input    1 Bit        Muxes := 13    
-	   8 Input    1 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -344,55 +354,189 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port freq[31] in module sin_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[30] in module sin_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[29] in module sin_wav_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port freq[28] in module sin_wav_gen is either unconnected or has no load
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-3332] Sequential element (midi_input_inst/FSM_sequential_state_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (midi_input_inst/FSM_sequential_state_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (midi_input_inst/FSM_sequential_state_reg[0]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (processor_inst/control_unit_i/FSM_onehot_state_reg[3]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (processor_inst/control_unit_i/FSM_onehot_state_reg[2]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (processor_inst/control_unit_i/FSM_onehot_state_reg[1]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (processor_inst/control_unit_i/FSM_onehot_state_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (i_0) is unused and will be removed from module top.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/wav_sel_reg[1]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:68]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/wav_sel_reg[0]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:68]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/attack_time_reg[15]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/attack_time_reg[14]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/attack_time_reg[13]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/attack_time_reg[12]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/attack_time_reg[11]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/attack_time_reg[10]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/attack_time_reg[9]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/attack_time_reg[8]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/attack_time_reg[7]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/attack_time_reg[6]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/attack_time_reg[5]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/attack_time_reg[4]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/attack_time_reg[3]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/attack_time_reg[2]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/attack_time_reg[1]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/attack_time_reg[0]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/decay_time_reg[15]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/decay_time_reg[14]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/decay_time_reg[13]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/decay_time_reg[12]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/decay_time_reg[11]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/decay_time_reg[10]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/decay_time_reg[9]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/decay_time_reg[8]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/decay_time_reg[7]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/decay_time_reg[6]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/decay_time_reg[5]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/decay_time_reg[4]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/decay_time_reg[3]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/decay_time_reg[2]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/decay_time_reg[1]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/decay_time_reg[0]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/sustain_level_reg[7]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/sustain_level_reg[6]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/sustain_level_reg[5]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/sustain_level_reg[4]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/sustain_level_reg[3]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/sustain_level_reg[2]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/sustain_level_reg[1]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/sustain_level_reg[0]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/release_time_reg[15]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/release_time_reg[14]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/release_time_reg[13]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/release_time_reg[12]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/release_time_reg[11]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/release_time_reg[10]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/release_time_reg[9]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'interface_inst/release_time_reg[8]__0/Q' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.srcs/sources_1/imports/imports/new/processor_synth_interface.v:72]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1489.891 ; gain = 608.219
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-ROM: Preliminary Mapping Report
-+-------------+------------------------------------+---------------+----------------+
-|Module Name  | RTL Object                         | Depth x Width | Implemented As | 
-+-------------+------------------------------------+---------------+----------------+
-|midi_to_freq | freq_out                           | 128x11        | LUT            | 
-|sin_wav_gen  | wav_out_reg                        | 256x8         | Block RAM      | 
-|top          | synth_inst/midi_freq_inst/freq_out | 128x11        | LUT            | 
-+-------------+------------------------------------+---------------+----------------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1539.453 ; gain = 656.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1489.891 ; gain = 608.219
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1539.453 ; gain = 656.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1489.891 ; gain = 608.219
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1539.453 ; gain = 656.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1489.891 ; gain = 608.219
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1539.453 ; gain = 656.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -410,37 +554,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1489.891 ; gain = 608.219
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1539.453 ; gain = 656.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1489.891 ; gain = 608.219
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1539.453 ; gain = 656.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1489.891 ; gain = 608.219
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1539.453 ; gain = 656.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1489.891 ; gain = 608.219
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1539.453 ; gain = 656.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1489.891 ; gain = 608.219
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1539.453 ; gain = 656.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1489.891 ; gain = 608.219
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1539.453 ; gain = 656.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -453,32 +597,48 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |OBUF |     1|
-+------+-----+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    16|
+|3     |LUT1   |     2|
+|4     |LUT2   |    70|
+|5     |LUT3   |    22|
+|6     |LUT4   |    20|
+|7     |LUT5   |    20|
+|8     |LUT6   |    68|
+|9     |FDCE   |    79|
+|10    |FDPE   |     1|
+|11    |FDRE   |    38|
+|12    |FDSE   |     2|
+|13    |IBUF   |     3|
+|14    |OBUF   |     1|
++------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1489.891 ; gain = 608.219
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1539.453 ; gain = 656.617
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 105 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1489.891 ; gain = 559.934
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1489.891 ; gain = 608.219
+Synthesis finished with 0 errors, 174 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 1539.453 ; gain = 558.797
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1539.453 ; gain = 656.617
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1489.891 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1539.453 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1489.891 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1539.453 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 The system cannot find the path specified.
-Synth Design complete | Checksum: a6c67d3c
+Synth Design complete | Checksum: e4f3832
 INFO: [Common 17-83] Releasing license: Synthesis
-90 Infos, 127 Warnings, 0 Critical Warnings and 0 Errors encountered.
+91 Infos, 128 Warnings, 158 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 1489.891 ; gain = 998.992
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1489.891 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 1539.453 ; gain = 1045.906
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1539.453 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/ltpie/Documents/GitHub/COMPE475/verimoog_2_0/verimoog_2_0.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Dec  9 02:17:38 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 11 12:40:23 2024...

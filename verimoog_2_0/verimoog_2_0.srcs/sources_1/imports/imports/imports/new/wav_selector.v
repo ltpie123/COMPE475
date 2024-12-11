@@ -65,53 +65,97 @@ module wav_selector(
     input wire voice_active,     
     output reg [7:0] wav_out
 );
+    // Pipeline registers for control signals
+    reg [1:0] wav_sel_reg1, wav_sel_reg2;
+    reg voice_active_reg1, voice_active_reg2;
+    reg [31:0] freq_reg1, freq_reg2;
+
     // Wave generator outputs
-    wire [7:0] sqr_wav_out;
-    wire [7:0] sin_wav_out;
-    wire [7:0] saw_wav_out;
-    wire [7:0] tri_wav_out;
-
-    // Simple wave generators for testing
-    saw_wav_gen saw_wav_inst (
-        .clk(clk),
-        .reset(reset),
-        .freq(freq),
-        .wav_out(saw_wav_out)
-    );
+    wire [7:0] saw_out;
+    wire [7:0] sqr_out;
+    wire [7:0] tri_out;
+    wire [7:0] sin_out;
     
-    sqr_wav_gen sqr_wav_inst (
-        .clk(clk),
-        .reset(reset),
-        .freq(freq),
-        .wav_out(sqr_wav_out)
-    );
-    
-    tri_wav_gen tri_wav_inst (
-        .clk(clk),
-        .reset(reset),
-        .freq(freq),
-        .wav_out(tri_wav_out)
-    );
+    // Registered wave outputs
+    reg [7:0] saw_reg, sqr_reg, tri_reg, sin_reg;
 
-    sin_wav_gen sin_wav_inst (
-        .clk(clk),
-        .reset(reset),
-        .freq(freq),
-        .wav_out(sin_wav_out)
-    );
-
-    // Super simple output selection - no intermediate registers
-    always @* begin
-        if (reset)
-            wav_out = 8'h00;  // Zero output on reset
-        else if (!voice_active)
-            wav_out = 8'h00;  // Zero output when inactive
-        else case (wav_sel)
-            2'b00: wav_out = saw_wav_out;
-            2'b01: wav_out = sqr_wav_out;
-            2'b10: wav_out = tri_wav_out;
-            2'b11: wav_out = sin_wav_out;
-            default: wav_out = 8'h00;
-        endcase
+    // First stage - register control inputs
+    always @(posedge clk) begin
+        if (reset) begin
+            wav_sel_reg1 <= 2'b00;
+            wav_sel_reg2 <= 2'b00;
+            voice_active_reg1 <= 1'b0;
+            voice_active_reg2 <= 1'b0;
+            freq_reg1 <= 32'd0;
+            freq_reg2 <= 32'd0;
+        end else begin
+            wav_sel_reg1 <= wav_sel;
+            wav_sel_reg2 <= wav_sel_reg1;
+            voice_active_reg1 <= voice_active;
+            voice_active_reg2 <= voice_active_reg1;
+            freq_reg1 <= freq;
+            freq_reg2 <= freq_reg1;
+        end
     end
+
+    // Instantiate optimized wave generators
+    saw_wav_gen saw_inst (
+        .clk(clk),
+        .reset(reset),
+        .freq(freq_reg2),
+        .wav_out(saw_out)
+    );
+
+    sqr_wav_gen sqr_inst (
+        .clk(clk),
+        .reset(reset),
+        .freq(freq_reg2),
+        .wav_out(sqr_out)
+    );
+
+    tri_wav_gen tri_inst (
+        .clk(clk),
+        .reset(reset),
+        .freq(freq_reg2),
+        .wav_out(tri_out)
+    );
+
+    sin_wav_gen sin_inst (
+        .clk(clk),
+        .reset(reset),
+        .freq(freq_reg2),
+        .wav_out(sin_out)
+    );
+
+    // Second stage - register wave outputs
+    always @(posedge clk) begin
+        if (reset) begin
+            saw_reg <= 8'h80;
+            sqr_reg <= 8'h80;
+            tri_reg <= 8'h80;
+            sin_reg <= 8'h80;
+        end else begin
+            saw_reg <= saw_out;
+            sqr_reg <= sqr_out;
+            tri_reg <= tri_out;
+            sin_reg <= sin_out;
+        end
+    end
+
+    // Final stage - waveform selection and output
+    always @(posedge clk) begin
+        if (reset) begin
+            wav_out <= 8'h80;
+        end else if (!voice_active_reg2) begin
+            wav_out <= 8'h80;
+        end else begin
+            case (wav_sel_reg2)
+                2'b00: wav_out <= saw_reg;
+                2'b01: wav_out <= sqr_reg;
+                2'b10: wav_out <= tri_reg;
+                2'b11: wav_out <= sin_reg;
+            endcase
+        end
+    end
+
 endmodule

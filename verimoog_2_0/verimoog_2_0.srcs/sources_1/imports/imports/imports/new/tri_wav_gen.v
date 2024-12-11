@@ -52,45 +52,39 @@
 //    - Could implement variable slope rates
 //////////////////////////////////////////////////////////////////////////////////
 
-
-module tri_wav_gen (
+module tri_wav_gen(
     input wire clk,
     input wire reset,
     input wire [31:0] freq,
     output reg [7:0] wav_out
 );
-    reg [31:0] phase_accumulator;
-    reg [31:0] phase_increment;
-    reg direction;
+    reg [31:0] freq_reg1, freq_reg2;
+    reg [31:0] phase_acc;
+    reg [31:0] phase_inc;
+    reg [63:0] phase_calc;
     reg [7:0] amplitude;
-
-    // Calculate phase increment
-    wire [31:0] phase_inc_calc;
-    assign phase_inc_calc = ((freq * 32'h100000000) / 100_000_000);
-
+    
+    localparam [63:0] PHASE_MULT = 64'd18446744073709551616;
+    
     always @(posedge clk) begin
         if (reset) begin
-            phase_accumulator <= 0;
-            phase_increment <= 0;
-            direction <= 0;
-            amplitude <= 0;
-            wav_out <= 0;
+            freq_reg1 <= 32'd0;
+            freq_reg2 <= 32'd0;
+            phase_acc <= 32'd0;
+            phase_inc <= 32'd0;
+            wav_out <= 8'h80;
+            phase_calc <= 64'd0;
+            amplitude <= 8'h80;
         end else begin
-            // Update phase increment (registered to prevent glitches)
-            phase_increment <= phase_inc_calc[31:0];
-
-            // Update phase accumulator
-            phase_accumulator <= phase_accumulator + phase_increment;
-
+            freq_reg1 <= freq;
+            freq_reg2 <= freq_reg1;
+            
+            phase_calc <= freq_reg2 * (PHASE_MULT / 100_000_000);
+            phase_inc <= phase_calc[63:32];
+            phase_acc <= phase_acc + phase_inc;
+            
             // Generate triangle wave
-            if (phase_accumulator[31]) begin
-                // Falling edge of triangle
-                amplitude <= ~phase_accumulator[30:23];
-            end else begin
-                // Rising edge of triangle
-                amplitude <= phase_accumulator[30:23];
-            end
-
+            amplitude <= phase_acc[31] ? ~phase_acc[30:23] : phase_acc[30:23];
             wav_out <= amplitude;
         end
     end

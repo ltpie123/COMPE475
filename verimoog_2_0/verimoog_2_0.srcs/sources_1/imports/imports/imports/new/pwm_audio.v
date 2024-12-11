@@ -63,22 +63,45 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module pwm_audio(
-    input wire clk,              // 100MHz clock
+    input wire clk,             
     input wire reset,
-    input wire [7:0] audio_in,   // 8-bit audio input
-    output reg pwm_out          // PWM output
+    input wire [7:0] audio_in,  
+    output reg pwm_out         
 );
 
-    reg [7:0] counter;
+    // Pipeline registers
+    reg [7:0] audio_reg1, audio_reg2;
+    reg [7:0] counter_reg;
+    reg compare_result;
     
-    always @(posedge clk or posedge reset) begin
+    // First stage - register input
+    always @(posedge clk) begin
         if (reset) begin
-            counter <= 8'd0;
-            pwm_out <= 1'b0;
+            audio_reg1 <= 8'd0;
+            audio_reg2 <= 8'd0;
         end else begin
-            counter <= counter + 1'b1;
-            pwm_out <= (audio_in > counter);
+            audio_reg1 <= audio_in;
+            audio_reg2 <= audio_reg1;
         end
+    end
+    
+    // Second stage - counter and comparison
+    always @(posedge clk) begin
+        if (reset) begin
+            counter_reg <= 8'd0;
+            compare_result <= 1'b0;
+        end else begin
+            counter_reg <= counter_reg + 1'b1;
+            compare_result <= (audio_reg2 > counter_reg);
+        end
+    end
+    
+    // Final stage - register output
+    always @(posedge clk) begin
+        if (reset)
+            pwm_out <= 1'b0;
+        else
+            pwm_out <= compare_result;
     end
 
 endmodule

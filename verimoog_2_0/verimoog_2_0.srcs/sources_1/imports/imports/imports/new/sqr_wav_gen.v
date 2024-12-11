@@ -58,28 +58,31 @@ module sqr_wav_gen(
     input wire [31:0] freq,
     output reg [7:0] wav_out
 );
-
-reg [31:0] counter;
-reg [31:0] max;
-
+    reg [31:0] freq_reg1, freq_reg2;
+    reg [31:0] phase_acc;
+    reg [31:0] phase_inc;
+    reg [63:0] phase_calc;
+    
+    localparam [63:0] PHASE_MULT = 64'd18446744073709551616;  // 2^64 / 100_000_000
+    
     always @(posedge clk) begin
         if (reset) begin
-            counter <= 0;
-            wav_out <= 8'h00;
+            freq_reg1 <= 32'd0;
+            freq_reg2 <= 32'd0;
+            phase_acc <= 32'd0;
+            phase_inc <= 32'd0;
+            wav_out <= 8'h80;
+            phase_calc <= 64'd0;
         end else begin
-            if (counter >= max) begin
-                counter <= 0;
-                wav_out <= ~wav_out;  // Toggle output after max period
-            end else begin
-                counter <= counter + 1;
-            end
+            freq_reg1 <= freq;
+            freq_reg2 <= freq_reg1;
+            
+            phase_calc <= freq_reg2 * (PHASE_MULT / 100_000_000);
+            phase_inc <= phase_calc[63:32];
+            phase_acc <= phase_acc + phase_inc;
+            
+            wav_out <= phase_acc[31] ? 8'hFF : 8'h00;
         end
-    end
-
-// Combinational block to calculate max value
-// Improved max calculation
-    always @(*) begin
-        max = (freq > 0) ? (100_000_000 / (2 * freq)) : 32'd100_000_000;
     end
 endmodule
 
